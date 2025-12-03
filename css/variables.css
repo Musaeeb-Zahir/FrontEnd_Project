@@ -1,0 +1,6 @@
+:root {
+  --blue-500: #0d6efd;
+  --gray-500: #8b96a5;
+  --primary-text-clr: var(--gray-500);
+  --primary-btn-bg: var(--blue-500);
+}
