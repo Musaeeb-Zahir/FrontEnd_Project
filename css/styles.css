@@ -8,7 +8,7 @@
 header {
   background-color: #ffffff;
   padding: 0px 85px;
-  border-bottom: 1px solid var(--gray-500);
+  border-bottom: 1px solid var(--primary-line-clr);
 }
 .container {
   display: flex;
@@ -73,4 +73,142 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+/* Subnavbar styling */
+.sub-navbar {
+  height: 56px;
+  border-bottom: 1px solid var(--primary-line-clr);
+  display: flex;
+  align-items: center;
+}
+.sub-navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  gap: 120px;
+}
+.sub-nav-links {
+  display: flex;
+  gap: 29px;
+}
+.sub-nav-links li {
+  list-style: none;
+}
+.sub-nav-links li a {
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+.sub-nav-links li:first-child a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.sub-nav-links li select {
+}
+
+/* Right */
+.right-nav {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+.right-nav li select {
+  border: none;
+}
+
+/* main-container */
+.main-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #f7fafc;
+}
+.hero-container {
+  height: 420px;
+  width: 1180px;
+  margin-top: 30px;
+  display: flex;
+  background-color: #ffffff;
+  border: 1px solid var(--primary-line-clr);
+  border-radius: 6px;
+  padding: 32px 14px;
+  gap: 12px;
+  margin: auto;
+  justify-content: center;
+}
+.hero-container nav {
+  width: 250px;
+  background-color: #8b96a5;
+}
+.hero-container nav ul {
+  padding: 10px;
+}
+.hero-container nav li {
+  list-style: none;
+}
+.main-banner {
+  width: 665px;
+  background-image: url("/assets/Image/backgrounds/Banner-board-800x420\ 2.png");
+  background-size: cover;
+  height: 360px;
+  text-align: center;
+}
+
+.left-main-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 200px;
+}
+.user {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px;
+  height: 150px;
+  background-color: #e3f0ff;
+  border-radius: 6px;
+}
+.profile-pic {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #91b1e7;
+}
+.profile-pic img {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.user button {
+  width: 180px;
+  height: 30px;
+}
+.join-now {
+  background-color: var(--primary-btn-bg);
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+.logIn {
+  background-color: white;
+  color: var(--primary-btn-bg);
+  border: none;
+  border-radius: 6px;
+}
+
+.discount {
+  padding: 12px;
+  border-radius: 6px;
+  background-color: #f38332;
+}
+.suplier {
+  padding: 12px;
+  border-radius: 6px;
+  background-color: #55bdc3;
 }
