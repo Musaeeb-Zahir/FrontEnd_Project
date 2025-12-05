@@ -141,19 +141,42 @@ header {
 .hero-container nav {
   width: 250px;
   background-color: #8b96a5;
+  border-radius: 6px;
 }
 .hero-container nav ul {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 .hero-container nav li {
   list-style: none;
+  padding: 6px;
+  width: 230px;
+  height: 35px;
+  background-color: #55bdc3;
+  border-radius: 5px;
+  text-align: start;
 }
 .main-banner {
   width: 665px;
   background-image: url("/assets/Image/backgrounds/Banner-board-800x420\ 2.png");
   background-size: cover;
   height: 360px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 30px;
+  justify-content: center;
+}
+.main-banner button {
+  width: 100px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  color: #1c1c1c;
+  margin-top: 30px;
+  border: none;
 }
 
 .left-main-box {
@@ -211,4 +234,115 @@ header {
   padding: 12px;
   border-radius: 6px;
   background-color: #55bdc3;
+}
+
+.deal-section {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: #f7fafc;
+}
+.deal-and-offers {
+  width: 1180px;
+  background-color: #ffffff;
+  height: 240px;
+  margin: auto;
+  border: 1px solid var(--primary-line-clr);
+  border-radius: 6px;
+  margin-top: 20px;
+}
+.deal-timer {
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 100%;
+  padding-top: 21px;
+}
+.deal-timer .time-box {
+  display: flex;
+  width: 45px;
+  height: 50px;
+  color: #ffffff;
+  background-color: #333;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 12px;
+}
+.deal-items {
+  display: grid;
+  grid-template-columns: repeat(5, 179px);
+}
+
+.deal-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.deal-item span {
+  padding: 2px 8px;
+  background-color: #ffe3e3;
+  color: #eb001b;
+  border-radius: 12px;
+}
+/* category-container */
+.category-section {
+  background-color: #f7fafc;
+  margin-bottom: 20px;
+}
+.category-container {
+  display: flex;
+  width: 1180px;
+  background-color: #ffffff;
+  height: 257px;
+  margin: auto;
+  border: 1px solid var(--primary-line-clr);
+  border-radius: 6px;
+  align-items: center;
+}
+.main-category {
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 280px;
+  height: 100%;
+  padding-top: 21px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-image: url("/assets/Image/backgrounds/Group\ 969.png");
+  background-size: cover;
+}
+.main-category > button {
+  width: 123px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #1c1c1c;
+}
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.cat-item {
+  display: flex;
+  background-color: #f38332;
+  position: relative;
+  width: 223px;
+  height: 127px;
+  padding: 12px;
+}
+.cat-item > div {
+  display: flex;
+  flex-direction: column;
+}
+.cat-item > div > h3 {
+  margin-bottom: 10px;
+}
+.cat-item img {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
 }
