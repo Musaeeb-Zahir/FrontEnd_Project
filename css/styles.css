@@ -328,7 +328,7 @@ header {
 }
 .cat-item {
   display: flex;
-  background-color: #f38332;
+  border: 1px solid var(--primary-line-clr);
   position: relative;
   width: 223px;
   height: 127px;
@@ -345,4 +345,44 @@ header {
   position: absolute;
   bottom: 6px;
   right: 6px;
+}
+
+/* Footer section */
+.footer-top-section {
+  display: flex;
+  height: 324px;
+  padding: 60px;
+  gap: 85px;
+}
+.footer-brand-info {
+  width: 20%;
+  padding-left: 30px;
+}
+.social-links li {
+  list-style: none;
+}
+.footer-nav-columns {
+  display: flex;
+  gap: 58px;
+}
+.footer-nav-columns ul li {
+  list-style: none;
+  margin-top: 10px;
+}
+.footer-nav-columns nav ul li a {
+  color: #333;
+  text-decoration: none;
+}
+.footer-get-app {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.footer-bottom-bar {
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 90px;
+  background-color: #DEE2E7;
 }
