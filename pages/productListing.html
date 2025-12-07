@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="cdnjs.cloudflare.com" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/utility.css">
+  <link rel="stylesheet" href="../css/productListing.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="..\assets\Layout\Brand\logo-colored.png" alt="logo">
+      </div>
+      <form action="">
+        <div class="search-bar">
+          <input type="search" name="search" id="search" placeholder="Search">
+          <select name="category" id="category">
+            <option value="all">All category</option>
+            <option value="electronics">electronics</option>
+            <option value="fashion">Fashion</option>
+          </select>
+          <button type="submit" class="search-btn">Search</button>
+          </div>
+      </form>
+      <nav class="user-nav">
+        <ul class="user-links">
+          <li>
+            <a href="http://">
+              <img src="../assets/icons/profile.png " alt="profile icon">
+            </a>
+            <span>Profile</span>
+          </li>
+          <li>
+            <a href="http://">
+              <img src="../assets/icons/massage.png" alt="massage icon">
+            </a>
+            <span>Massage</span>
+          </li>
+          <li>
+            <a href="http://">
+              <img src="../assets/icons/order.png" alt="order icon ">
+            </a>
+            <span>Order</span>
+          </li>
+          <li>
+            <a href="http://">
+              <img src="../assets/icons/cart.png" alt="cart icon">
+            </a>
+            <span>My Cart</span>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <nav class="sub-navbar">
+    <div class="sub-navbar-container">
+        
+        <ul class="sub-nav-links left-nav normal-text">
+            <li>
+                <a href="#" class="category-trigger">
+                    <img src="../assets/icons/hamburger.png" alt="manu icon" width="20px">
+                    <span>All category</span>
+                </a>
+            </li>
+            <li><a href="#">Hot offers</a></li>
+            <li><a href="#">Gift boxes</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Menu item</a></li>
+            <li>
+               <select name="help" id="help">
+                    <option value="help">Help</option>
+                    <option value="track-order">Track Order</option>
+                    <option value="returns">Returns</option>
+                    <option value="shipping">Shipping</option>
+                    <option value="faqs">FAQs</option>
+                    <!-- <img src="assets/Layout/Form/input-group/Icon/control/Vector.png" alt="dropdown down icon"> -->
+               </select>
+            </li>
+        </ul>
+        <ul class="nav-links right-nav">
+          <li>
+            <select name="language" id="language">
+              <option value="english">English, USD</option>
+              <option value="spanish">Spanish, EUR</option>
+              <option value="french">French, EUR</option>
+            </select>
+          </li>
+          <li>
+            <select name="ship-to" id="ship-to">
+              ship-to
+              <option value="usa">
+                Ship to 
+              </option>
+              <option value="uk"></option>
+              <option value="germany"></option>
+            </select>
+          </li>
+        </ul>
+        <!-- <ul class="nav-links right-nav">
+            <li>
+                <a href="#">English, USD <i class="fa-solid fa-chevron-down"></i></a>
+            </li>
+            <li>
+                <a href="#" class="ship-to">
+                    Ship to 
+                    <img src="https://flagcdn.com/w20/de.png" alt="Germany Flag">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+            </li>
+        </ul> -->
+
+    </div>
+</nav>
+<main class="main-listing">
+  <nav aria-label="breadcrumb" class="breadcrumb-nav">
+    <div class="breadcrumb-list-container">
+        
+        <ol class="breadcrumb-list">
+            
+            <li>
+                <a href="#">Home</a>
+            </li>
+
+            <li>
+                <a href="#">Clothings</a>
+            </li>
+
+            <li>
+                <a href="#">Men's wear</a>
+            </li>
+
+            <li>
+                <span aria-current="page">Summer clothing</span>
+            </li>
+
+        </ol>
+    </div>
+</nav>
+<div class="listing-page-container">
+    
+    <aside class="sidebar-filters">
+        
+        <div class="filter-group">
+            <div class="filter-header">
+                <h3>Category</h3>
+                <img src="../assets/Layout/Form/input-group/Icon/control/Vector.png" alt="toggle" class="icon-sm">
+            </div>
+            <ul class="filter-list">
+                <li><a href="#">Mobile accessory</a></li>
+                <li><a href="#">Electronics</a></li>
+                <li><a href="#">Smartphones</a></li>
+                <li><a href="#">Modern tech</a></li>
+                <li><a href="#" class="view-all">See all</a></li>
+            </ul>
+        </div>
+
+        <div class="filter-group">
+            <div class="filter-header">
+                <h3>Brands</h3>
+                <img src="../assets/Layout/Form/input-group/Icon/control/Vector.png" alt="toggle" class="icon-sm">
+            </div>
+            <ul class="filter-list checkbox-list">
+                <li>
+                    <label>
+                        <input type="checkbox"> <span>Samsung</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox"> <span>Apple</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox"> <span>Huawei</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox"> <span>Pocco</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox"> <span>Lenovo</span>
+                    </label>
+                </li>
+                <li><a href="#" class="view-all">See all</a></li>
+            </ul>
+        </div>
+
+        <div class="filter-group">
+    <div class="filter-header">
+        <h3>Features</h3>
+        <img src="../assets/Layout/Form/input-group/Icon/control/Vector.png" alt="toggle" class="icon-sm">
+    </div>
+    <ul class="filter-list checkbox-list">
+        <li>
+            <label>
+                <input type="checkbox"> <span>Metallic</span>
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="checkbox"> <span>Plastic cover</span>
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="checkbox"> <span>8GB Ram</span>
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="checkbox"> <span>Super power</span>
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="checkbox"> <span>Large Memory</span>
+            </label>
+        </li>
+        <li><a href="#" class="view-all">See all</a></li>
+    </ul>
+</div>
+
+        <div class="filter-group">
+            <div class="filter-header">
+                <h3>Price range</h3>
+                <img src="../assets/Layout/Form/input-group/Icon/control/Vector.png" alt="toggle" class="icon-sm">
+            </div>
+            <div class="range-slider">
+                <input type="range" min="0" max="10000">
+            </div>
+            <div class="price-inputs">
+                <div class="input-wrap">
+                    <label>Min</label>
+                    <input type="number" placeholder="0">
+                </div>
+                <div class="input-wrap">
+                    <label>Max</label>
+                    <input type="number" placeholder="999999">
+                </div>
+            </div>
+            <button class="btn-apply">Apply</button>
+        </div>
+
+        <div class="filter-group">
+            <div class="filter-header">
+                <h3>Condition</h3>
+                <img src="../assets/Layout/Form/input-group/Icon/control/Vector.png" alt="toggle" class="icon-sm">
+            </div>
+            <ul class="filter-list radio-list">
+                <li>
+                    <label>
+                        <input type="radio" name="condition" checked> <span>Any</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="condition"> <span>Refurbished</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="condition"> <span>Brand new</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="condition"> <span>Old items</span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+     <div class="filter-group">
+    <div class="filter-header">
+        <h3>Ratings</h3>
+        <img src="../assets/Layout/Form/input-group/Icon/control/Vector.png" alt="toggle" class="icon-sm">
+    </div>
+    <ul class="filter-list checkbox-list">
+        <li>
+            <label>
+                <input type="checkbox">
+                <div class="rating-stars">
+                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                </div>
+            </label>
+        </li>
+       <li>
+            <label>
+                <input type="checkbox">
+                <div class="rating-stars">
+                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                </div>
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="checkbox">
+                <div class="rating-stars">
+                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                </div>
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="checkbox">
+                <div class="rating-stars">
+                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                </div>
+            </label>
+        </li>
+    </ul>
+</div>
+    </aside>
+
+    <main class="product-content">
+        
+        <div class="top-control-bar">
+            <div class="bar-left">
+                <span class="item-count">12,911 items in <strong>Mobile accessory</strong></span>
+            </div>
+            <div class="bar-right">
+                <label class="verified-check">
+                    <input type="checkbox" checked> <span>Verified only</span>
+                </label>
+                
+                <div class="sort-dropdown">
+                    <select>
+                        <option>Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Newest</option>
+                    </select>
+                </div>
+
+                <div class="view-toggles">
+                    <button class="btn-icon active">
+                        <img src="../assets/Layout/Form/input-group/Icon/control/list.png" alt="List">
+                    </button>
+                    <button class="btn-icon">
+                        <img src="../assets/Layout/Form/input-group/Icon/control/grid.png" alt="Grid">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="products-wrapper">
+            
+            <article class="product-card">
+                <div class="card-image">
+                    <img src="../assets/Image/tech/image 23.png" alt="iPhone" height="
+187.6px">
+                </div>
+                <div class="card-details">
+                    <div class="card-header">
+                        <h4>Canon Cmera EOS 2000, Black 10x zoom</h4>
+                        <button class="btn-fav">
+                            <img src="../assets/Layout/Form/input-group/Icon/control/fav.png" alt="Fav">
+                        </button>
+                    </div>
+                    
+                    <div class="price-info">
+                        <span class="price-current">$998.00</span>
+                        <span class="price-old">$1128.00</span>
+                    </div>
+
+                    <div class="rating-info">
+                        <div class="stars">
+                            <img src="../assets/icons/star-fill.png" alt="star">
+                            <img src="../assets/icons/star-fill.png" alt="star">
+                            <img src="../assets/icons/star-fill.png" alt="star">
+                            <img src="../assets/icons/star-fill.png" alt="star">
+                            <img src="../assets/icons/star-empty.png" alt="star">
+                        </div>
+                        <span class="rating-score">7.5</span>
+                        <span class="dot"></span>
+                        <span class="orders-count">154 orders</span>
+                        <span class="dot"></span>
+                        <span class="shipping-status">Free Shipping</span>
+                    </div>
+
+                    <p class="product-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+
+                    <a href="#" class="view-link">View details</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="card-image">
+                    <img src="../assets/products/gopro.png" alt="GoPro">
+                </div>
+                <div class="card-details">
+                    <div class="card-header">
+                        <h4>GoPro HERO6 4K Action Camera - Black</h4>
+                        <button class="btn-fav">
+                            <img src="../assets/icons/heart.png" alt="Fav">
+                        </button>
+                    </div>
+                    
+                    <div class="price-info">
+                        <span class="price-current">$998.00</span>
+                    </div>
+
+                    <div class="rating-info">
+                        <div class="stars">
+                            <img src="../assets/icons/star-fill.png" alt="star">
+                            <img src="../assets/icons/star-fill.png" alt="star">
+                            <img src="../assets/icons/star-fill.png" alt="star">
+                            <img src="../assets/icons/star-fill.png" alt="star">
+                            <img src="../assets/icons/star-grey.png" alt="star">
+                        </div>
+                        <span class="rating-score">7.5</span>
+                        <span class="dot"></span>
+                        <span class="orders-count">154 orders</span>
+                        <span class="dot"></span>
+                        <span class="shipping-status">Free Shipping</span>
+                    </div>
+
+                    <p class="product-desc">
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
+                    </p>
+
+                    <a href="#" class="view-link">View details</a>
+                </div>
+            </article>
+
+        </div>
+        <div class="pagination-wrapper">
+            
+            <div class="limit-selector">
+                <select name="show-limit" id="show-limit">
+                    <option value="10">Show 10</option>
+                    <option value="20">Show 20</option>
+                    <option value="50">Show 50</option>
+                </select>
+                <img src="../assets/icons/chevron-down.png" alt="arrow" class="dropdown-icon">
+            </div>
+        
+            <div class="page-controls">
+                
+                <button class="page-btn arrow-btn page-previous ">
+                    <img src="../assets/icons/chevron-left.png" alt="Previous">
+                </button>
+        
+                <button class="page-btn active ">1</button>
+                
+                <button class="page-btn">2</button>
+                
+                <button class="page-btn">3</button>
+        
+                <button class="page-btn arrow-btn page-next">
+                    <img src="../assets/icons/chevron-right.png" alt="Next">
+                </button>
+        
+            </div>
+        
+        </div>
+    </main>
+</div>
+</main>
+</body>
+</html>

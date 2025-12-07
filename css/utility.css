@@ -11,3 +11,7 @@ style-none {
   align-items: center;
   gap: 6px;
 }
+a {
+  text-decoration: none;
+  color: var(--primary-text-color);
+}

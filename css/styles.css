@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} 
 header {
   background-color: #ffffff;
   padding: 0px 85px;
@@ -399,9 +399,9 @@ header {
   margin-bottom: 15px;
 }
 
-input,
-textarea,
-select {
+.input,
+.textarea,
+.select {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
