@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="../css/cart.css">
   <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="/css/productDetail.css">
   <title>Document</title>
 </head>
 <body>
+    <div class="header-placeholder"></div>
   <section class="cart-section">
     <div class="container">
         
@@ -243,8 +246,27 @@
 
             </div>
         </section>
-
     </div>
 </section>
+<div class="discount-banner-placeholder"></div>
+<div class="footer-placeholder"></div>
+<script>
+    // Load Header Component
+    fetch('/components/header.html')
+        .then(response => response.text())
+        .then(data => {
+        document.querySelector('.header-placeholder').innerHTML = data;
+        });
+        fetch('/components/discountBanner.html')
+        .then(response => response.text())
+        .then(data => {
+        document.querySelector('.discount-banner-placeholder').innerHTML = data;
+        });
+        fetch('/components/footer.html')
+        .then(response => response.text())
+        .then(data => {
+        document.querySelector('.footer-placeholder').innerHTML = data;
+        });
+</script>
 </body>
 </html>

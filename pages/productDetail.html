@@ -10,6 +10,7 @@
 </head>
 <body>
   <div id="header-placeholder"></div>
+  <div class="subnavbar-placeholder"></div>
   <section class="product-view-section">
       <div class="product-view-card">
           
@@ -347,26 +348,30 @@
                 <span class="rp-price">$32.00-$40.00</span>
             </div>
         </div>
-
     </div>
 </section>
-<section class="discount-section">
-    <div class="discount-banner">
-        
-        <div class="banner-text">
-            <h3>Super discount on more than 100 USD</h3>
-            <p>Have you ever finally just write dummy info</p>
-        </div>
-
-        <a href="#" class="btn-shop">Shop now</a>
-
-    </div>
-</section>
+<div class="discount-banner-placeholder"></div>
+<div class="footer-placeholder"></div>
 <script>
         fetch('../Components/header.html')
         .then(response => response.text())
             .then(data => {
                 document.getElementById('header-placeholder').innerHTML = data;
+            });
+        fetch('../Components/subNavBar.html')
+        .then(response => response.text())
+            .then(data => {
+                document.querySelector('.subnavbar-placeholder').innerHTML = data;
+            });
+        fetch('../Components/discountBanner.html')
+        .then(response => response.text())
+            .then(data => {
+                document.querySelector('.discount-banner-placeholder').innerHTML = data;
+            });
+        fetch('../Components/footer.html')
+        .then(response => response.text())
+            .then(data => {
+                document.querySelector('.footer-placeholder').innerHTML = data;
             });
     </script>
 </body>
