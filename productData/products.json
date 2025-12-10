@@ -1,0 +1,289 @@
+[
+  {
+    "id": 101,
+    "title": "Mens Long Sleeve T-shirt Cotton Base Layer Slim Muscle",
+    "slug": "mens-long-sleeve-tshirt",
+    "category": "clothing",
+    "sub_category": "Men's wear",
+    "brand": "Adidas",
+    "price": {
+      "current": 98.00,
+      "old": null,
+      "currency": "USD",
+      "discount_label": null
+    },
+    "stock_status": "In stock",
+    "min_order": "10 pcs",
+    "images": {
+      "main": "/assets/Image/tech/6.png",
+      "gallery": [
+        "/assets/products/shirt-thumb-1.png",
+        "/assets/products/shirt-thumb-2.png",
+        "/assets/products/shirt-thumb-3.png",
+        "/assets/products/shirt-thumb-4.png"
+      ]
+    },
+    "rating": {
+      "score": 9.3,
+      "count": 32,
+      "stars": 4.5
+    },
+    "sales": {
+      "sold_count": 154,
+      "reviews_count": 32
+    },
+    "bulk_pricing": [
+      { "range": "50-100 pcs", "price": 98.00 },
+      { "range": "100-700 pcs", "price": 90.00 },
+      { "range": "700+ pcs", "price": 78.00 }
+    ],
+    "specifications": {
+      "Material": "Cotton, Plastic Material",
+      "Design": "Modern nice",
+      "Type": "Classic",
+      "Customization": "Logo and design custom packages",
+      "Protection": "Refund Policy",
+      "Warranty": "2 years full warranty"
+    },
+    "features": [
+      "Breathable fabric",
+      "Soft cotton material",
+      "Available in multiple sizes",
+      "Machine washable"
+    ],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "supplier": {
+      "name": "Guanjoi Trading LLC",
+      "country": "Germany",
+      "flag": "/assets/icons/germany-flag.png",
+      "verified": true,
+      "shipping": "Worldwide shipping"
+    },
+    "reviews": [
+      {
+        "user": "Ali Khan",
+        "rating": 5,
+        "date": "2025-11-20",
+        "comment": "Best quality shirt, really liked the fabric."
+      },
+      {
+        "user": "John Doe",
+        "rating": 4,
+        "date": "2025-10-15",
+        "comment": "Good, but delivery was late."
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "title": "GoPro HERO6 4K Action Camera - Black",
+    "slug": "gopro-hero6-4k",
+    "category": "electronics",
+    "sub_category": "Cameras",
+    "brand": "GoPro",
+    "price": {
+      "current": 99.50,
+      "old": 1128.00,
+      "currency": "USD",
+      "discount_label": "-10%"
+    },
+    "stock_status": "Out of stock",
+    "min_order": "1 pcs",
+    "images": {
+      "main": "/assets/Image/tech/6.png",
+      "gallery": [
+        "/assets/products/camera-side.png",
+        "/assets/products/camera-back.png"
+      ]
+    },
+    "rating": {
+      "score": 7.5,
+      "count": 154,
+      "stars": 4
+    },
+    "sales": {
+      "sold_count": 1200,
+      "reviews_count": 154
+    },
+    "bulk_pricing": [], 
+    "specifications": {
+      "Model": "#8786867",
+      "Resolution": "4K Ultra HD",
+      "Memory": "Supports up to 128GB SD",
+      "Battery": "1220mAh lithium-ion",
+      "Waterproof": "Yes, up to 10m"
+    },
+    "features": [
+      "Voice Control",
+      "Touch Screen",
+      "Ultra HD Video",
+      "Waterproof without housing"
+    ],
+    "description": "Capture your adventures in 4K. The GoPro HERO6 Black transforms your adventures into incredible QuikStories right on your phone.",
+    "supplier": {
+      "name": "Tech World Inc",
+      "country": "USA",
+      "flag": "/assets/icons/us-flag.png",
+      "verified": true,
+      "shipping": "Free Shipping"
+    },
+    "reviews": [
+      {
+        "user": "Sarah Smith",
+        "rating": 5,
+        "date": "2025-12-01",
+        "comment": "Amazing camera for vlogging!"
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "title": "Xiaomi Redmi 8 Original Global Version",
+    "slug": "xiaomi-redmi-8",
+    "category": "mobile",
+    "sub_category": "Smartphones",
+    "brand": "Xiaomi",
+    "price": {
+      "current": 120.00,
+      "old": null,
+      "currency": "USD",
+      "discount_label": "-35%"
+    },
+    "stock_status": "Out of stock",
+    "min_order": "1 pcs",
+    "images": {
+      "main": "/assets/Image/tech/image 33.png",
+      "gallery": []
+    },
+    "rating": {
+      "score": 8.0,
+      "count": 90,
+      "stars": 4
+    },
+    "sales": {
+      "sold_count": 500,
+      "reviews_count": 45
+    },
+    "bulk_pricing": [],
+    "specifications": {
+      "Ram": "4GB",
+      "Storage": "64GB",
+      "Screen": "6.2 inch HD",
+      "Battery": "5000mAh"
+    },
+    "features": [
+      "Dual Camera",
+      "Fingerprint Sensor",
+      "Fast Charging"
+    ],
+    "description": "Great budget phone with massive battery life.",
+    "supplier": {
+      "name": "China Gadgets",
+      "country": "China",
+      "flag": "/assets/icons/china-flag.png",
+      "verified": false,
+      "shipping": "Standard Shipping"
+    },
+    "reviews": []
+  },
+  {
+    "id": 103,
+    "title": "Xiaomi Redmi 8 Original Global Version",
+    "slug": "xiaomi-redmi-8",
+    "category": "home and outdoor",
+    "sub_category": "Smartphones",
+    "brand": "Xiaomi",
+    "price": {
+      "current": 120.00,
+      "old": null,
+      "currency": "USD",
+      "discount_label": "-35%"
+    },
+    "stock_status": "Out of stock",
+    "min_order": "1 pcs",
+    "images": {
+      "main": "/assets/Image/tech/image 33.png",
+      "gallery": []
+    },
+    "rating": {
+      "score": 8.0,
+      "count": 90,
+      "stars": 4
+    },
+    "sales": {
+      "sold_count": 500,
+      "reviews_count": 45
+    },
+    "bulk_pricing": [],
+    "specifications": {
+      "Ram": "4GB",
+      "Storage": "64GB",
+      "Screen": "6.2 inch HD",
+      "Battery": "5000mAh"
+    },
+    "features": [
+      "Dual Camera",
+      "Fingerprint Sensor",
+      "Fast Charging"
+    ],
+    "description": "Great budget phone with massive battery life.",
+    "supplier": {
+      "name": "China Gadgets",
+      "country": "China",
+      "flag": "/assets/icons/china-flag.png",
+      "verified": false,
+      "shipping": "Standard Shipping"
+    },
+    "reviews": []
+  },
+  {
+    "id": 104,
+    "title": "Infinix Redmi 8 Original Global Version",
+    "slug": "infix-redmi-8",
+    "category": "home and outdoor",
+    "sub_category": "Smartphones",
+    "brand": "Xiaomi",
+    "price": {
+      "current": 120.00,
+      "old": null,
+      "currency": "USD",
+      "discount_label": "-35%"
+    },
+    "stock_status": "Out of stock",
+    "min_order": "1 pcs",
+    "images": {
+      "main": "/assets/Image/tech/image 33.png",
+      "gallery": []
+    },
+    "rating": {
+      "score": 8.0,
+      "count": 90,
+      "stars": 4
+    },
+    "sales": {
+      "sold_count": 500,
+      "reviews_count": 45
+    },
+    "bulk_pricing": [],
+    "specifications": {
+      "Ram": "4GB",
+      "Storage": "64GB",
+      "Screen": "6.2 inch HD",
+      "Battery": "5000mAh"
+    },
+    "features": [
+      "Dual Camera",
+      "Fingerprint Sensor",
+      "Fast Charging"
+    ],
+    "description": "Great budget phone with massive battery life.",
+    "supplier": {
+      "name": "China Gadgets",
+      "country": "China",
+      "flag": "/assets/icons/china-flag.png",
+      "verified": false,
+      "shipping": "Standard Shipping"
+    },
+    "reviews": []
+  }
+]

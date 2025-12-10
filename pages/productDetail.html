@@ -11,12 +11,13 @@
 <body>
   <div id="header-placeholder"></div>
   <div class="subnavbar-placeholder"></div>
+  <div class="product-detail-placeholder"></div>
   <section class="product-view-section">
       <div class="product-view-card">
           
           <div class="gallery-column">
               <div class="main-image">
-                  <img src="../assets/Layout/alibaba/Image/cloth/2 1.png" alt="Mens T-shirt">
+                  <img src="../assets/Layout/alibaba/Image/cloth/2 1.png" alt="Mens T-shirt" id="product-detail-image">
               </div>
               <div class="thumbnail-list">
                   <button class="thumb-btn active">
@@ -56,11 +57,11 @@
                       <span class="rating-num">9.3</span>
                   </div>
                   <span class="dot-separator"></span>
-                  <span class="meta-text">
+                  <span class="meta-text" id="reviews-count">
                       <img src="../assets/icons/message.png" alt="reviews" class="icon-sm"> 32 reviews
                   </span>
                   <span class="dot-separator"></span>
-                  <span class="meta-text">
+                  <span class="meta-text" id="sold-count">
                       <img src="../assets/icons/shopping-bag.png" alt="sold" class="icon-sm"> 154 sold
                   </span>
               </div>
@@ -228,15 +229,7 @@
                 <h3>You may like</h3>
                 
                 <div class="related-list">
-                    <a href="#" class="related-item">
-                        <div class="related-img">
-                            <img src="../assets/products/coat.png" alt="Coat">
-                        </div>
-                        <div class="related-info">
-                            <h4>Men Blazers Sets Elegant Formal</h4>
-                            <span class="related-price">$7.00 - $99.50</span>
-                        </div>
-                    </a>
+                  
 
                     <a href="#" class="related-item">
                         <div class="related-img">
@@ -288,66 +281,6 @@
     <h3>Related products</h3>
     
     <div class="related-grid">
-        
-        <div class="related-card">
-            <div class="img-box">
-                <img src="../assets/products/wallet.png" alt="Wallet">
-            </div>
-            <div class="info-box">
-                <a href="#" class="rp-title">Xiaomi Redmi 8 Original</a>
-                <span class="rp-price">$32.00-$40.00</span>
-            </div>
-        </div>
-
-        <div class="related-card">
-            <div class="img-box">
-                <img src="../assets/products/smartwatch.png" alt="Watch">
-            </div>
-            <div class="info-box">
-                <a href="#" class="rp-title">Xiaomi Redmi 8 Original</a>
-                <span class="rp-price">$32.00-$40.00</span>
-            </div>
-        </div>
-
-        <div class="related-card">
-            <div class="img-box">
-                <img src="../assets/products/headphones.png" alt="Headphones">
-            </div>
-            <div class="info-box">
-                <a href="#" class="rp-title">Xiaomi Redmi 8 Original</a>
-                <span class="rp-price">$32.00-$40.00</span>
-            </div>
-        </div>
-
-        <div class="related-card">
-            <div class="img-box">
-                <img src="../assets/products/shorts.png" alt="Shorts">
-            </div>
-            <div class="info-box">
-                <a href="#" class="rp-title">Xiaomi Redmi 8 Original</a>
-                <span class="rp-price">$32.00-$40.00</span>
-            </div>
-        </div>
-
-        <div class="related-card">
-            <div class="img-box">
-                <img src="../assets/products/kettle.png" alt="Kettle">
-            </div>
-            <div class="info-box">
-                <a href="#" class="rp-title">Xiaomi Redmi 8 Original</a>
-                <span class="rp-price">$32.00-$40.00</span>
-            </div>
-        </div>
-
-        <div class="related-card">
-            <div class="img-box">
-                <img src="../assets/products/stand.png" alt="Stand">
-            </div>
-            <div class="info-box">
-                <a href="#" class="rp-title">Xiaomi Redmi 8 Original</a>
-                <span class="rp-price">$32.00-$40.00</span>
-            </div>
-        </div>
     </div>
 </section>
 <div class="discount-banner-placeholder"></div>
@@ -374,5 +307,6 @@
                 document.querySelector('.footer-placeholder').innerHTML = data;
             });
     </script>
+    <script src="/script/main.js"></script>
 </body>
 </html>
