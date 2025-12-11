@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../css/variables.css">
   <link rel="stylesheet" href="../css/utility.css">
   <link rel="stylesheet" href="../css/productListing.css">
+  <link rel="stylesheet" href="/css/proGrid.css">
   <link rel="stylesheet" href="../css/styles.css">
   
   <title>Document</title>
@@ -258,10 +259,10 @@
                 </div>
 
                 <div class="view-toggles">
-                    <button class="btn-icon active">
+                    <button class="btn-icon active" id="btn-icon-list">
                         <img src="../assets/Layout/Form/input-group/Icon/control/list.png" alt="List">
                     </button>
-                    <button class="btn-icon">
+                    <button class="btn-icon" id="btn-icon-grid">
                         <img src="../assets/Layout/Form/input-group/Icon/control/grid.png" alt="Grid">
                     </button>
                 </div>
@@ -270,46 +271,7 @@
 
         <div class="products-wrapper">
             
-            <article class="product-card">
-                <div class="card-image">
-                    <img src="../assets/Image/tech/image 23.png" alt="iPhone" height="
-187.6px">
-                </div>
-                <div class="card-details">
-                    <div class="card-header">
-                        <h4>Canon Cmera EOS 2000, Black 10x zoom</h4>
-                        <button class="btn-fav">
-                            <img src="../assets/Layout/Form/input-group/Icon/control/fav.png" alt="Fav">
-                        </button>
-                    </div>
-                    
-                    <div class="price-info">
-                        <span class="price-current">$998.00</span>
-                        <span class="price-old">$1128.00</span>
-                    </div>
-
-                    <div class="rating-info">
-                        <div class="stars">
-                            <img src="../assets/icons/star-fill.png" alt="star">
-                            <img src="../assets/icons/star-fill.png" alt="star">
-                            <img src="../assets/icons/star-fill.png" alt="star">
-                            <img src="../assets/icons/star-fill.png" alt="star">
-                            <img src="../assets/icons/star-empty.png" alt="star">
-                        </div>
-                        <span class="rating-score">7.5</span>
-                        <span class="dot"></span>
-                        <span class="orders-count">154 orders</span>
-                        <span class="dot"></span>
-                        <span class="shipping-status">Free Shipping</span>
-                    </div>
-
-                    <p class="product-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-
-                    <a href="#" class="view-link">View details</a>
-                </div>
-            </article>
+           
 
             <article class="product-card">
                 <div class="card-image">
@@ -404,5 +366,6 @@ fetch('../components/footer.html')
     .then(response => response.text())
     .then(data => document.querySelector('.footerplaceholder').innerHTML = data);
 </script>
+<script src="/script/main.js"></script>
 </body>
 </html>

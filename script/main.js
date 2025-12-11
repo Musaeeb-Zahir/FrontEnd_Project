@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", (event) => {
   if (document.querySelector(".hero-container")) {
+    loadCategoryList();
     updateUIForDealElements();
     updateUIHomeElements();
     updateUIElectronicItems();
@@ -8,7 +9,17 @@ document.addEventListener("DOMContentLoaded", (event) => {
   if (document.querySelector(".product-detail-placeholder")) {
     loadProductDetailPage();
   }
+  if (document.querySelector(".listing-page-container")) {
+    loadCategoryListingItems();
+    document
+      .querySelector("#btn-icon-grid")
+      .addEventListener("click", handleGridClick);
+  }
+  document
+    .querySelector("#btn-icon-list")
+    .addEventListener("click", handleListClick);
 });
+// Fetch products data
 async function fetchProductsData() {
   try {
     const response = await fetch("/productData/products.json");
@@ -18,10 +29,24 @@ async function fetchProductsData() {
     console.error("Error fetching deals:", error);
   }
 }
+// load category list navgation
+async function loadCategoryList() {
+  const categoryListContainer = document.querySelector(
+    "#category-list-navigation"
+  );
+  const data = await fetchProductsData();
+  const categories = [...new Set(data.map((item) => item.category))];
+  categories.forEach((category) => {
+    categoryListContainer.innerHTML += `
+    <a href="/pages/productListing.html?category=${category}">
+      <li>${category}</li>
+    </a>
+    `;
+  });
+}
 
 const dealItems = document.querySelector(".deal-items");
-
-// Filter function
+// Filter function for deal items
 async function filterDealItems() {
   const data = await fetchProductsData();
   return data.filter((item) => item.price.discount_label !== null);
@@ -44,8 +69,6 @@ async function updateUIForDealElements() {
   });
 }
 
-// updateUIForDealElements();
-
 //Load Home and outdoor items
 const categoryGridContainer = document.querySelector(".category-grid");
 const filterHomeAndOutdoorItems = async () => {
@@ -67,7 +90,6 @@ async function updateUIHomeElements() {
   `;
   });
 }
-// updateUIHomeElements();
 
 //Load electronics items
 const electronicsGridContainer = document.querySelector("#electronics-grid");
@@ -90,7 +112,6 @@ async function updateUIElectronicItems() {
   `;
   });
 }
-// updateUIElectronicItems();
 
 //laod recommanded items
 const recommandedItemsGrid = document.querySelector(".recommended-items-grid");
@@ -112,7 +133,6 @@ async function loadUIforrecommandedItems() {
     `;
   });
 }
-// loadUIforrecommandedItems();
 
 // Load product detail page
 async function loadProductDetailPage() {
@@ -204,4 +224,83 @@ async function loadProductDetailUI(product) {
                     </a>
     `;
   });
+}
+
+// Load category listing items
+async function loadCategoryListingItems() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const categoryName = urlParams.get("category");
+  const listingContainer = document.querySelector(".products-wrapper");
+  const paginationWrapper = document.querySelector(".pagination-wrapper");
+  const allItems = await fetchProductsData();
+  const categoryItems = allItems.filter(
+    (item) => item.category === categoryName
+  );
+  listingContainer.innerHTML = "";
+  categoryItems.forEach((element) => {
+    listingContainer.innerHTML += `
+     <article class="product-card">
+                <div class="card-image">
+                    <img src=${element.images.main} alt="iPhone" height="
+187.6px">
+                </div>
+                <div class="card-details">
+                    <div class="card-header">
+                        <h4>${element.title}</h4>
+                        <button class="btn-fav">
+                            <img src="../assets/Layout/Form/input-group/Icon/control/fav.png" alt="Fav">
+                        </button>
+                    </div>
+                    
+                    <div class="price-info">
+                        <span class="price-current">$${element.price.current}</span>
+                        <span class="price-old">$${element.price.old}</span>
+                    </div>
+
+                    <div class="rating-info">
+                        <div class="stars">
+                            <img src="../assets/icons/star-fill.png" alt="star">
+                            <img src="../assets/icons/star-fill.png" alt="star">
+                            <img src="../assets/icons/star-fill.png" alt="star">
+                            <img src="../assets/icons/star-fill.png" alt="star">
+                            <img src="../assets/icons/star-empty.png" alt="star">
+                        </div>
+                        <span class="rating-score">${element.rating.score}</span>
+                        <span class="dot"></span>
+                        <span class="orders-count">${element.sales.sold_count} orders</span>
+                        <span class="dot"></span>
+                        <span class="shipping-status">${element.supplier.shipping}</span>
+                    </div>
+
+                    <p class="product-desc">
+                        ${element.description}
+                    </p>
+
+                    <a href="/pages/productDetail.html?id=${element.id}" class="view-link">View details</a>
+                </div>
+            </article>
+    `;
+    if (categoryItems.length <= 6) {
+      paginationWrapper.classList.add("hidden");
+    }
+  });
+}
+
+//switch list to gird
+const gridBtn = document.querySelector("#btn-icon-grid");
+const listBtn = document.querySelector("#btn-icon-list");
+function handleGridClick() {
+  const container = document.querySelector(".products-wrapper");
+  // Sirf Parent par class toggle karein
+  container.classList.add("grid-mode");
+  container.classList.remove("list-mode");
+  gridBtn.classList.add("active");
+  listBtn.classList.remove("active");
+}
+function handleListClick() {
+  const container = document.querySelector(".products-wrapper");
+  container.classList.remove("grid-mode");
+  container.classList.add("list-mode");
+  gridBtn.classList.remove("active");
+  listBtn.classList.add("active");
 }

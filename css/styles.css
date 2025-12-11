@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} 
+}
 header {
   background-color: #ffffff;
   padding: 0px 85px;
@@ -140,21 +140,22 @@ header {
 }
 .hero-container nav {
   width: 250px;
-  background-color: #8b96a5;
   border-radius: 6px;
 }
 .hero-container nav ul {
-  padding: 10px;
+  padding: 0px 15px;
   display: flex;
   flex-direction: column;
   gap: 2px;
 }
 .hero-container nav li {
   list-style: none;
+  display: flex;
+  align-items: center;
   padding: 6px;
   width: 230px;
-  height: 35px;
-  background-color: #55bdc3;
+  height: 40px;
+  background-color: #e5f1ff;
   border-radius: 5px;
   text-align: start;
 }
