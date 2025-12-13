@@ -92,6 +92,7 @@ header {
 .sub-nav-links {
   display: flex;
   gap: 29px;
+  align-items: center;
 }
 .sub-nav-links li {
   list-style: none;
@@ -311,7 +312,13 @@ header {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+.home-and-outdoor-main-category {
   background-image: url("/assets/Image/backgrounds/Group\ 969.png");
+  background-size: cover;
+}
+.electronics-main-category {
+  background-image: url("/assets/Image/backgrounds/image\ 98.png");
   background-size: cover;
 }
 .main-category > button {
@@ -461,6 +468,7 @@ textarea::placeholder {
   border: 1px solid var(--primary-line-clr);
   border-radius: 6px;
   background-color: #f7fafc;
+  height: 310px;
 }
 .recommended-item div {
   display: flex;
@@ -485,11 +493,10 @@ textarea::placeholder {
   gap: 30px;
   height: 256px;
 }
-.extra-service-items {
+.extra-services-items {
   display: flex;
   align-items: center;
-  gap: 8px;
-  justify-content: center;
+  gap: 20px;
   height: 200px;
 }
 .extra-service-item {
@@ -505,6 +512,7 @@ textarea::placeholder {
 .extra-service-item .bg-image-section {
   width: 100%;
   height: 120px;
+  border-radius: 5px;
   background-image: url("/assets/Image/backgrounds/Mask\ group.png");
 }
 .extra-service-item > p {
@@ -663,6 +671,11 @@ textarea::placeholder {
 .footer-brand-info {
   width: 20%;
   padding-left: 30px;
+}
+.social-links {
+  display: flex;
+  gap: 11px;
+  padding-top: 12px;
 }
 .social-links li {
   list-style: none;

@@ -14,10 +14,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
     document
       .querySelector("#btn-icon-grid")
       .addEventListener("click", handleGridClick);
+    document
+      .querySelector("#btn-icon-list")
+      .addEventListener("click", handleListClick);
   }
-  document
-    .querySelector("#btn-icon-list")
-    .addEventListener("click", handleListClick);
+
+  if (document.querySelector(".cart-section")) {
+    renderSavedForLater();
+  }
 });
 // Fetch products data
 async function fetchProductsData() {
@@ -127,7 +131,7 @@ async function loadUIforrecommandedItems() {
         <p class="price">
           <strong>$${element.price.current}</strong>
         </p>
-        <p>${element.description}</p></div>
+        <p>${element.title}</p></div>
       </article>
       </a>
     `;
@@ -247,7 +251,7 @@ async function loadCategoryListingItems() {
                 <div class="card-details">
                     <div class="card-header">
                         <h4>${element.title}</h4>
-                        <button class="btn-fav">
+                        <button class="btn-fav" onclick="saveForLater(${element.id})">
                             <img src="../assets/Layout/Form/input-group/Icon/control/fav.png" alt="Fav">
                         </button>
                     </div>
@@ -303,4 +307,51 @@ function handleListClick() {
   container.classList.add("list-mode");
   gridBtn.classList.remove("active");
   listBtn.classList.add("active");
+}
+
+//load and add saved for later cart
+const storedData = localStorage.getItem("wishlistIds");
+let savedItems = storedData ? JSON.parse(storedData) : [];
+async function saveForLater(elementid) {
+  const index = savedItems.indexOf(elementid);
+  if (index !== -1) {
+    savedItems.splice(index, 1);
+    console.log(`Removed ${elementid}`);
+  } else {
+    savedItems.unshift(elementid);
+    console.log(`Added ${elementid}`);
+  }
+  localStorage.setItem("wishlistIds", JSON.stringify(savedItems));
+  console.log("Updated List:", savedItems);
+}
+
+async function renderSavedForLater() {
+  const savedGrid = document.querySelector(".saved-grid");
+  const savedItemsForlater = JSON.parse(localStorage.getItem("wishlistIds"));
+  const products = await fetchProductsData();
+  const savedIdsNumbers = savedItemsForlater.map(Number);
+  console.log(savedIdsNumbers);
+
+  const wishlistProducts = products.filter((product) => {
+    return savedIdsNumbers.includes(product.id);
+  });
+  savedGrid.innerHTML = "";
+  wishlistProducts.forEach((pro) => {
+    savedGrid.innerHTML += `
+  <article class="saved-card">
+                    <div class="saved-img">
+                        <img src=${pro.images.main}alt="Tablet">
+                    </div>
+                    <div class="saved-info">
+                        <span class="saved-price">$${pro.price.current}</span>
+                        <h4 class="saved-title">${pro.title}</h4>
+                        <button class="btn-move-cart" >
+                            <span class="material-symbols-outlined">
+shopping_cart
+</span>  Move to cart
+                        </button>
+                    </div>
+                </article>
+  `;
+  });
 }
