@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/productDetail.css">
-  <link rel="stylesheet" href="../css/variables.css">
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="/css/productDetail.css">
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/utility.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <title>Document</title>
 </head>
 <body>
@@ -20,9 +22,7 @@
                   <img src="../assets/Layout/alibaba/Image/cloth/2 1.png" alt="Mens T-shirt" id="product-detail-image">
               </div>
               <div class="thumbnail-list">
-                  <button class="thumb-btn active">
-                      <img src="../assets/products/shirt-thumb-1.png" alt="Thumb">
-                  </button>
+                 
                   <button class="thumb-btn">
                       <img src="../assets/products/shirt-thumb-2.png" alt="Thumb">
                   </button>
@@ -151,77 +151,49 @@
               </div>
   
               <button class="btn-save-later">
-                  <img src="../assets/icons/heart-blue.png" alt="heart">
+                  <img src="/assets/icons/SVG/heart.svg" alt="heart">
                   <span>Save for later</span>
               </button>
           </aside>
-  
       </div>
   </section>
   <section class="description-section">
     <div class="container-grid">
-        
         <div class="details-card">
             
             <nav class="tab-nav">
-                <button class="tab-link active">Description</button>
-                <button class="tab-link">Reviews</button>
-                <button class="tab-link">Shipping</button>
-                <button class="tab-link">About seller</button>
+               <button class="tab-link active" onclick="openTab(event, 'description-tab')">Description</button>
+                <button class="tab-link" onclick="openTab(event, 'reviews')">Reviews</button>
+                <button class="tab-link" onclick="openTab(event, 'shipping')">Shipping</button>
+                <button class="tab-link" onclick="openTab(event, 'seller')">About seller</button>
             </nav>
-
-            <div class="tab-content">
+          <div class="about-product-container">
+            <div class="tab-content active-content" id="description-tab">
                 <div class="content-text">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                    </p>
                 </div>
 
                 <table class="spec-table">
-                    <tr>
-                        <td class="spec-label">Model</td>
-                        <td class="spec-value">#8786867</td>
-                    </tr>
-                    <tr>
-                        <td class="spec-label">Style</td>
-                        <td class="spec-value">Classic style</td>
-                    </tr>
-                    <tr>
-                        <td class="spec-label">Certificate</td>
-                        <td class="spec-value">ISO-898921212</td>
-                    </tr>
-                    <tr>
-                        <td class="spec-label">Size</td>
-                        <td class="spec-value">34mm x 450mm x 19mm</td>
-                    </tr>
-                    <tr>
-                        <td class="spec-label">Memory</td>
-                        <td class="spec-value">36GB RAM</td>
-                    </tr>
+                   
                 </table>
 
                 <ul class="feature-check-list">
-                    <li>
-                        <img src="../assets/icons/check.png" alt="check">
-                        <span>Some great feature name here</span>
-                    </li>
-                    <li>
-                        <img src="../assets/icons/check.png" alt="check">
-                        <span>Lorem ipsum dolor sit amet, consectetur</span>
-                    </li>
-                    <li>
-                        <img src="../assets/icons/check.png" alt="check">
-                        <span>Duis aute irure dolor in reprehenderit</span>
-                    </li>
-                    <li>
-                        <img src="../assets/icons/check.png" alt="check">
-                        <span>Some great feature name here</span>
-                    </li>
                 </ul>
             </div>
+        <div id="reviews" class="tab-content">
+        <div class="review-list"></div>
+    </div>
+
+    <div id="shipping" class="tab-content">
+        <table class="specs-table">
+         
+        </table>
+    </div>
+
+    <div id="seller" class="tab-content">
+        
+    </div>
+            </div>
+
         </div>
 
         <aside class="related-sidebar">

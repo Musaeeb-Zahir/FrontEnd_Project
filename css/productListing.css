@@ -464,7 +464,7 @@
   background-color: var(--primary-full-background-clr);
   border-color: var(--primary-line-clr);
   color: var(--primary-text-color);
-  cursor: default;
+  cursor: default;  
 }
 
 .page-btn:hover:not(.active) {

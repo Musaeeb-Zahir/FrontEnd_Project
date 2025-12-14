@@ -253,7 +253,10 @@
     "min_order": "1 pcs",
     "images": {
       "main": "/assets/Image/tech/image 33.png",
-      "gallery": []
+      "gallery": [
+          "/assets/products/shirt-thumb-1.png",
+        "/assets/products/shirt-thumb-2.png"
+      ]
     },
     "rating": {
       "score": 8.0,

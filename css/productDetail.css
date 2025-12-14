@@ -336,7 +336,9 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   overflow: hidden;
 }
-
+.about-product-container {
+  height: 618px;
+}
 .tab-nav {
   display: flex;
   border-bottom: 1px solid var(--primary-line-clr);
@@ -362,8 +364,22 @@
 
 .tab-content {
   padding: 20px;
+  display: none; /* Default: Sab chupa do */
+  animation: fadeIn 0.4s;
 }
-
+.tab-content.active-content {
+  display: block;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .content-text p {
   color: var(--primary-text-color);
   font-size: 14px;
@@ -597,4 +613,154 @@
 
 .btn-shop:hover {
   transform: scale(1.05);
+}
+
+.tab-link {
+  background: none;
+  border: none;
+  padding: 15px 25px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #8b96a5; /* Gray text for inactive */
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s;
+}
+
+.tab-link:hover {
+  color: #0d6efd; /* Blue on hover */
+}
+.tab-link:target {
+  display: block;
+}
+
+/* Active Tab Style (Image jaisa) */
+.tab-link.active {
+  color: #0d6efd;
+  border-bottom: 2px solid #0d6efd;
+  font-weight: 600;
+}
+
+/* --- CONTENT BOX --- */
+.tab-content-box {
+  border: 1px solid #e0e0e0; /* Box ka border */
+  border-top: none; /* Upar border nahi chahiye kyunki tabs hain */
+  padding: 25px;
+  background: #fff;
+  min-height: 200px;
+}
+
+/* Hide inactive tabs */
+.tab-pane {
+  display: none;
+}
+
+/* Show active tab */
+.tab-pane {
+  display: none;
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* --- REVIEWS STYLE --- */
+.review-item {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+.review-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.reviewer-name {
+  font-weight: bold;
+  color: #333;
+}
+.review-date {
+  font-size: 13px;
+  color: #999;
+  display: block;
+  margin-bottom: 8px;
+}
+.review-text {
+  color: #505050;
+  line-height: 1.6;
+}
+.text-warning {
+  color: #ff9017;
+} /* Star Color */
+.text-gray {
+  color: #d4d4d4;
+}
+
+/* --- SHIPPING TABLE STYLE (Same as Specs) --- */
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.specs-table td {
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+}
+.specs-table .label {
+  background-color: #f7f8f9; /* Gray background for labels */
+  color: #505050;
+  width: 30%;
+  font-weight: 500;
+}
+
+/* --- SELLER PROFILE STYLE --- */
+.seller-profile {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.seller-img {
+  width: 60px;
+  height: 60px;
+  background: #eef2f5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #0d6efd;
+}
+.seller-info h4 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+}
+.seller-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  color: #8b96a5;
+  margin-bottom: 10px;
+}
+.seller-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.btn-msg {
+  padding: 8px 15px;
+  background: white;
+  border: 1px solid #0d6efd;
+  color: #0d6efd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-msg:hover {
+  background: #0d6efd;
+  color: white;
 }

@@ -6,8 +6,21 @@ document.addEventListener("DOMContentLoaded", (event) => {
     updateUIElectronicItems();
     loadUIforrecommandedItems();
   }
+
   if (document.querySelector(".product-detail-placeholder")) {
     loadProductDetailPage();
+    window.openTab = function openTab(evt, tabName) {
+      const allContents = document.querySelectorAll(".tab-content");
+      allContents.forEach((content) => {
+        content.classList.remove("active-content");
+      });
+      const allButtons = document.querySelectorAll(".tab-link");
+      allButtons.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+      evt.currentTarget.classList.add("active");
+      document.getElementById(tabName).classList.add("active-content");
+    };
   }
   if (document.querySelector(".listing-page-container")) {
     loadCategoryListingItems();
@@ -160,7 +173,7 @@ async function loadProductDetailUI(product) {
     mainImage: document.getElementById("product-detail-image"),
     title: document.querySelector(".product-title"),
     stockText: document.querySelector(".stock-status"),
-    // thumbnails: document.querySelector(".thumbnail-list"),
+    thumbnails: document.querySelector(".thumbnail-list"),
     // ratingStars: document.querySelector(".rating-stars"),
     reviewsCount: document.querySelector("#reviews-count"),
     soldCount: document.querySelector("#sold-count"),
@@ -171,7 +184,7 @@ async function loadProductDetailUI(product) {
     // supplierFlag: document.querySelector(".supplier-flag"),
     // supplierLocation: document.querySelector(".supplier-location"),
     // supplierShipping: document.querySelector(".supplier-shipping"),
-    descriptionText: document.querySelector(".content-text p"),
+    // descriptionText: document.querySelector(".content-text p"),
     // modelId: document.querySelector(".model-id"),
     featuresList: document.getElementById("features-list"),
   };
@@ -181,7 +194,117 @@ async function loadProductDetailUI(product) {
   el.reviewsCount.textContent = `${product.sales.reviews_count} Reviews`;
   el.soldCount.textContent = `${product.sales.sold_count} Sold`;
 
-  el.descriptionText.textContent = product.description;
+  // el.descriptionText.textContent = product.description;
+
+  //view all thumnail list
+  el.thumbnails.innerHTML = "";
+  if (product.images.gallery.length <= 0) {
+    el.thumbnails.innerHTML = "";
+  } else {
+    product.images.gallery.forEach((img) => {
+      el.thumbnails.innerHTML += `
+     <button class="thumb-btn active">
+                      <img src=${img} alt="Thumb">
+                  </button>
+    `;
+    });
+  }
+  //load description tab
+  const specTable = document.querySelector(".spec-table");
+  for (const [key, value] of Object.entries(product.specifications)) {
+    specTable.innerHTML = "";
+    specTable.innerHTML += `
+  <tr>
+  <td class="spec-label">${key}</td>
+  <td class="spec-value">${value}</td>
+  </tr>
+  `;
+  }
+  //load features list
+  const featureCheckListContainer = document.querySelector(
+    ".feature-check-list"
+  );
+  featureCheckListContainer.innerHTML = "";
+  product.features.forEach((feature) => {
+    featureCheckListContainer.innerHTML += `
+    <li>
+                       <i class="fa-solid fa-check opacity"></i>
+                        <span>${feature}</span>
+                    </li>
+    `;
+  });
+
+  //load user reviews
+  const reviewsContainer = document.querySelector(".review-list");
+  reviewsContainer.innerHTML = "";
+  product.reviews.forEach((review) => {
+    reviewsContainer.innerHTML += `
+<div class="review-item">
+                <div class="review-head">
+                    <span class="reviewer-name">${review.user}</span>
+                    <div class="stars">
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-gray"></i>
+                        <span class="rating-num">${review.rating}</span>
+                    </div>
+                </div>
+                <span class="review-date">${review.date}</span>
+                <p class="review-text">${review.comment}</p>
+            </div>
+
+`;
+  });
+  //load shipping detail
+  const shippingContainer = document.querySelector(".specs-table");
+  for (const [key, value] of Object.entries(product.supplier)) {
+    console.log(`${key}: ${value}`);
+    shippingContainer.innerHTML += `
+  <tr>
+                <td class="label">${key}</td>
+                <td>${value}</td>
+            </tr>
+  `;
+  }
+
+  //load seller detail
+  const sellerContainer = document.querySelector("#seller");
+  if (
+    !product.sellerInfo ||
+    product.sellerInfo.length === 0 ||
+    product.sellerInfo === null
+  ) {
+    sellerContainer.innerHTML = "<p>No seller information available.</p>";
+  } else {
+    product.seller.forEach((sellerInfo) => {
+      sellerContainer.innerHTML = "";
+      sellerContainer.innerHTML += `
+     <div class="seller-profile">
+            <div class="seller-img">
+                <span class="seller-initial">${sellerInfo.name[0].toUpperCase()}</span> </div>
+            <div class="seller-info">
+                <h4>${sellerInfo.name}</h4>
+                <div class="seller-meta">
+                    <span class="country">
+                        <img src=${
+                          sellerInfo.flag
+                        } alt="flag" class="icon-xs"> Germany
+                    </span>
+                    <span class="verified">
+                        <i class="fa-solid fa-shield-halved"></i> ${
+                          sellerInfo.verified_status
+                        }
+                    </span>
+                </div>
+                <p class="seller-desc">${sellerInfo.description}</p>
+                <button class="btn-msg">Contact Seller</button>
+            </div>
+        </div>
+      `;
+    });
+  }
 
   //load related items
   const relatedItemsContainer = document.querySelector(".related-grid");
