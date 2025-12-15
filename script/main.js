@@ -448,6 +448,15 @@ async function saveForLater(elementid) {
   console.log("Updated List:", savedItems);
 }
 
+//hide and show filter list in lsition page
+function toggleFilterList(id) {
+  const filterList = document.querySelector(`#${id}`);
+  filterList.classList.toggle("display-none");
+  event.target.src = event.target.src.includes("Vector.png")
+    ? "/assets/Layout/Form/input-group/Icon/control/Vector2.png"
+    : "/assets/Layout/Form/input-group/Icon/control/Vector.png";
+}
+
 async function renderSavedForLater() {
   const savedGrid = document.querySelector(".saved-grid");
   const savedItemsForlater = JSON.parse(localStorage.getItem("wishlistIds"));
@@ -468,7 +477,7 @@ async function renderSavedForLater() {
                     <div class="saved-info">
                         <span class="saved-price">$${pro.price.current}</span>
                         <h4 class="saved-title">${pro.title}</h4>
-                        <button class="btn-move-cart" >
+                        <button class="btn-move-cart" onclick="moveToCart(${pro.id})">
                             <span class="material-symbols-outlined">
 shopping_cart
 </span>  Move to cart
@@ -478,3 +487,122 @@ shopping_cart
   `;
   });
 }
+//render cart UI
+async function renderCartUI() {
+  const cartContainer = document.querySelector(".cart-main");
+  const cartItemsStored = sessionStorage.getItem("cartItems");
+  const cartItems = cartItemsStored ? JSON.parse(cartItemsStored) : [];
+
+  // check empty cart
+  if (cartItems.length === 0) {
+    cartContainer.innerHTML = "<p>Your cart is empty</p>";
+    return;
+  }
+
+  // Products fetch
+  const products = await fetchProductsData();
+
+  const cartProducts = products.filter((product) => {
+    return (
+      cartItems.includes(product.id) || cartItems.includes(String(product.id))
+    );
+  });
+
+  cartContainer.innerHTML = "";
+  cartProducts.forEach((element) => {
+    cartContainer.innerHTML += `
+        <article class="cart-item">
+
+                    <figure class="item-img">
+
+                        <img src=${element.images.main} alt="T-shirt">
+
+                    </figure>
+
+                    <div class="item-info">
+
+                        <div class="info-left">
+
+                            <h4>${element.slug}</h4>
+
+                            <p class="item-specs">Size: ${
+                              element.specifications.size
+                                ? element.specifications.size
+                                : ""
+                            }, Color: ${
+      element.specifications.color ? element.specifications.color : ""
+    }, Material: ${
+      element.specifications.Material ? element.specifications.Material : ""
+    }</p>
+
+                            <p class="seller-name">Seller: ${
+                              element.seller ? element.seller : ""
+                            }</p>
+
+
+
+                            <div class="action-btns">
+
+                                <button class="btn-remove" onclick="removeFromCart(${
+                                  element.id
+                                })">Remove</button>
+
+                                <button class="btn-save" onclick="saveForLater(${
+                                  element.id
+                                })">Save for later</button>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="info-right">
+
+                            <span class="item-price">${
+                              element.price.current
+                            }</span>
+
+                            <div class="qty-select">
+
+                                <select>
+
+                                    <option value="9">Qty: 9</option>
+
+                                    <option value="1">Qty: 1</option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+        `;
+  });
+}
+
+async function moveToCart(productid) {
+  let cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
+  if (!cartItems.includes(productid)) {
+    cartItems.unshift(productid);
+    sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
+    console.log(`Added ${productid}`);
+
+    await renderCartUI();
+  } else {
+    console.log("Item already in cart");
+  }
+}
+
+async function removeFromCart(id) {
+  let cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
+  const updatedItems = cartItems.filter((e) => e != id);
+  sessionStorage.setItem("cartItems", JSON.stringify(updatedItems));
+  await renderCartUI();
+}
+document.addEventListener("DOMContentLoaded", () => {
+  renderCartUI();
+});

@@ -51,9 +51,9 @@
         <div class="filter-group">
             <div class="filter-header">
                 <h3>Category</h3>
-                <img src="../assets/Layout/Form/input-group/Icon/control/Vector.png" alt="toggle" class="icon-sm">
+                <img src="/assets/Layout/Form/input-group/Icon/control/Vector.png" alt="toggle" class="icon-sm toggleBtn" onclick="toggleFilterList('category-filter')">
             </div>
-            <ul class="filter-list">
+            <ul class="filter-list" id="category-filter">
                 <li><a href="#">Mobile accessory</a></li>
                 <li><a href="#">Electronics</a></li>
                 <li><a href="#">Smartphones</a></li>
@@ -65,9 +65,9 @@
         <div class="filter-group">
             <div class="filter-header">
                 <h3>Brands</h3>
-                <img src="../assets/Layout/Form/input-group/Icon/control/Vector.png" alt="toggle" class="icon-sm">
+                <img src="/assets/Layout/Form/input-group/Icon/control/Vector.png" alt="toggle" class="icon-sm" onclick="toggleFilterList('brand-filter')">
             </div>
-            <ul class="filter-list checkbox-list">
+            <ul class="filter-list checkbox-list"  id="brand-filter">
                 <li>
                     <label>
                         <input type="checkbox"> <span>Samsung</span>
@@ -100,9 +100,9 @@
         <div class="filter-group">
     <div class="filter-header">
         <h3>Features</h3>
-        <img src="../assets/Layout/Form/input-group/Icon/control/Vector.png" alt="toggle" class="icon-sm">
+        <img src="/assets/Layout/Form/input-group/Icon/control/Vector.png" alt="toggle" class="icon-sm" onclick="toggleFilterList('features-filter')">
     </div>
-    <ul class="filter-list checkbox-list">
+    <ul class="filter-list checkbox-list" id="features-filter">
         <li>
             <label>
                 <input type="checkbox"> <span>Metallic</span>
@@ -135,12 +135,12 @@
         <div class="filter-group">
             <div class="filter-header">
                 <h3>Price range</h3>
-                <img src="../assets/Layout/Form/input-group/Icon/control/Vector.png" alt="toggle" class="icon-sm">
+                <img src="/assets/Layout/Form/input-group/Icon/control/Vector.png" alt="toggle" class="icon-sm" onclick="toggleFilterList('price-filter')">
             </div>
-            <div class="range-slider">
+            <div class="range-slider"id="price-filter">
                 <input type="range" min="0" max="10000">
             </div>
-            <div class="price-inputs">
+            <div class="price-inputs ">
                 <div class="input-wrap">
                     <label>Min</label>
                     <input type="number" placeholder="0">
@@ -156,9 +156,9 @@
         <div class="filter-group">
             <div class="filter-header">
                 <h3>Condition</h3>
-                <img src="../assets/Layout/Form/input-group/Icon/control/Vector.png" alt="toggle" class="icon-sm">
+                <img src="/assets/Layout/Form/input-group/Icon/control/Vector.png" alt="toggle" class="icon-sm" onclick="toggleFilterList('condition-filter')">
             </div>
-            <ul class="filter-list radio-list">
+            <ul class="filter-list radio-list" id="condition-filter">
                 <li>
                     <label>
                         <input type="radio" name="condition" checked> <span>Any</span>
@@ -184,18 +184,18 @@
      <div class="filter-group">
     <div class="filter-header">
         <h3>Ratings</h3>
-        <img src="../assets/Layout/Form/input-group/Icon/control/Vector.png" alt="toggle" class="icon-sm">
+        <img src="/assets/Layout/Form/input-group/Icon/control/Vector.png" alt="toggle" class="icon-sm" onclick="toggleFilterList('rating-filter')">
     </div>
-    <ul class="filter-list checkbox-list">
+    <ul class="filter-list checkbox-list" id="rating-filter">
         <li>
             <label>
                 <input type="checkbox">
                 <div class="rating-stars">
-                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
                 </div>
             </label>
         </li>
@@ -203,11 +203,11 @@
             <label>
                 <input type="checkbox">
                 <div class="rating-stars">
-                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
                 </div>
             </label>
         </li>
@@ -215,11 +215,11 @@
             <label>
                 <input type="checkbox">
                 <div class="rating-stars">
-                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
                 </div>
             </label>
         </li>
@@ -227,11 +227,11 @@
             <label>
                 <input type="checkbox">
                 <div class="rating-stars">
-                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="../assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
                 </div>
             </label>
         </li>
@@ -260,10 +260,10 @@
 
                 <div class="view-toggles">
                     <button class="btn-icon active" id="btn-icon-list">
-                        <img src="../assets/Layout/Form/input-group/Icon/control/list.png" alt="List">
+                        <img src="/assets/Layout/Form/input-group/Icon/control/list.png" alt="List">
                     </button>
                     <button class="btn-icon" id="btn-icon-grid">
-                        <img src="../assets/Layout/Form/input-group/Icon/control/grid.png" alt="Grid">
+                        <img src="/assets/Layout/Form/input-group/Icon/control/grid.png" alt="Grid">
                     </button>
                 </div>
             </div>
@@ -275,13 +275,13 @@
 
             <article class="product-card">
                 <div class="card-image">
-                    <img src="../assets/products/gopro.png" alt="GoPro">
+                    <img src="/assets/products/gopro.png" alt="GoPro">
                 </div>
                 <div class="card-details">
                     <div class="card-header">
                         <h4>GoPro HERO6 4K Action Camera - Black</h4>
                         <button class="btn-fav" ">
-                            <img src="../assets/icons/heart.png" alt="Fav">
+                            <img src="/assets/icons/heart.png" alt="Fav">
                         </button>
                     </div>
                     
@@ -291,11 +291,11 @@
 
                     <div class="rating-info">
                         <div class="stars">
-                            <img src="../assets/icons/star-fill.png" alt="star">
-                            <img src="../assets/icons/star-fill.png" alt="star">
-                            <img src="../assets/icons/star-fill.png" alt="star">
-                            <img src="../assets/icons/star-fill.png" alt="star">
-                            <img src="../assets/icons/star-grey.png" alt="star">
+                            <img src="/assets/icons/star-fill.png" alt="star">
+                            <img src="/assets/icons/star-fill.png" alt="star">
+                            <img src="/assets/icons/star-fill.png" alt="star">
+                            <img src="/assets/icons/star-fill.png" alt="star">
+                            <img src="/assets/icons/star-grey.png" alt="star">
                         </div>
                         <span class="rating-score">7.5</span>
                         <span class="dot"></span>
@@ -321,13 +321,13 @@
                     <option value="20">Show 20</option>
                     <option value="50">Show 50</option>
                 </select>
-                <img src="../assets/icons/chevron-down.png" alt="arrow" class="dropdown-icon">
+                <img src="/assets/icons/chevron-down.png" alt="arrow" class="dropdown-icon">
             </div>
         
             <div class="page-controls">
                 
                 <button class="page-btn arrow-btn page-previous ">
-                    <img src="../assets/icons/chevron-left.png" alt="Previous">
+                    <img src="/assets/icons/chevron-left.png" alt="Previous">
                 </button>
         
                 <button class="page-btn active ">1</button>
@@ -337,7 +337,7 @@
                 <button class="page-btn">3</button>
         
                 <button class="page-btn arrow-btn page-next">
-                    <img src="../assets/icons/chevron-right.png" alt="Next">
+                    <img src="/assets/icons/chevron-right.png" alt="Next">
                 </button>
         
             </div>
