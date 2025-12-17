@@ -1,292 +1,649 @@
 [
   {
     "id": 101,
-    "title": "Mens Long Sleeve T-shirt Cotton Base Layer Slim Muscle",
-    "slug": "mens-long-sleeve-tshirt",
+    "title": "Classic Leather Biker Jacket",
+    "slug": "leather-biker-jacket",
     "category": "clothing",
-    "sub_category": "Men's wear",
-    "brand": "Adidas",
-    "price": {
-      "current": 98.00,
-      "old": null,
-      "currency": "USD",
-      "discount_label": null
-    },
+    "sub_category": "Outerwear",
+    "brand": "Zara",
+    "price": { "current": 150.00, "old": 200.00, "currency": "USD", "discount_label": "-25%" },
     "stock_status": "In stock",
-    "min_order": "10 pcs",
+    "min_order": "1 pcs",
     "images": {
-      "main": "/assets/Image/tech/6.png",
-      "gallery": [
-        "/assets/products/shirt-thumb-1.png",
-        "/assets/products/shirt-thumb-2.png",
-        "/assets/products/shirt-thumb-3.png",
-        "/assets/products/shirt-thumb-4.png"
-      ]
+      "main": "/assets/Layout/alibaba/Image/cloth/1.png",
+      "gallery": []
     },
-    "rating": {
-      "score": 9.3,
-      "count": 32,
-      "stars": 4.5
-    },
-    "sales": {
-      "sold_count": 154,
-      "reviews_count": 32
-    },
-    "bulk_pricing": [
-      { "range": "50-100 pcs", "price": 98.00 },
-      { "range": "100-700 pcs", "price": 90.00 },
-      { "range": "700+ pcs", "price": 78.00 }
-    ],
-    "specifications": {
-      "Material": "Cotton, Plastic Material",
-      "Design": "Modern nice",
-      "Type": "Classic",
-      "Customization": "Logo and design custom packages",
-      "Protection": "Refund Policy",
-      "Warranty": "2 years full warranty"
-    },
-    "features": [
-      "Breathable fabric",
-      "Soft cotton material",
-      "Available in multiple sizes",
-      "Machine washable"
-    ],
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "supplier": {
-      "name": "Guanjoi Trading LLC",
-      "country": "Germany",
-      "flag": "/assets/icons/germany-flag.png",
-      "verified": true,
-      "shipping": "Worldwide shipping"
-    },
+    "rating": { "score": 9.0, "count": 45, "stars": 4.5 },
+    "sales": { "sold_count": 320, "reviews_count": 45 },
+    "specifications": { "Material": "Genuine Leather", "Size": "S, M, L, XL" },
+    "features": ["Windproof", "Zipper Pockets", "Premium Stitching"],
+    "description": "High-quality genuine leather jacket perfect for winter riders.",
+    "supplier": { "name": "Fashion Hub", "country": "Turkey", "verified": true, "shipping": "Worldwide" },
     "reviews": [
       {
-        "user": "Ali Khan",
+        "user": "James Bond",
         "rating": 5,
-        "date": "2025-11-20",
-        "comment": "Best quality shirt, really liked the fabric."
+        "date": "2025-01-10",
+        "comment": "Fits perfectly, feels premium."
       },
       {
-        "user": "John Doe",
+        "user": "Mark Twain",
         "rating": 4,
-        "date": "2025-10-15",
-        "comment": "Good, but delivery was late."
+        "date": "2025-02-05",
+        "comment": "Good leather but sleeves are slightly long."
       }
     ]
   },
   {
     "id": 102,
-    "title": "GoPro HERO6 4K Action Camera - Black",
-    "slug": "gopro-hero6-4k",
-    "category": "electronics",
-    "sub_category": "Cameras",
-    "brand": "GoPro",
-    "price": {
-      "current": 99.50,
-      "old": 1128.00,
-      "currency": "USD",
-      "discount_label": "-10%"
-    },
-    "stock_status": "Out of stock",
-    "min_order": "1 pcs",
+    "title": "Summer Beach Casual Shorts",
+    "slug": "summer-beach-shorts",
+    "category": "clothing",
+    "sub_category": "Men's wear",
+    "brand": "H&M",
+    "price": { "current": 25.00, "old": null, "currency": "USD", "discount_label": null },
+    "stock_status": "In stock",
+    "min_order": "5 pcs",
     "images": {
-      "main": "/assets/Image/tech/6.png",
-      "gallery": [
-        "/assets/products/camera-side.png",
-        "/assets/products/camera-back.png"
-      ]
+      "main": "/assets/Layout/alibaba/Image/cloth/2.png",
+      "gallery": []
     },
-    "rating": {
-      "score": 7.5,
-      "count": 154,
-      "stars": 4
+    "rating": { "score": 8.5, "count": 20, "stars": 4 },
+    "sales": { "sold_count": 500, "reviews_count": 20 },
+    "specifications": { "Material": "Polyester", "Pattern": "Printed" },
+    "features": ["Quick Dry", "Elastic Waistband", "Breathable"],
+    "description": "Comfortable shorts designed for beach and casual summer wear.",
+    "supplier": { "name": "Beach Vibes", "country": "China", "verified": false, "shipping": "Standard" },
+    "reviews": []
+  },
+  {
+    "id": 103,
+    "title": "Basic Cotton Crew Neck T-Shirt",
+    "slug": "cotton-crew-tshirt",
+    "category": "clothing",
+    "sub_category": "Tops",
+    "brand": "Uniqlo",
+    "price": { "current": 15.00, "old": 20.00, "currency": "USD", "discount_label": "-25%" },
+    "stock_status": "In stock",
+    "min_order": "10 pcs",
+    "images": {
+      "main": "/assets/Layout/alibaba/Image/cloth/3.png",
+      "gallery": []
     },
-    "sales": {
-      "sold_count": 1200,
-      "reviews_count": 154
-    },
-    "bulk_pricing": [], 
-    "specifications": {
-      "Model": "#8786867",
-      "Resolution": "4K Ultra HD",
-      "Memory": "Supports up to 128GB SD",
-      "Battery": "1220mAh lithium-ion",
-      "Waterproof": "Yes, up to 10m"
-    },
-    "features": [
-      "Voice Control",
-      "Touch Screen",
-      "Ultra HD Video",
-      "Waterproof without housing"
-    ],
-    "description": "Capture your adventures in 4K. The GoPro HERO6 Black transforms your adventures into incredible QuikStories right on your phone.",
-    "supplier": {
-      "name": "Tech World Inc",
-      "country": "USA",
-      "flag": "/assets/icons/us-flag.png",
-      "verified": true,
-      "shipping": "Free Shipping"
-    },
+    "rating": { "score": 9.5, "count": 100, "stars": 5 },
+    "sales": { "sold_count": 1200, "reviews_count": 100 },
+    "specifications": { "Material": "100% Cotton", "Fit": "Regular" },
+    "features": ["Soft Fabric", "Color Fastness", "Daily Wear"],
+    "description": "Essential cotton t-shirt available in multiple colors.",
+    "supplier": { "name": "Cotton World", "country": "Bangladesh", "verified": true, "shipping": "Fast Shipping" },
     "reviews": [
       {
-        "user": "Sarah Smith",
+        "user": "Alice Cooper",
         "rating": 5,
-        "date": "2025-12-01",
-        "comment": "Amazing camera for vlogging!"
+        "date": "2025-03-12",
+        "comment": "Very soft and durable."
       }
     ]
   },
   {
-    "id": 103,
-    "title": "Xiaomi Redmi 8 Original Global Version",
-    "slug": "xiaomi-redmi-8",
-    "category": "mobile",
-    "sub_category": "Smartphones",
-    "brand": "Xiaomi",
-    "price": {
-      "current": 120.00,
-      "old": null,
-      "currency": "USD",
-      "discount_label": "-35%"
-    },
+    "id": 104,
+    "title": "Genuine Leather Bi-fold Wallet",
+    "slug": "leather-wallet",
+    "category": "clothing",
+    "sub_category": "Accessories",
+    "brand": "Fossil",
+    "price": { "current": 45.00, "old": 60.00, "currency": "USD", "discount_label": "-30%" },
     "stock_status": "Out of stock",
     "min_order": "1 pcs",
     "images": {
-      "main": "/assets/Image/tech/image 33.png",
+      "main": "/assets/Layout/alibaba/Image/cloth/4.png",
       "gallery": []
     },
-    "rating": {
-      "score": 8.0,
-      "count": 90,
-      "stars": 4
-    },
-    "sales": {
-      "sold_count": 500,
-      "reviews_count": 45
-    },
-    "bulk_pricing": [],
-    "specifications": {
-      "Ram": "4GB",
-      "Storage": "64GB",
-      "Screen": "6.2 inch HD",
-      "Battery": "5000mAh"
-    },
-    "features": [
-      "Dual Camera",
-      "Fingerprint Sensor",
-      "Fast Charging"
-    ],
-    "description": "Great budget phone with massive battery life.",
-    "supplier": {
-      "name": "China Gadgets",
-      "country": "China",
-      "flag": "/assets/icons/china-flag.png",
-      "verified": false,
-      "shipping": "Standard Shipping"
-    },
-    "reviews": []
+    "rating": { "score": 8.8, "count": 60, "stars": 4.5 },
+    "sales": { "sold_count": 400, "reviews_count": 60 },
+    "specifications": { "Material": "Leather", "Slots": "8 Card Slots" },
+    "features": ["RFID Protection", "Slim Design", "Durable"],
+    "description": "Classic leather wallet with plenty of storage for cards and cash.",
+    "supplier": { "name": "Leather Crafts", "country": "Italy", "verified": true, "shipping": "Worldwide" },
+    "reviews": [
+      {
+        "user": "John Doe",
+        "rating": 4,
+        "date": "2024-12-25",
+        "comment": "Nice texture but a bit thick."
+      },
+      {
+        "user": "Sarah Lee",
+        "rating": 5,
+        "date": "2025-01-02",
+        "comment": "Perfect gift for my husband."
+      }
+    ]
   },
   {
     "id": 105,
-    "title": "Xiaomi Redmi 8 Original Global Version",
-    "slug": "xiaomi-redmi-8",
-    "category": "home and outdoor",
-    "sub_category": "Smartphones",
-    "brand": "Xiaomi",
-    "price": {
-      "current": 120.00,
-      "old": null,
-      "currency": "USD",
-      "discount_label": "-35%"
-    },
-    "stock_status": "Out of stock",
+    "title": "Urban Travel Backpack",
+    "slug": "urban-backpack",
+    "category": "clothing",
+    "sub_category": "Bags",
+    "brand": "Samsonite",
+    "price": { "current": 85.00, "old": null, "currency": "USD", "discount_label": null },
+    "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
-      "main": "/assets/Image/tech/image 33.png",
+      "main": "/assets/Layout/alibaba/Image/cloth/5.png",
       "gallery": []
     },
-    "rating": {
-      "score": 8.0,
-      "count": 90,
-      "stars": 4
-    },
-    "sales": {
-      "sold_count": 500,
-      "reviews_count": 45
-    },
-    "bulk_pricing": [],
-    "specifications": {
-      "Ram": "4GB",
-      "Storage": "64GB",
-      "Screen": "6.2 inch HD",
-      "Battery": "5000mAh"
-    },
-    "features": [
-      "Dual Camera",
-      "Fingerprint Sensor",
-      "Fast Charging"
-    ],
-    "description": "Great budget phone with massive battery life.",
-    "supplier": {
-      "name": "China Gadgets",
-      "country": "China",
-      "flag": "/assets/icons/china-flag.png",
-      "verified": false,
-      "shipping": "Standard Shipping"
-    },
+    "rating": { "score": 9.2, "count": 15, "stars": 4.5 },
+    "sales": { "sold_count": 150, "reviews_count": 15 },
+    "specifications": { "Capacity": "30L", "Waterproof": "Yes" },
+    "features": ["Laptop Compartment", "Ergonomic Straps", "USB Port"],
+    "description": "Stylish and functional backpack for daily commute or travel.",
+    "supplier": { "name": "Bag Masters", "country": "Vietnam", "verified": true, "shipping": "Standard" },
     "reviews": []
   },
   {
-    "id": 104,
-    "title": "Infinix Redmi 8 Original Global Version",
-    "slug": "infix-redmi-8",
-    "category": "home and outdoor",
-    "sub_category": "Smartphones",
-    "brand": "Xiaomi",
-    "price": {
-      "current": 120.00,
-      "old": null,
-      "currency": "USD",
-      "discount_label": "-35%"
+    "id": 106,
+    "title": "Men's Classic Wool Trench Coat",
+    "slug": "mens-trench-coat",
+    "category": "clothing",
+    "sub_category": "Outerwear",
+    "brand": "Burberry",
+    "price": { "current": 120.00, "old": 150.00, "currency": "USD", "discount_label": "-20%" },
+    "stock_status": "In stock",
+    "min_order": "1 pcs",
+    "images": {
+      "main": "/assets/Layout/alibaba/Image/cloth/6.png",
+      "gallery": []
     },
+    "rating": { "score": 8.9, "count": 12, "stars": 4.5 },
+    "sales": { "sold_count": 80, "reviews_count": 12 },
+    "specifications": { "Material": "Wool Blend", "Length": "Long" },
+    "features": ["Warm Lining", "Double Breasted", "Formal Look"],
+    "description": "Elegant trench coat suitable for business and formal occasions.",
+    "supplier": { "name": "Gentleman's Choice", "country": "UK", "verified": true, "shipping": "Express" },
+    "reviews": [
+      {
+        "user": "Gentleman Joe",
+        "rating": 5,
+        "date": "2024-11-15",
+        "comment": "Absolutely classy."
+      }
+    ]
+  },
+  {
+    "id": 201,
+    "title": "Modern Velvet Soft Chair",
+    "slug": "velvet-soft-chair",
+    "category": "home and interior",
+    "sub_category": "Furniture",
+    "brand": "IKEA",
+    "price": { "current": 199.00, "old": 250.00, "currency": "USD", "discount_label": "-20%" },
+    "stock_status": "In stock",
+    "min_order": "1 pcs",
+    "images": {
+      "main": "/assets/Image/interior/1.png",
+      "gallery": []
+    },
+    "rating": { "score": 9.4, "count": 55, "stars": 4.5 },
+    "sales": { "sold_count": 210, "reviews_count": 55 },
+    "specifications": { "Material": "Velvet & Wood", "Color": "Teal" },
+    "features": ["Ergonomic Support", "Soft Cushioning", "Modern Design"],
+    "description": "Luxurious velvet chair that adds a touch of elegance to your living room.",
+    "supplier": { "name": "Home Decor Ltd", "country": "Sweden", "verified": true, "shipping": "Freight" },
+    "reviews": [
+      {
+        "user": "Interior Fan",
+        "rating": 5,
+        "date": "2025-01-20",
+        "comment": "Love the color, very vibrant."
+      },
+      {
+        "user": "Relaxed User",
+        "rating": 4,
+        "date": "2025-02-10",
+        "comment": "Comfy but assembling took time."
+      }
+    ]
+  },
+  {
+    "id": 202,
+    "title": "Ceramic Kitchen Dinner Set",
+    "slug": "kitchen-dinner-set",
+    "category": "home and interior",
+    "sub_category": "Kitchenware",
+    "brand": "Corelle",
+    "price": { "current": 89.99, "old": null, "currency": "USD", "discount_label": null },
+    "stock_status": "In stock",
+    "min_order": "2 sets",
+    "images": {
+      "main": "/assets/Image/interior/2.png",
+      "gallery": []
+    },
+    "rating": { "score": 8.7, "count": 30, "stars": 4.5 },
+    "sales": { "sold_count": 150, "reviews_count": 30 },
+    "specifications": { "Pieces": "16", "Material": "Ceramic" },
+    "features": ["Microwave Safe", "Dishwasher Safe", "Scratch Resistant"],
+    "description": "Complete dinner set including plates, bowls, and mugs.",
+    "supplier": { "name": "Kitchen Kings", "country": "China", "verified": true, "shipping": "Fragile Care" },
+    "reviews": []
+  },
+  {
+    "id": 203,
+    "title": "Minimalist Bedside Lamp",
+    "slug": "bedside-lamp",
+    "category": "home and interior",
+    "sub_category": "Lighting",
+    "brand": "Philips",
+    "price": { "current": 35.00, "old": 50.00, "currency": "USD", "discount_label": "-30%" },
+    "stock_status": "In stock",
+    "min_order": "1 pcs",
+    "images": {
+      "main": "/assets/Image/interior/3.png",
+      "gallery": []
+    },
+    "rating": { "score": 9.1, "count": 80, "stars": 4.5 },
+    "sales": { "sold_count": 600, "reviews_count": 80 },
+    "specifications": { "Bulb Type": "LED", "Power": "12W" },
+    "features": ["Adjustable Brightness", "Warm Light", "Energy Saving"],
+    "description": "Sleek bedside lamp perfect for reading and ambient lighting.",
+    "supplier": { "name": "Bright Lights", "country": "Germany", "verified": true, "shipping": "Standard" },
+    "reviews": [
+      {
+        "user": "Book Worm",
+        "rating": 5,
+        "date": "2025-03-01",
+        "comment": "Perfect for late night reading."
+      }
+    ]
+  },
+  {
+    "id": 204,
+    "title": "Smart Robotic Vacuum Appliance",
+    "slug": "robotic-vacuum",
+    "category": "home and interior",
+    "sub_category": "Appliances",
+    "brand": "Roomba",
+    "price": { "current": 299.00, "old": 400.00, "currency": "USD", "discount_label": "-25%" },
+    "stock_status": "In stock",
+    "min_order": "1 pcs",
+    "images": {
+      "main": "/assets/Image/interior/4.png",
+      "gallery": []
+    },
+    "rating": { "score": 9.6, "count": 120, "stars": 5 },
+    "sales": { "sold_count": 800, "reviews_count": 120 },
+    "specifications": { "Battery Life": "120 mins", "Suction": "2000Pa" },
+    "features": ["App Control", "Auto Charge", "Mapping Technology"],
+    "description": "Keep your floors clean automatically with this smart robot vacuum.",
+    "supplier": { "name": "Smart Home Inc", "country": "USA", "verified": true, "shipping": "Free Shipping" },
+    "reviews": [
+      {
+        "user": "Tech Mom",
+        "rating": 5,
+        "date": "2025-01-15",
+        "comment": "Life saver! Cleans very well."
+      },
+      {
+        "user": "Pet Owner",
+        "rating": 5,
+        "date": "2025-01-18",
+        "comment": "Great for picking up cat hair."
+      }
+    ]
+  },
+  {
+    "id": 205,
+    "title": "Automatic Espresso Coffee Maker",
+    "slug": "espresso-coffee-maker",
+    "category": "home and interior",
+    "sub_category": "Appliances",
+    "brand": "Nespresso",
+    "price": { "current": 145.00, "old": null, "currency": "USD", "discount_label": null },
     "stock_status": "Out of stock",
     "min_order": "1 pcs",
     "images": {
-      "main": "/assets/Image/tech/image 33.png",
-      "gallery": [
-          "/assets/products/shirt-thumb-1.png",
-        "/assets/products/shirt-thumb-2.png"
-      ]
+      "main": "/assets/Image/interior/5.png",
+      "gallery": []
     },
-    "rating": {
-      "score": 8.0,
-      "count": 90,
-      "stars": 4
-    },
-    "sales": {
-      "sold_count": 500,
-      "reviews_count": 45
-    },
-    "bulk_pricing": [],
-    "specifications": {
-      "Ram": "4GB",
-      "Storage": "64GB",
-      "Screen": "6.2 inch HD",
-      "Battery": "5000mAh"
-    },
-    "features": [
-      "Dual Camera",
-      "Fingerprint Sensor",
-      "Fast Charging"
-    ],
-    "description": "Great budget phone with massive battery life.",
-    "supplier": {
-      "name": "China Gadgets",
-      "country": "China",
-      "flag": "/assets/icons/china-flag.png",
-      "verified": false,
-      "shipping": "Standard Shipping"
-    },
+    "rating": { "score": 9.3, "count": 200, "stars": 4.5 },
+    "sales": { "sold_count": 1500, "reviews_count": 200 },
+    "specifications": { "Pressure": "19 Bar", "Tank": "1L" },
+    "features": ["Fast Heating", "Compact Size", "One-touch Brew"],
+    "description": "Brew cafe-quality espresso at home in seconds.",
+    "supplier": { "name": "Coffee Hub", "country": "Italy", "verified": true, "shipping": "Standard" },
     "reviews": []
+  },
+  {
+    "id": 206,
+    "title": "Modern Window Blinders",
+    "slug": "window-blinders",
+    "category": "home and interior",
+    "sub_category": "Decor",
+    "brand": "HomeStyle",
+    "price": { "current": 40.00, "old": 55.00, "currency": "USD", "discount_label": "-27%" },
+    "stock_status": "In stock",
+    "min_order": "2 pcs",
+    "images": {
+      "main": "/assets/Image/interior/6.png",
+      "gallery": []
+    },
+    "rating": { "score": 8.2, "count": 25, "stars": 4 },
+    "sales": { "sold_count": 100, "reviews_count": 25 },
+    "specifications": { "Material": "Polyester", "Size": "Custom" },
+    "features": ["Light Filtering", "Easy Install", "Privacy"],
+    "description": "Contemporary blinds to control light and privacy in your home.",
+    "supplier": { "name": "Decor Direct", "country": "China", "verified": false, "shipping": "Standard" },
+    "reviews": [
+      {
+        "user": "Privacy Please",
+        "rating": 3,
+        "date": "2024-12-05",
+        "comment": "Does the job, but installation was tricky."
+      }
+    ]
+  },
+  {
+    "id": 207,
+    "title": "Heavy Duty Kitchen Mixer",
+    "slug": "kitchen-mixer",
+    "category": "home and interior",
+    "sub_category": "Kitchenware",
+    "brand": "KitchenAid",
+    "price": { "current": 250.00, "old": 300.00, "currency": "USD", "discount_label": "-16%" },
+    "stock_status": "In stock",
+    "min_order": "1 pcs",
+    "images": {
+      "main": "/assets/Image/interior/7.png",
+      "gallery": []
+    },
+    "rating": { "score": 9.8, "count": 300, "stars": 5 },
+    "sales": { "sold_count": 900, "reviews_count": 300 },
+    "specifications": { "Power": "500W", "Bowl Capacity": "5L" },
+    "features": ["Multiple Speeds", "Tilt-head", "Stainless Bowl"],
+    "description": "The ultimate tool for baking and mixing heavy doughs.",
+    "supplier": { "name": "Bake Pros", "country": "USA", "verified": true, "shipping": "Express" },
+    "reviews": [
+      {
+        "user": "Cake Boss",
+        "rating": 5,
+        "date": "2025-01-01",
+        "comment": "Strong motor, great for bread dough."
+      }
+    ]
+  },
+  {
+    "id": 208,
+    "title": "Decorative Ceramic Vase",
+    "slug": "ceramic-vase",
+    "category": "home and interior",
+    "sub_category": "Decor",
+    "brand": "Artisan",
+    "price": { "current": 22.00, "old": null, "currency": "USD", "discount_label": null },
+    "stock_status": "In stock",
+    "min_order": "1 pcs",
+    "images": {
+      "main": "/assets/Image/interior/8.png",
+      "gallery": []
+    },
+    "rating": { "score": 8.0, "count": 10, "stars": 4 },
+    "sales": { "sold_count": 50, "reviews_count": 10 },
+    "specifications": { "Height": "30cm", "Material": "Ceramic" },
+    "features": ["Hand Painted", "Modern Shape", "Waterproof"],
+    "description": "Beautiful vase to accent your living space, perfect for fresh flowers.",
+    "supplier": { "name": "Art House", "country": "Portugal", "verified": false, "shipping": "Standard" },
+    "reviews": []
+  },
+  {
+    "id": 301,
+    "title": "GoPro Hero 9 Black Action Camera",
+    "slug": "gopro-hero-9",
+    "category": "tech",
+    "sub_category": "Cameras",
+    "brand": "GoPro",
+    "price": { "current": 350.00, "old": 400.00, "currency": "USD", "discount_label": "-12%" },
+    "stock_status": "In stock",
+    "min_order": "1 pcs",
+    "images": {
+      "main": "/assets/Image/tech/1.png",
+      "gallery": []
+    },
+    "rating": { "score": 9.2, "count": 220, "stars": 4.5 },
+    "sales": { "sold_count": 1000, "reviews_count": 220 },
+    "specifications": { "Resolution": "5K Video", "Waterproof": "10m" },
+    "features": ["HyperSmooth 3.0", "Front Display", "Voice Control"],
+    "description": "Capture stunning 5K video with the most advanced GoPro yet.",
+    "supplier": { "name": "Tech World", "country": "USA", "verified": true, "shipping": "Free Shipping" },
+    "reviews": [
+      {
+        "user": "Action Jackson",
+        "rating": 5,
+        "date": "2025-02-14",
+        "comment": "Video stability is insane!"
+      },
+      {
+        "user": "Vlogger Kate",
+        "rating": 4,
+        "date": "2025-02-20",
+        "comment": "Great camera but battery drains fast."
+      }
+    ]
+  },
+  {
+    "id": 302,
+    "title": "Smart Watch Series 7",
+    "slug": "smart-watch-7",
+    "category": "tech",
+    "sub_category": "Wearables",
+    "brand": "Apple",
+    "price": { "current": 329.00, "old": 399.00, "currency": "USD", "discount_label": "-17%" },
+    "stock_status": "In stock",
+    "min_order": "1 pcs",
+    "images": {
+      "main": "/assets/Image/tech/2.png",
+      "gallery": []
+    },
+    "rating": { "score": 9.5, "count": 500, "stars": 5 },
+    "sales": { "sold_count": 3000, "reviews_count": 500 },
+    "specifications": { "Battery": "18 Hours", "Connectivity": "GPS + Cellular" },
+    "features": ["ECG App", "Blood Oxygen", "Fitness Tracking"],
+    "description": "The future of health on your wrist. Larger display and faster charging.",
+    "supplier": { "name": "iStore", "country": "USA", "verified": true, "shipping": "Express" },
+    "reviews": [
+      {
+        "user": "Apple Fanboy",
+        "rating": 5,
+        "date": "2025-01-10",
+        "comment": "Best watch ever."
+      }
+    ]
+  },
+  {
+    "id": 303,
+    "title": "Smartphone X Pro 256GB",
+    "slug": "smartphone-x-pro",
+    "category": "tech",
+    "sub_category": "Mobile",
+    "brand": "Xiaomi",
+    "price": { "current": 699.00, "old": null, "currency": "USD", "discount_label": null },
+    "stock_status": "In stock",
+    "min_order": "1 pcs",
+    "images": {
+      "main": "/assets/Image/tech/3.png",
+      "gallery": []
+    },
+    "rating": { "score": 8.9, "count": 150, "stars": 4.5 },
+    "sales": { "sold_count": 600, "reviews_count": 150 },
+    "specifications": { "RAM": "12GB", "Storage": "256GB" },
+    "features": ["108MP Camera", "120Hz Display", "5G Ready"],
+    "description": "Flagship performance at an unbeatable price.",
+    "supplier": { "name": "Mi Official", "country": "China", "verified": true, "shipping": "Standard" },
+    "reviews": [
+      {
+        "user": "Tech Guru",
+        "rating": 4,
+        "date": "2025-01-05",
+        "comment": "Fast processor but lots of bloatware."
+      }
+    ]
+  },
+  {
+    "id": 304,
+    "title": "Noise Cancelling Over-Ear Headphones",
+    "slug": "nc-headphones",
+    "category": "tech",
+    "sub_category": "Audio",
+    "brand": "Sony",
+    "price": { "current": 199.00, "old": 250.00, "currency": "USD", "discount_label": "-20%" },
+    "stock_status": "In stock",
+    "min_order": "1 pcs",
+    "images": {
+      "main": "/assets/Image/tech/4.png",
+      "gallery": []
+    },
+    "rating": { "score": 9.3, "count": 180, "stars": 4.5 },
+    "sales": { "sold_count": 850, "reviews_count": 180 },
+    "specifications": { "Battery": "30 Hours", "Type": "Wireless" },
+    "features": ["Active NC", "Touch Controls", "Voice Assistant"],
+    "description": "Immerse yourself in music with industry-leading noise cancellation.",
+    "supplier": { "name": "Sound City", "country": "Japan", "verified": true, "shipping": "Standard" },
+    "reviews": []
+  },
+  {
+    "id": 305,
+    "title": "Galaxy Ultra Mobile Phone",
+    "slug": "galaxy-ultra",
+    "category": "tech",
+    "sub_category": "Mobile",
+    "brand": "Samsung",
+    "price": { "current": 999.00, "old": 1100.00, "currency": "USD", "discount_label": "-9%" },
+    "stock_status": "Out of stock",
+    "min_order": "1 pcs",
+    "images": {
+      "main": "/assets/Image/tech/5.png",
+      "gallery": []
+    },
+    "rating": { "score": 9.7, "count": 400, "stars": 5 },
+    "sales": { "sold_count": 2000, "reviews_count": 400 },
+    "specifications": { "Screen": "6.8 inch AMOLED", "Zoom": "100x" },
+    "features": ["S-Pen Support", "Nightography", "Long Battery"],
+    "description": "The ultimate smartphone experience with a powerful camera system.",
+    "supplier": { "name": "Samsung Direct", "country": "Korea", "verified": true, "shipping": "Free Shipping" },
+    "reviews": [
+      {
+        "user": "Android Lover",
+        "rating": 5,
+        "date": "2025-03-10",
+        "comment": "The zoom on this camera is magical."
+      },
+      {
+        "user": "Power User",
+        "rating": 5,
+        "date": "2025-03-11",
+        "comment": "Screen is beautiful."
+      }
+    ]
+  },
+  {
+    "id": 306,
+    "title": "Budget Android Smartphone",
+    "slug": "budget-smartphone",
+    "category": "tech",
+    "sub_category": "Mobile",
+    "brand": "Oppo",
+    "price": { "current": 199.00, "old": 220.00, "currency": "USD", "discount_label": "-10%" },
+    "stock_status": "In stock",
+    "min_order": "1 pcs",
+    "images": {
+      "main": "/assets/Image/tech/6.png",
+      "gallery": []
+    },
+    "rating": { "score": 8.0, "count": 75, "stars": 4 },
+    "sales": { "sold_count": 300, "reviews_count": 75 },
+    "specifications": { "RAM": "4GB", "Battery": "5000mAh" },
+    "features": ["Dual Sim", "Expandable Storage", "HD Screen"],
+    "description": "Reliable smartphone with essential features for everyday use.",
+    "supplier": { "name": "Mobile Mart", "country": "China", "verified": false, "shipping": "Slow" },
+    "reviews": []
+  },
+  {
+    "id": 307,
+    "title": "Pro Laptop 15-inch",
+    "slug": "pro-laptop-15",
+    "category": "tech",
+    "sub_category": "Computers",
+    "brand": "Dell",
+    "price": { "current": 1200.00, "old": 1400.00, "currency": "USD", "discount_label": "-14%" },
+    "stock_status": "In stock",
+    "min_order": "1 pcs",
+    "images": {
+      "main": "/assets/Image/tech/7.png",
+      "gallery": []
+    },
+    "rating": { "score": 9.1, "count": 90, "stars": 4.5 },
+    "sales": { "sold_count": 250, "reviews_count": 90 },
+    "specifications": { "Processor": "Intel i7", "RAM": "16GB" },
+    "features": ["InfinityEdge Display", "Backlit Keyboard", "SSD"],
+    "description": "Powerhouse laptop for creators and professionals.",
+    "supplier": { "name": "Comp World", "country": "USA", "verified": true, "shipping": "Fragile Care" },
+    "reviews": [
+      {
+        "user": "Designer Dave",
+        "rating": 5,
+        "date": "2025-01-30",
+        "comment": "Runs Photoshop very smoothly."
+      }
+    ]
+  },
+  {
+    "id": 308,
+    "title": "Smart Electric Glass Kettle",
+    "slug": "smart-kettle",
+    "category": "tech",
+    "sub_category": "Smart Home",
+    "brand": "Xiaomi",
+    "price": { "current": 45.00, "old": null, "currency": "USD", "discount_label": null },
+    "stock_status": "In stock",
+    "min_order": "1 pcs",
+    "images": {
+      "main": "/assets/Image/tech/8.png",
+      "gallery": []
+    },
+    "rating": { "score": 8.6, "count": 40, "stars": 4.5 },
+    "sales": { "sold_count": 180, "reviews_count": 40 },
+    "specifications": { "Capacity": "1.7L", "Control": "App/Touch" },
+    "features": ["Temp Control", "Keep Warm", "Fast Boil"],
+    "description": "Control your water temperature precisely with this smart kettle.",
+    "supplier": { "name": "Mi Home", "country": "China", "verified": true, "shipping": "Standard" },
+    "reviews": []
+  },
+  {
+    "id": 309,
+    "title": "White Studio Wireless Headphones",
+    "slug": "white-studio-headphones",
+    "category": "tech",
+    "sub_category": "Audio",
+    "brand": "Beats",
+    "price": { "current": 180.00, "old": 200.00, "currency": "USD", "discount_label": "-10%" },
+    "stock_status": "In stock",
+    "min_order": "1 pcs",
+    "images": {
+      "main": "/assets/Image/tech/9.png",
+      "gallery": []
+    },
+    "rating": { "score": 8.8, "count": 110, "stars": 4.5 },
+    "sales": { "sold_count": 450, "reviews_count": 110 },
+    "specifications": { "Color": "White", "Battery": "22 Hours" },
+    "features": ["Pure ANC", "Fast Fuel", "Comfort Cushions"],
+    "description": "Stylish white headphones delivering premium sound quality.",
+    "supplier": { "name": "Audio Gear", "country": "USA", "verified": true, "shipping": "Standard" },
+    "reviews": [
+      {
+        "user": "Music Lover",
+        "rating": 5,
+        "date": "2025-02-28",
+        "comment": "Bass is incredibly punchy."
+      }
+    ]
   }
 ]

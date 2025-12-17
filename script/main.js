@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   if (document.querySelector(".cart-section")) {
     renderSavedForLater();
+    renderCartUI();
   }
 });
 // Fetch products data
@@ -61,7 +62,6 @@ async function loadCategoryList() {
     `;
   });
 }
-
 const dealItems = document.querySelector(".deal-items");
 // Filter function for deal items
 async function filterDealItems() {
@@ -72,25 +72,32 @@ async function filterDealItems() {
 // UI update function
 async function updateUIForDealElements() {
   const discountItems = await filterDealItems();
-
   dealItems.innerHTML = "";
-
-  discountItems.forEach((element) => {
-    dealItems.innerHTML += `
+  discountItems
+    .filter((element) => {
+      // String (e.g. "-20%") ko number banayein aur minus hatayein
+      const discountValue = Math.abs(parseInt(element.price.discount_label));
+      return discountValue > 10;
+    })
+    .slice(0, 5)
+    .forEach((element) => {
+      dealItems.innerHTML += `
       <article class="deal-item">
         <img src="${element.images.main}" alt="">
         <h3>${element.category}</h3>
         <span>${element.price.discount_label}</span>
       </article>
     `;
-  });
+    });
 }
 
-//Load Home and outdoor items
+//Load home and interior items
 const categoryGridContainer = document.querySelector(".category-grid");
 const filterHomeAndOutdoorItems = async () => {
   const data = await fetchProductsData();
-  return data.filter((element) => element.category == "home and outdoor");
+  return data
+    .filter((element) => element.category == "home and interior")
+    .slice(0, 8);
 };
 //update home and items category function
 async function updateUIHomeElements() {
@@ -112,11 +119,11 @@ async function updateUIHomeElements() {
 const electronicsGridContainer = document.querySelector("#electronics-grid");
 const filterElectronicsItems = async () => {
   const data = await fetchProductsData();
-  return data.filter((element) => element.category == "electronics");
+  return data.filter((element) => element.category == "tech").slice(0, 8);
 };
 //update home and items category function
 async function updateUIElectronicItems() {
-  const electronicsItems = await filterHomeAndOutdoorItems();
+  const electronicsItems = await filterElectronicsItems();
   electronicsGridContainer.innerHTML = "";
   electronicsItems.forEach((element) => {
     electronicsGridContainer.innerHTML += `
@@ -135,7 +142,7 @@ const recommandedItemsGrid = document.querySelector(".recommended-items-grid");
 async function loadUIforrecommandedItems() {
   recommandedItemsGrid.innerHTML = "";
   const recommandedItems = await fetchProductsData();
-  recommandedItems.forEach((element) => {
+  recommandedItems.slice(0, 10).map((element) => {
     recommandedItemsGrid.innerHTML += `
     <a href="/pages/productDetail.html?id=${element.id}">
     <article class="recommended-item">
@@ -451,7 +458,8 @@ async function saveForLater(elementid) {
 //hide and show filter list in lsition page
 function toggleFilterList(id) {
   const filterList = document.querySelector(`#${id}`);
-  filterList.classList.toggle("display-none");
+  filterList.classList.toggle("display-block");
+  // filterList.classList.toggle("display-none-list");
   event.target.src = event.target.src.includes("Vector.png")
     ? "/assets/Layout/Form/input-group/Icon/control/Vector2.png"
     : "/assets/Layout/Form/input-group/Icon/control/Vector.png";
@@ -603,6 +611,3 @@ async function removeFromCart(id) {
   sessionStorage.setItem("cartItems", JSON.stringify(updatedItems));
   await renderCartUI();
 }
-document.addEventListener("DOMContentLoaded", () => {
-  renderCartUI();
-});

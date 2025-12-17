@@ -63,6 +63,7 @@
 .filter-group {
   border-top: 1px solid var(--primary-line-clr);
   padding: 15px 0;
+  position: relative;
 }
 
 .filter-group:first-child {
@@ -95,8 +96,13 @@
   list-style: none;
   padding: 0;
   margin: 0;
-}
+  overflow: hidden; /* Vital: Hides content when height is 0 */
+  max-height: 0; /* Effectively hides the element */
+  opacity: 0;
 
+  /* This creates the smooth push-down effect */
+  transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out;
+}
 .filter-list li,
 .radio-list li label {
   margin-bottom: 10px;
@@ -464,7 +470,7 @@
   background-color: var(--primary-full-background-clr);
   border-color: var(--primary-line-clr);
   color: var(--primary-text-color);
-  cursor: default;  
+  cursor: default;
 }
 
 .page-btn:hover:not(.active) {
