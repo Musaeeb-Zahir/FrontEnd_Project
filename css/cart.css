@@ -131,8 +131,12 @@
   color: var(--primary-text-color);
 }
 
-.qty-select select {
+.qty-select .qty-feild {
   padding: 5px;
+  display: block !important;
+  width: 123px;
+  height: 40px;
+  position: relative;
   border: 1px solid var(--primary-line-clr);
   border-radius: 4px;
   background: white;
@@ -140,6 +144,13 @@
   outline: none;
   cursor: pointer;
 }
+/* .qty-select .qty-feild::after {
+  content: "⌄";
+  font-weight: 900;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+} */
 
 /* --- Cart Actions Row --- */
 .cart-actions-row {

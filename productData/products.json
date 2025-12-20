@@ -6,7 +6,7 @@
     "category": "clothing",
     "sub_category": "Outerwear",
     "brand": "Zara",
-    "price": { "current": 150.00, "old": 200.00, "currency": "USD", "discount_label": "-25%" },
+    "price": { "current": 150.00, "old": 200.00, "currency": "USD", "discount_label": "25" },
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -63,7 +63,7 @@
     "category": "clothing",
     "sub_category": "Tops",
     "brand": "Uniqlo",
-    "price": { "current": 15.00, "old": 20.00, "currency": "USD", "discount_label": "-25%" },
+    "price": { "current": 15.00, "old": 20.00, "currency": "USD", "discount_label": "25" },
     "stock_status": "In stock",
     "min_order": "10 pcs",
     "images": {
@@ -72,7 +72,7 @@
     },
     "rating": { "score": 9.5, "count": 100, "stars": 5 },
     "sales": { "sold_count": 1200, "reviews_count": 100 },
-    "specifications": { "Material": "100% Cotton", "Fit": "Regular" },
+    "specifications": { "Material": "00 Cotton", "Fit": "Regular" },
     "features": ["Soft Fabric", "Color Fastness", "Daily Wear"],
     "description": "Essential cotton t-shirt available in multiple colors.",
     "supplier": { "name": "Cotton World", "country": "Bangladesh", "verified": true, "shipping": "Fast Shipping" },
@@ -92,7 +92,7 @@
     "category": "clothing",
     "sub_category": "Accessories",
     "brand": "Fossil",
-    "price": { "current": 45.00, "old": 60.00, "currency": "USD", "discount_label": "-30%" },
+    "price": { "current": 45.00, "old": 60.00, "currency": "USD", "discount_label": "30" },
     "stock_status": "Out of stock",
     "min_order": "1 pcs",
     "images": {
@@ -149,7 +149,7 @@
     "category": "clothing",
     "sub_category": "Outerwear",
     "brand": "Burberry",
-    "price": { "current": 120.00, "old": 150.00, "currency": "USD", "discount_label": "-20%" },
+    "price": { "current": 120.00, "old": 150.00, "currency": "USD", "discount_label": "20" },
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -178,7 +178,7 @@
     "category": "home and interior",
     "sub_category": "Furniture",
     "brand": "IKEA",
-    "price": { "current": 199.00, "old": 250.00, "currency": "USD", "discount_label": "-20%" },
+    "price": { "current": 199.00, "old": 250.00, "currency": "USD", "discount_label": "20" },
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -235,7 +235,7 @@
     "category": "home and interior",
     "sub_category": "Lighting",
     "brand": "Philips",
-    "price": { "current": 35.00, "old": 50.00, "currency": "USD", "discount_label": "-30%" },
+    "price": { "current": 35.00, "old": 50.00, "currency": "USD", "discount_label": "30" },
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -264,7 +264,7 @@
     "category": "home and interior",
     "sub_category": "Appliances",
     "brand": "Roomba",
-    "price": { "current": 299.00, "old": 400.00, "currency": "USD", "discount_label": "-25%" },
+    "price": { "current": 299.00, "old": 400.00, "currency": "USD", "discount_label": "25" },
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -321,7 +321,7 @@
     "category": "home and interior",
     "sub_category": "Decor",
     "brand": "HomeStyle",
-    "price": { "current": 40.00, "old": 55.00, "currency": "USD", "discount_label": "-27%" },
+    "price": { "current": 40.00, "old": 55.00, "currency": "USD", "discount_label": "27" },
     "stock_status": "In stock",
     "min_order": "2 pcs",
     "images": {
@@ -350,7 +350,7 @@
     "category": "home and interior",
     "sub_category": "Kitchenware",
     "brand": "KitchenAid",
-    "price": { "current": 250.00, "old": 300.00, "currency": "USD", "discount_label": "-16%" },
+    "price": { "current": 250.00, "old": 300.00, "currency": "USD", "discount_label": "16" },
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -401,7 +401,7 @@
     "category": "tech",
     "sub_category": "Cameras",
     "brand": "GoPro",
-    "price": { "current": 350.00, "old": 400.00, "currency": "USD", "discount_label": "-12%" },
+    "price": { "current": 350.00, "old": 400.00, "currency": "USD", "discount_label": "12" },
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -436,7 +436,7 @@
     "category": "tech",
     "sub_category": "Wearables",
     "brand": "Apple",
-    "price": { "current": 329.00, "old": 399.00, "currency": "USD", "discount_label": "-17%" },
+    "price": { "current": 329.00, "old": 399.00, "currency": "USD", "discount_label": "17" },
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -494,7 +494,7 @@
     "category": "tech",
     "sub_category": "Audio",
     "brand": "Sony",
-    "price": { "current": 199.00, "old": 250.00, "currency": "USD", "discount_label": "-20%" },
+    "price": { "current": 199.00, "old": 250.00, "currency": "USD", "discount_label": "20" },
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -516,7 +516,7 @@
     "category": "tech",
     "sub_category": "Mobile",
     "brand": "Samsung",
-    "price": { "current": 999.00, "old": 1100.00, "currency": "USD", "discount_label": "-9%" },
+    "price": { "current": 999.00, "old": 1100.00, "currency": "USD", "discount_label": "-9" },
     "stock_status": "Out of stock",
     "min_order": "1 pcs",
     "images": {
@@ -551,7 +551,7 @@
     "category": "tech",
     "sub_category": "Mobile",
     "brand": "Oppo",
-    "price": { "current": 199.00, "old": 220.00, "currency": "USD", "discount_label": "-10%" },
+    "price": { "current": 199.00, "old": 220.00, "currency": "USD", "discount_label": "10" },
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -573,7 +573,7 @@
     "category": "tech",
     "sub_category": "Computers",
     "brand": "Dell",
-    "price": { "current": 1200.00, "old": 1400.00, "currency": "USD", "discount_label": "-14%" },
+    "price": { "current": 1200.00, "old": 1400.00, "currency": "USD", "discount_label": "14" },
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -603,6 +603,11 @@
     "sub_category": "Smart Home",
     "brand": "Xiaomi",
     "price": { "current": 45.00, "old": null, "currency": "USD", "discount_label": null },
+    "bulk_price": {
+      "first": 40,
+      "second": 35,
+      "third": 30
+    },
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -624,7 +629,7 @@
     "category": "tech",
     "sub_category": "Audio",
     "brand": "Beats",
-    "price": { "current": 180.00, "old": 200.00, "currency": "USD", "discount_label": "-10%" },
+    "price": { "current": 180.00, "old": 200.00, "currency": "USD", "discount_label": "10" },
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {

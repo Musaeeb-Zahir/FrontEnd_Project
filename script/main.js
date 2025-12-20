@@ -181,10 +181,14 @@ async function loadProductDetailUI(product) {
     title: document.querySelector(".product-title"),
     stockText: document.querySelector(".stock-status"),
     thumbnails: document.querySelector(".thumbnail-list"),
-    // ratingStars: document.querySelector(".rating-stars"),
     reviewsCount: document.querySelector("#reviews-count"),
     soldCount: document.querySelector("#sold-count"),
-    // priceBlocks: document.querySelector(".price-blocks"),
+    featuresList: document.getElementById("features-list"),
+    bulkPrice: document.querySelectorAll(".price-val"),
+    attrValue: document.querySelectorAll(".attr-value"),
+    saveForLater: document.querySelector(".btn-save-later"),
+    btnInquiry: document.querySelector(".btn-inquiry"),
+    // ratingStars: document.querySelector(".rating-stars"),
     // dynamicSpecs: document.getElementById("dynamic-specs"),
     // minOrder: document.querySelector(".min-order"),
     // companyName: document.querySelector(".company-name"),
@@ -193,15 +197,30 @@ async function loadProductDetailUI(product) {
     // supplierShipping: document.querySelector(".supplier-shipping"),
     // descriptionText: document.querySelector(".content-text p"),
     // modelId: document.querySelector(".model-id"),
-    featuresList: document.getElementById("features-list"),
   };
+  el.saveForLater.addEventListener("click", () => saveForLater(product.id));
+  el.btnInquiry.addEventListener("click", () => moveToCart(product.id));
   el.mainImage.src = product.images.main;
   el.title.textContent = product.title;
   el.stockText.innerText = product.stock_status;
   el.reviewsCount.textContent = `${product.sales.reviews_count} Reviews`;
   el.soldCount.textContent = `${product.sales.sold_count} Sold`;
+  console.log(el.bulkPrice[0]);
+  el.bulkPrice[0].textContent = `$${product.bulk_price.first}`;
+  el.bulkPrice[1].textContent = `$${product.bulk_price.second}`;
+  el.bulkPrice[2].textContent = `$${product.bulk_price.third}`;
+  console.log(el.attrValue);
 
-  // el.descriptionText.textContent = product.description;
+  el.attrValue[0].textContent = `$${product.price.current}`;
+  el.attrValue[2].textContent = `${
+    product.specifications.Material || "Not Provided"
+  }`;
+
+  el.attrValue[1].textContent = `${product.type || "Not Provided"}`;
+  el.attrValue[3].textContent = `${product.design || "Not Provided"}`;
+  el.attrValue[4].textContent = `${product.custamization || "Not Provided"}`;
+  el.attrValue[5].textContent = `${product.protection || "Not Provided"}`;
+  el.attrValue[6].textContent = `${product.warranty || "Not Provided"}`;
 
   //view all thumnail list
   el.thumbnails.innerHTML = "";
@@ -420,6 +439,58 @@ async function loadCategoryListingItems() {
   });
 }
 
+//FiteredUI updates
+async function updateUIFiltered(filteredList) {
+  const listingContainer = document.querySelector(".products-wrapper");
+  listingContainer.innerHTML = "";
+  filteredList.forEach((element) => {
+    listingContainer.innerHTML += `
+       <article class="product-card">
+                  <div class="card-image">
+                      <img src=${element.images.main} alt="iPhone" height="
+  187.6px">
+                  </div>
+                  <div class="card-details">
+                      <div class="card-header">
+                          <h4>${element.title}</h4>
+                          <button class="btn-fav" onclick="saveForLater(${element.id})">
+                              <img src="../assets/Layout/Form/input-group/Icon/control/fav.png" alt="Fav">
+                          </button>
+                      </div>
+
+                      <div class="price-info">
+                          <span class="price-current">$${element.price.current}</span>
+                          <span class="price-old">$${element.price.old}</span>
+                      </div>
+
+                      <div class="rating-info">
+                          <div class="stars">
+                              <img src="../assets/icons/star-fill.png" alt="star">
+                              <img src="../assets/icons/star-fill.png" alt="star">
+                              <img src="../assets/icons/star-fill.png" alt="star">
+                              <img src="../assets/icons/star-fill.png" alt="star">
+                              <img src="../assets/icons/star-empty.png" alt="star">
+                          </div>
+                          <span class="rating-score">${element.rating.score}</span>
+                          <span class="dot"></span>
+                          <span class="orders-count">${element.sales.sold_count} orders</span>
+                          <span class="dot"></span>
+                          <span class="shipping-status">${element.supplier.shipping}</span>
+                      </div>
+
+                      <p class="product-desc">
+                          ${element.description}
+                      </p>
+
+                      <a href="/pages/productDetail.html?id=${element.id}" class="view-link">View details</a>
+                  </div>
+              </article>
+      `;
+    if (filteredList.length <= 6) {
+      paginationWrapper.classList.add("hidden");
+    }
+  });
+}
 //switch list to gird
 const gridBtn = document.querySelector("#btn-icon-grid");
 const listBtn = document.querySelector("#btn-icon-list");
@@ -438,6 +509,53 @@ function handleListClick() {
   gridBtn.classList.remove("active");
   listBtn.classList.add("active");
 }
+//filter
+let activeFilter = {
+  brand: "all",
+  maxPrice: 10000,
+  minRating: 0,
+};
+function updateFilter(filterType, value) {
+  if (filterType === "price") {
+    activeFilter.maxPrice = Number(value);
+  } else if (filterType === "brand") {
+    activeFilter.brand = value;
+  } else if (filterType === "rating") {
+    activeFilter.minRating = Number(value);
+  }
+  applyAllFilters();
+}
+
+//Main filter fuction
+let allProducts = [];
+async function applyAllFilters() {
+  allProducts = await fetchProductsData();
+  const filteredList = allProducts.filter((product) => {
+    // --- CHECK 1: BRAND ---
+    // Agar 'all' hai TO true, WARNA check karo ke brand match ho raha hai?
+    const brandMatch =
+      activeFilter.brand === "all" || product.brand === activeFilter.brand;
+    console.log(brandMatch);
+
+    // // --- CHECK 2: PRICE ---
+    // // Product ki price user ki set ki hui maxPrice se kam honi chahiye
+    // const priceMatch = product.price.current <= activeFilter.maxPrice;
+
+    // // --- CHECK 3: RATING ---
+    // // Product ki rating user ki set ki hui rating se zyada honi chahiye
+    // const ratingMatch = product.rating >= activeFilter.minRating;
+    // console.log("rating", ratingMatch);
+
+    // FINAL DECISION:
+    // Agar teeno TRUE hain, tabhi product dikhao
+    return brandMatch;
+    // && priceMatch && ratingMatch;
+  });
+  console.log(filteredList);
+
+  // 4. Result UI par show karein
+  updateUIFiltered(filteredList);
+}
 
 //load and add saved for later cart
 const storedData = localStorage.getItem("wishlistIds");
@@ -455,7 +573,7 @@ async function saveForLater(elementid) {
   console.log("Updated List:", savedItems);
 }
 
-//hide and show filter list in lsition page
+//hide and show filter list in listing page
 function toggleFilterList(id) {
   const filterList = document.querySelector(`#${id}`);
   filterList.classList.toggle("display-block");
@@ -567,19 +685,19 @@ async function renderCartUI() {
 
                         <div class="info-right">
 
-                            <span class="item-price">${
+                            <span class="item-price">$${
                               element.price.current
                             }</span>
 
-                            <div class="qty-select">
-
-                                <select>
-
-                                    <option value="9">Qty: 9</option>
-
-                                    <option value="1">Qty: 1</option>
-
-                                </select>
+                    <div class="qty-select">
+ <input list="qty" id="qty-choice" name="qty" value="Qty:1" class="qty-feild">
+<datalist id="qty" qty-feild>
+  <option value="Qty:1">
+  <option value="Qty:10">
+  <option value="Qty:30">
+  <option value="Qty:50">
+  <option value="Qty:100">
+</datalist>
 
                             </div>
 
@@ -590,6 +708,9 @@ async function renderCartUI() {
                 </article>
         `;
   });
+
+  //Update Price detail
+  priceCalculation(cartProducts);
 }
 
 async function moveToCart(productid) {
@@ -610,4 +731,34 @@ async function removeFromCart(id) {
   const updatedItems = cartItems.filter((e) => e != id);
   sessionStorage.setItem("cartItems", JSON.stringify(updatedItems));
   await renderCartUI();
+}
+
+//handle coupon
+function handleCoupon() {
+  let inputCoupon = document.querySelector(".add-coupon");
+  inputCoupon.value = "No coupon match";
+  inputCoupon.style.color = "red";
+}
+//Calcute Total price
+function priceCalculation(cartItems) {
+  const qty = document.querySelector(".qty-feild");
+  const subTotal = document.querySelector(".sub-total");
+  const discountPrice = document.querySelector(".discount-percentage");
+  const taxPrice = document.querySelector(".tax-price");
+  const totalPriceBox = document.querySelector(".total-price");
+  let subTotalprice = 0;
+  // let totalDiscountPercent = 0;
+  let totalTax = 0;
+  let totalDiscount = 0;
+  cartItems.forEach((e) => {
+    subTotalprice += e.price.current;
+    let totalDiscountPercent = e.price.discount_label;
+    totalDiscount += (totalDiscountPercent / 100) * e.price.current;
+    totalTax += e.price.tax || 0;
+  });
+  subTotal.textContent = `$${subTotalprice}`;
+  discountPrice.textContent = `-$${totalDiscount}`;
+  taxPrice.textContent = `+${totalTax}`;
+  let totalPrice = subTotalprice - totalDiscount + totalTax;
+  totalPriceBox.textContent = `$${totalPrice}`;
 }

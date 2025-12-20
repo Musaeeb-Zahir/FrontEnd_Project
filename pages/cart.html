@@ -67,8 +67,8 @@
                 <div class="coupon-box">
                     <label>Have a coupon?</label>
                     <div class="input-group">
-                        <input type="text" placeholder="Add coupon">
-                        <button>Apply</button>
+                        <input type="text" placeholder="Add coupon" class="add-coupon" required>
+                        <button class="add-coupon-btn" onclick="handleCoupon()">Apply</button>
                     </div>
                 </div>
 
@@ -77,15 +77,15 @@
                 <div class="summary-details">
                     <div class="summary-row">
                         <span>Subtotal:</span>
-                        <span>$1403.97</span>
+                        <span class="sub-total">$1403.97</span>
                     </div>
                     <div class="summary-row">
                         <span>Discount:</span>
-                        <span class="text-red">- $60.00</span>
+                        <span class="text-red discount-percentage">- $60.00</span>
                     </div>
                     <div class="summary-row">
                         <span>Tax:</span>
-                        <span class="text-green">+ $14.00</span>
+                        <span class="text-green tax-price">+ $14.00</span>
                     </div>
                 </div>
 
