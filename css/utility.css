@@ -25,3 +25,6 @@ a {
   max-height: 500px;
   opacity: 1;
 }
+.availableCategory.active {
+  background-color: #e5f1ff;
+}

@@ -48,6 +48,7 @@ async function fetchProductsData() {
   }
 }
 // load category list navgation
+
 async function loadCategoryList() {
   const categoryListContainer = document.querySelector(
     "#category-list-navigation"
@@ -57,11 +58,14 @@ async function loadCategoryList() {
   categories.forEach((category) => {
     categoryListContainer.innerHTML += `
     <a href="/pages/productListing.html?category=${category}">
-      <li>${category}</li>
+      <li onclick="handleActiveCategory()" class="availableCategory">${category}</li>
     </a>
     `;
+    document.querySelectorAll(".availableCategory")[0].style.backgroundColor =
+      "#E5F1FF";
   });
 }
+//handleActiveCategory
 const dealItems = document.querySelector(".deal-items");
 // Filter function for deal items
 async function filterDealItems() {
@@ -75,18 +79,19 @@ async function updateUIForDealElements() {
   dealItems.innerHTML = "";
   discountItems
     .filter((element) => {
-      // String (e.g. "-20%") ko number banayein aur minus hatayein
       const discountValue = Math.abs(parseInt(element.price.discount_label));
       return discountValue > 10;
     })
     .slice(0, 5)
     .forEach((element) => {
       dealItems.innerHTML += `
+       <a href="/pages/productDetail.html?id=${element.id}">
       <article class="deal-item">
         <img src="${element.images.main}" alt="">
-        <h3>${element.category}</h3>
-        <span>${element.price.discount_label}</span>
+        <p>${element.title}</p>
+        <span>${element.price.discount_label}%</span>
       </article>
+      </a>
     `;
     });
 }
@@ -105,12 +110,14 @@ async function updateUIHomeElements() {
   categoryGridContainer.innerHTML = "";
   homeAndOutdooritems.forEach((element) => {
     categoryGridContainer.innerHTML += `
+     <a href="/pages/productDetail.html?id=${element.id}">
   <article class="cat-item">
        <div><h3>${element.slug}</h3>
         <span>From</span>
         <span class="price"> ${element.price.currency} ${element.price.current}</span></div> 
         <img src="${element.images.main}" alt="Soft chairs">
       </article>
+      </a>
   `;
   });
 }
@@ -127,12 +134,14 @@ async function updateUIElectronicItems() {
   electronicsGridContainer.innerHTML = "";
   electronicsItems.forEach((element) => {
     electronicsGridContainer.innerHTML += `
+     <a href="/pages/productDetail.html?id=${element.id}">
   <article class="cat-item">
        <div><h3>${element.slug}</h3>s
         <span>From</span>
         <span class="price"> ${element.price.currency} ${element.price.current}</span></div> 
         <img src="${element.images.main}" alt="Soft chairs">
       </article>
+      </a>
   `;
   });
 }
@@ -163,13 +172,18 @@ async function loadProductDetailPage() {
   if (document.querySelector(".product-detail-placeholder")) {
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get("id");
-    console.log(productId);
-
+    const path1 = document.querySelector(".category-page");
+    const path2 = document.querySelector(".detail-page");
     const products = await fetchProductsData();
     const product = products.find((item) => item.id == productId);
     if (product) {
       loadProductDetailUI(product);
+      path1.textContent = product.category;
+      path2.textContent = product.title;
     }
+    path1.addEventListener("click", () => {
+      path1.href = `/pages/productListing.html?category=${product.category}`;
+    });
   }
 }
 async function loadProductDetailUI(product) {
@@ -188,8 +202,8 @@ async function loadProductDetailUI(product) {
     attrValue: document.querySelectorAll(".attr-value"),
     saveForLater: document.querySelector(".btn-save-later"),
     btnInquiry: document.querySelector(".btn-inquiry"),
-    // ratingStars: document.querySelector(".rating-stars"),
-    // dynamicSpecs: document.getElementById("dynamic-specs"),
+    ratingStars: document.querySelector(".rating-stars"),
+    ratingNum: document.querySelector("#rating-num"),
     // minOrder: document.querySelector(".min-order"),
     // companyName: document.querySelector(".company-name"),
     // supplierFlag: document.querySelector(".supplier-flag"),
@@ -198,6 +212,8 @@ async function loadProductDetailUI(product) {
     // descriptionText: document.querySelector(".content-text p"),
     // modelId: document.querySelector(".model-id"),
   };
+  el.ratingStars.innerHTML = getStarHTML(product.rating.stars);
+  el.ratingNum.innerText = product.rating.stars;
   el.saveForLater.addEventListener("click", () => saveForLater(product.id));
   el.btnInquiry.addEventListener("click", () => moveToCart(product.id));
   el.mainImage.src = product.images.main;
@@ -206,7 +222,9 @@ async function loadProductDetailUI(product) {
   el.reviewsCount.textContent = `${product.sales.reviews_count} Reviews`;
   el.soldCount.textContent = `${product.sales.sold_count} Sold`;
   console.log(el.bulkPrice[0]);
-  el.bulkPrice[0].textContent = `$${product.bulk_price.first}`;
+  el.bulkPrice[0].textContent = `$${
+    product.bulk_price.first || "not available"
+  }`;
   el.bulkPrice[1].textContent = `$${product.bulk_price.second}`;
   el.bulkPrice[2].textContent = `$${product.bulk_price.third}`;
   console.log(el.attrValue);
@@ -345,11 +363,11 @@ async function loadProductDetailUI(product) {
     <a href="/pages/productDetail.html?id=${element.id}">
   <div class="related-card">
             <div class="img-box">
-                <img src="../assets/products/wallet.png" alt="Wallet">
+                <img src=${element.images.main} alt="Wallet">
             </div>
             <div class="info-box">
-                <a href="#" class="rp-title">Xiaomi Redmi 8 Original</a>
-                <span class="rp-price">$32.00-$40.00</span>
+                <a href="#" class="rp-title">${element.title}</a>
+                <span class="rp-price">$40.00</span>
             </div>
         </div>
      </a>`;
@@ -381,16 +399,31 @@ async function loadProductDetailUI(product) {
 
 // Load category listing items
 async function loadCategoryListingItems() {
+  const path = document.querySelector(".category-page");
   const urlParams = new URLSearchParams(window.location.search);
   const categoryName = urlParams.get("category");
+  path.textContent = categoryName;
   const listingContainer = document.querySelector(".products-wrapper");
   const paginationWrapper = document.querySelector(".pagination-wrapper");
+  const itemTotal = document.querySelector(".item-count");
   const allItems = await fetchProductsData();
   const categoryItems = allItems.filter(
     (item) => item.category === categoryName
   );
+  itemTotal.textContent = `${categoryItems.length}${
+    categoryItems.length <= 1 ? " item" : " items"
+  } in ${categoryName}`;
+  let savedIdsNumbers;
+  const savedItemsForlater = JSON.parse(localStorage.getItem("wishlistIds"));
+  console.log("savedddddddd", savedItemsForlater);
+  if (savedItemsForlater !== null) {
+    savedIdsNumbers = savedItemsForlater.map(Number);
+  } else {
+    savedIdsNumbers = [];
+  }
   listingContainer.innerHTML = "";
   categoryItems.forEach((element) => {
+    const starIcons = getStarHTML(element.rating.stars);
     listingContainer.innerHTML += `
      <article class="product-card">
                 <div class="card-image">
@@ -400,36 +433,48 @@ async function loadCategoryListingItems() {
                 <div class="card-details">
                     <div class="card-header">
                         <h4>${element.title}</h4>
-                        <button class="btn-fav" onclick="saveForLater(${element.id})">
-                            <img src="../assets/Layout/Form/input-group/Icon/control/fav.png" alt="Fav">
+                        <button class="btn-fav" onclick="saveForLater(${
+                          element.id
+                        })">
+                            <img class="savedIcon" src=${
+                              savedIdsNumbers.includes(element.id)
+                                ? "/assets/icons/SVG/saved.svg"
+                                : "/assets/icons/SVG/save.svg"
+                            } alt="Fav">
                         </button>
                     </div>
                     
                     <div class="price-info">
-                        <span class="price-current">$${element.price.current}</span>
+                        <span class="price-current">$${
+                          element.price.current
+                        }</span>
                         <span class="price-old">$${element.price.old}</span>
                     </div>
 
                     <div class="rating-info">
                         <div class="stars">
-                            <img src="../assets/icons/star-fill.png" alt="star">
-                            <img src="../assets/icons/star-fill.png" alt="star">
-                            <img src="../assets/icons/star-fill.png" alt="star">
-                            <img src="../assets/icons/star-fill.png" alt="star">
-                            <img src="../assets/icons/star-empty.png" alt="star">
+                        ${starIcons}
                         </div>
-                        <span class="rating-score">${element.rating.score}</span>
+                        <span class="rating-score">${
+                          element.rating.stars
+                        }</span>
                         <span class="dot"></span>
-                        <span class="orders-count">${element.sales.sold_count} orders</span>
+                        <span class="orders-count">${
+                          element.sales.sold_count
+                        } orders</span>
                         <span class="dot"></span>
-                        <span class="shipping-status">${element.supplier.shipping}</span>
+                        <span class="shipping-status">${
+                          element.supplier.shipping
+                        }</span>
                     </div>
 
                     <p class="product-desc">
                         ${element.description}
                     </p>
 
-                    <a href="/pages/productDetail.html?id=${element.id}" class="view-link">View details</a>
+                    <a href="/pages/productDetail.html?id=${
+                      element.id
+                    }" class="view-link">View details</a>
                 </div>
             </article>
     `;
@@ -439,58 +484,6 @@ async function loadCategoryListingItems() {
   });
 }
 
-//FiteredUI updates
-async function updateUIFiltered(filteredList) {
-  const listingContainer = document.querySelector(".products-wrapper");
-  listingContainer.innerHTML = "";
-  filteredList.forEach((element) => {
-    listingContainer.innerHTML += `
-       <article class="product-card">
-                  <div class="card-image">
-                      <img src=${element.images.main} alt="iPhone" height="
-  187.6px">
-                  </div>
-                  <div class="card-details">
-                      <div class="card-header">
-                          <h4>${element.title}</h4>
-                          <button class="btn-fav" onclick="saveForLater(${element.id})">
-                              <img src="../assets/Layout/Form/input-group/Icon/control/fav.png" alt="Fav">
-                          </button>
-                      </div>
-
-                      <div class="price-info">
-                          <span class="price-current">$${element.price.current}</span>
-                          <span class="price-old">$${element.price.old}</span>
-                      </div>
-
-                      <div class="rating-info">
-                          <div class="stars">
-                              <img src="../assets/icons/star-fill.png" alt="star">
-                              <img src="../assets/icons/star-fill.png" alt="star">
-                              <img src="../assets/icons/star-fill.png" alt="star">
-                              <img src="../assets/icons/star-fill.png" alt="star">
-                              <img src="../assets/icons/star-empty.png" alt="star">
-                          </div>
-                          <span class="rating-score">${element.rating.score}</span>
-                          <span class="dot"></span>
-                          <span class="orders-count">${element.sales.sold_count} orders</span>
-                          <span class="dot"></span>
-                          <span class="shipping-status">${element.supplier.shipping}</span>
-                      </div>
-
-                      <p class="product-desc">
-                          ${element.description}
-                      </p>
-
-                      <a href="/pages/productDetail.html?id=${element.id}" class="view-link">View details</a>
-                  </div>
-              </article>
-      `;
-    if (filteredList.length <= 6) {
-      paginationWrapper.classList.add("hidden");
-    }
-  });
-}
 //switch list to gird
 const gridBtn = document.querySelector("#btn-icon-grid");
 const listBtn = document.querySelector("#btn-icon-list");
@@ -509,53 +502,6 @@ function handleListClick() {
   gridBtn.classList.remove("active");
   listBtn.classList.add("active");
 }
-//filter
-let activeFilter = {
-  brand: "all",
-  maxPrice: 10000,
-  minRating: 0,
-};
-function updateFilter(filterType, value) {
-  if (filterType === "price") {
-    activeFilter.maxPrice = Number(value);
-  } else if (filterType === "brand") {
-    activeFilter.brand = value;
-  } else if (filterType === "rating") {
-    activeFilter.minRating = Number(value);
-  }
-  applyAllFilters();
-}
-
-//Main filter fuction
-let allProducts = [];
-async function applyAllFilters() {
-  allProducts = await fetchProductsData();
-  const filteredList = allProducts.filter((product) => {
-    // --- CHECK 1: BRAND ---
-    // Agar 'all' hai TO true, WARNA check karo ke brand match ho raha hai?
-    const brandMatch =
-      activeFilter.brand === "all" || product.brand === activeFilter.brand;
-    console.log(brandMatch);
-
-    // // --- CHECK 2: PRICE ---
-    // // Product ki price user ki set ki hui maxPrice se kam honi chahiye
-    // const priceMatch = product.price.current <= activeFilter.maxPrice;
-
-    // // --- CHECK 3: RATING ---
-    // // Product ki rating user ki set ki hui rating se zyada honi chahiye
-    // const ratingMatch = product.rating >= activeFilter.minRating;
-    // console.log("rating", ratingMatch);
-
-    // FINAL DECISION:
-    // Agar teeno TRUE hain, tabhi product dikhao
-    return brandMatch;
-    // && priceMatch && ratingMatch;
-  });
-  console.log(filteredList);
-
-  // 4. Result UI par show karein
-  updateUIFiltered(filteredList);
-}
 
 //load and add saved for later cart
 const storedData = localStorage.getItem("wishlistIds");
@@ -563,11 +509,9 @@ let savedItems = storedData ? JSON.parse(storedData) : [];
 async function saveForLater(elementid) {
   const index = savedItems.indexOf(elementid);
   if (index !== -1) {
-    savedItems.splice(index, 1);
-    console.log(`Removed ${elementid}`);
+    console.log(`already mojood ${elementid}`);
   } else {
     savedItems.unshift(elementid);
-    console.log(`Added ${elementid}`);
   }
   localStorage.setItem("wishlistIds", JSON.stringify(savedItems));
   console.log("Updated List:", savedItems);
@@ -587,7 +531,7 @@ async function renderSavedForLater() {
   const savedGrid = document.querySelector(".saved-grid");
   const savedItemsForlater = JSON.parse(localStorage.getItem("wishlistIds"));
   const products = await fetchProductsData();
-  const savedIdsNumbers = savedItemsForlater.map(Number);
+  const savedIdsNumbers = savedItemsForlater.map(Number) || [];
   console.log(savedIdsNumbers);
 
   const wishlistProducts = products.filter((product) => {
@@ -598,7 +542,7 @@ async function renderSavedForLater() {
     savedGrid.innerHTML += `
   <article class="saved-card">
                     <div class="saved-img">
-                        <img src=${pro.images.main}alt="Tablet">
+                        <img src=${pro.images.main} alt="Tablet">
                     </div>
                     <div class="saved-info">
                         <span class="saved-price">$${pro.price.current}</span>
@@ -690,13 +634,18 @@ async function renderCartUI() {
                             }</span>
 
                     <div class="qty-select">
- <input list="qty" id="qty-choice" name="qty" value="Qty:1" class="qty-feild">
+ <input list="qty" id="qty-choice" name="qty" value="1" class="qty-feild"
+        data-price="${element.price.current}" 
+        data-discount="${element.price.discount_label || 0}" 
+        data-tax="${element.price.tax_percent || 0}" 
+        
+        onchange="priceCalculation()"
+        onkeyup="priceCalculation()">
 <datalist id="qty" qty-feild>
-  <option value="Qty:1">
-  <option value="Qty:10">
-  <option value="Qty:30">
-  <option value="Qty:50">
-  <option value="Qty:100">
+  <option value="10">
+  <option value="30">
+  <option value="50">
+  <option value="100">
 </datalist>
 
                             </div>
@@ -708,9 +657,7 @@ async function renderCartUI() {
                 </article>
         `;
   });
-
-  //Update Price detail
-  priceCalculation(cartProducts);
+  priceCalculation();
 }
 
 async function moveToCart(productid) {
@@ -731,6 +678,7 @@ async function removeFromCart(id) {
   const updatedItems = cartItems.filter((e) => e != id);
   sessionStorage.setItem("cartItems", JSON.stringify(updatedItems));
   await renderCartUI();
+  priceCalculation();
 }
 
 //handle coupon
@@ -739,26 +687,61 @@ function handleCoupon() {
   inputCoupon.value = "No coupon match";
   inputCoupon.style.color = "red";
 }
-//Calcute Total price
-function priceCalculation(cartItems) {
-  const qty = document.querySelector(".qty-feild");
-  const subTotal = document.querySelector(".sub-total");
-  const discountPrice = document.querySelector(".discount-percentage");
-  const taxPrice = document.querySelector(".tax-price");
-  const totalPriceBox = document.querySelector(".total-price");
-  let subTotalprice = 0;
-  // let totalDiscountPercent = 0;
-  let totalTax = 0;
-  let totalDiscount = 0;
-  cartItems.forEach((e) => {
-    subTotalprice += e.price.current;
-    let totalDiscountPercent = e.price.discount_label;
-    totalDiscount += (totalDiscountPercent / 100) * e.price.current;
-    totalTax += e.price.tax || 0;
+
+// calculate total price
+function priceCalculation() {
+  let finalTotal = 0;
+  let totalDiscountGiven = 0;
+  let totalTaxCollected = 0;
+
+  const qtyInputs = document.querySelectorAll("#qty-choice");
+
+  qtyInputs.forEach((input) => {
+    const qty = parseInt(input.value);
+    const price = parseFloat(input.getAttribute("data-price"));
+    const discountPercent = parseFloat(input.getAttribute("data-discount"));
+    const taxPercent = parseFloat(input.getAttribute("data-tax"));
+
+    const baseTotal = price * qty;
+    const discountAmount = (baseTotal * discountPercent) / 100;
+
+    const priceAfterDiscount = baseTotal - discountAmount;
+    const taxAmount = (priceAfterDiscount * taxPercent) / 100;
+
+    const itemFinalTotal = priceAfterDiscount + taxAmount;
+
+    finalTotal += itemFinalTotal;
+    totalDiscountGiven += discountAmount;
+    totalTaxCollected += taxAmount;
   });
-  subTotal.textContent = `$${subTotalprice}`;
-  discountPrice.textContent = `-$${totalDiscount}`;
-  taxPrice.textContent = `+${totalTax}`;
-  let totalPrice = subTotalprice - totalDiscount + totalTax;
-  totalPriceBox.textContent = `$${totalPrice}`;
+
+  console.log(
+    `Total: ${finalTotal}, Tax: ${totalTaxCollected}, Disc: ${totalDiscountGiven}`
+  );
+
+  // Subtotal
+  const subTotalEl = document.querySelector(".sub-total");
+  if (subTotalEl)
+    subTotalEl.innerText = "$" + (finalTotal - totalTaxCollected).toFixed(2);
+  document.querySelector(".discount-percentage").innerText =
+    "-" + totalDiscountGiven;
+  document.querySelector(".tax-price").innerText = "+" + totalTaxCollected;
+  // Final Total
+  const grandTotalEl = document.querySelector(".total-price"); // Total Price
+  if (grandTotalEl) grandTotalEl.innerText = "$" + finalTotal.toFixed(2);
+}
+
+//render star according to rating
+function getStarHTML(ratingValue) {
+  let starsHTML = "";
+
+  for (let i = 1; i <= 5; i++) {
+    if (i <= Math.round(ratingValue)) {
+      starsHTML += `<img src="../assets/icons/SVG/star.svg" alt="star">`;
+    } else {
+      starsHTML += `<img src="../assets/icons/star.png" alt="star">`;
+    }
+  }
+
+  return starsHTML;
 }

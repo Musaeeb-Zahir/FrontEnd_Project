@@ -13,6 +13,26 @@
 <body>
   <div id="header-placeholder"></div>
   <div class="subnavbar-placeholder"></div>
+     <nav aria-label="breadcrumb" class="breadcrumb-nav">
+    <div class="breadcrumb-list-container">
+        
+        <ol class="breadcrumb-list">
+            
+            <li>
+                <a href="/index.html">Home</a>
+            </li>
+            <i class="fa-solid fa-angle-right opacity"></i>
+            <li>
+                <a class="category-page">Clothings</a>
+            </li>
+            <i class="fa-solid fa-angle-right opacity"></i>
+            <li>
+                <a href="#" class="detail-page">Clothings</a>
+            </li>
+
+        </ol>
+    </div>
+</nav>
   <div class="product-detail-placeholder"></div>
   <section class="product-view-section">
       <div class="product-view-card">
@@ -54,8 +74,8 @@
                       <img src="../assets/icons/star-fill.png" alt="star">
                       <img src="../assets/icons/star-fill.png" alt="star">
                       <img src="../assets/icons/star-half.png" alt="star">
-                      <span class="rating-num">9.3</span>
-                  </div>
+                    </div>
+                    <div class="rating-num" id="rating-num">9.3</div>
                   <span class="dot-separator"></span>
                   <span class="meta-text" id="reviews-count">
                       <img src="../assets/icons/message.png" alt="reviews" class="icon-sm"> 32 reviews
@@ -132,14 +152,15 @@
                   <div class="supplier-details">
                       <div class="detail-item">
                           <img src="../assets/icons/germany-flag.png" alt="flag" class="icon-flag">
-                          <span>Germany, Berlin</span>
+                          <span class="seller-country">Germany, Berlin</span>
                       </div>
                       <div class="detail-item">
-                          <img src="../assets/icons/shield-check.png" alt="verified" class="icon-sm">
+                           <i class="fa-solid fa-clipboard-check icon-small icon-small"></i>
                           <span>Verified Seller</span>
                       </div>
                       <div class="detail-item">
-                          <img src="../assets/icons/globe.png" alt="globe" class="icon-sm">
+                         
+                          <i class="fa-solid fa-globe"></i>
                           <span>Worldwide shipping</span>
                       </div>
                   </div>

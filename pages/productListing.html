@@ -6,7 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="cdnjs.cloudflare.com" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Permanent+Marker&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/variables.css">
   <link rel="stylesheet" href="/css/utility.css">
@@ -26,19 +26,11 @@
         <ol class="breadcrumb-list">
             
             <li>
-                <a href="#">Home</a>
+                <a href="/index.html">Home</a>
             </li>
-
+            <i class="fa-solid fa-angle-right opacity"></i>
             <li>
-                <a href="#">Clothings</a>
-            </li>
-
-            <li>
-                <a href="#">Men's wear</a>
-            </li>
-
-            <li>
-                <span aria-current="page">Summer clothing</span>
+                <a href="#" class="category-page">Clothings</a>
             </li>
 
         </ol>
@@ -70,27 +62,27 @@
             <ul class="filter-list checkbox-list"  id="brand-filter">
                 <li>
                     <label>
-                        <input type="checkbox" onchange="updateFilter('brand', 'Samsung')"> <span>Samsung</span>
+                        <input type="checkbox"> <span>Samsung</span>
                     </label>
                 </li>
                 <li>
                     <label>
-                        <input type="checkbox" onchange="updateFilter('brand', 'Apple')"> <span>Apple</span>
+                        <input type="checkbox"> <span>Apple</span>
                     </label>
                 </li>
                 <li>
                     <label>
-                        <input type="checkbox" onchange="updateFilter('brand', 'huawei')"> <span>Huawei</span>
+                        <input type="checkbox"> <span>Huawei</span>
                     </label>
                 </li>
                 <li>
                     <label>
-                        <input type="checkbox" onchange="updateFilter('brand', 'pocco')"> <span>Pocco</span>
+                        <input type="checkbox"> <span>Pocco</span>
                     </label>
                 </li>
                 <li>
                     <label>
-                        <input type="checkbox" onchange="updateFilter('brand', 'lenovo')"> <span>Lenovo</span>
+                        <input type="checkbox"> <span>Lenovo</span>
                     </label>
                 </li>
                 <li><a href="#" class="view-all">See all</a></li>
@@ -105,17 +97,17 @@
     <ul class="filter-list checkbox-list" id="features-filter">
         <li>
             <label>
-                <input type="checkbox" onchange="updateFilter('features', 'metallic')"> <span>Metallic</span>
+                <input type="checkbox"> <span>Metallic</span>
             </label>
         </li>
         <li>
             <label>
-                <input type="checkbox" onchange="updateFilter('features', 'Plastic')"> <span>Plastic cover</span>
+                <input type="checkbox"> <span>Plastic cover</span>
             </label>
         </li>
         <li>
             <label>
-                <input type="checkbox" onchange="updateFilter('features', '8GB Ram')"> <span>8GB Ram</span>
+                <input type="checkbox"> <span>8GB Ram</span>
             </label>
         </li>
         <li>
@@ -137,7 +129,7 @@
                 <h3>Price range</h3>
                 <img src="/assets/Layout/Form/input-group/Icon/control/Vector.png" alt="toggle" class="icon-sm" onclick="toggleFilterList('price-filter')">
             </div>
-            <div class="range-slider"id="price-filter">
+            <div class="range-slider filter-list"id="price-filter">
                 <input type="range" min="0" max="10000">
             </div>
             <div class="price-inputs ">
@@ -191,11 +183,11 @@
             <label>
                 <input type="checkbox">
                 <div class="rating-stars">
-                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="/assets/icons/SVG/star.svg" alt="star">
+                    <img src="/assets/icons/SVG/star.svg" alt="star">
+                    <img src="/assets/icons/SVG/star.svg" alt="star">
+                    <img src="/assets/icons/SVG/star.svg" alt="star">
+                    <img src="/assets/icons/SVG/star.svg" alt="star">
                 </div>
             </label>
         </li>
@@ -203,11 +195,11 @@
             <label>
                 <input type="checkbox">
                 <div class="rating-stars">
-                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="/assets/icons/SVG/star.svg" alt="star">
+                    <img src="/assets/icons/SVG/star.svg" alt="star">
+                    <img src="/assets/icons/SVG/star.svg" alt="star">
+                    <img src="/assets/icons/SVG/star.svg" alt="star">
+                    <img src="/assets/icons/star.png" alt="star">
                 </div>
             </label>
         </li>
@@ -215,11 +207,11 @@
             <label>
                 <input type="checkbox">
                 <div class="rating-stars">
-                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="/assets/icons/SVG/star.svg" alt="star">
+                    <img src="/assets/icons/SVG/star.svg" alt="star">
+                    <img src="/assets/icons/SVG/star.svg" alt="star">
+                    <img src="/assets/icons/star.png" alt="star">
+                    <img src="/assets/icons/star.png" alt="star">
                 </div>
             </label>
         </li>
@@ -227,11 +219,11 @@
             <label>
                 <input type="checkbox">
                 <div class="rating-stars">
-                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
-                    <img src="/assets/Layout/Form/input-group/Icon/control/star.png" alt="star">
+                    <img src="/assets/icons/SVG/star.svg" alt="star">
+                    <img src="/assets/icons/SVG/star.svg" alt="star">
+                    <img src="/assets/icons/star.png" alt="star">
+                    <img src="/assets/icons/star.png" alt="star">
+                    <img src="/assets/icons/star.png" alt="star">
                 </div>
             </label>
         </li>
@@ -321,13 +313,13 @@
                     <option value="20">Show 20</option>
                     <option value="50">Show 50</option>
                 </select>
-                <img src="/assets/icons/chevron-down.png" alt="arrow" class="dropdown-icon">
+                <i class="fa-solid fa-chevron-down dropdown-icon"></i>
             </div>
         
             <div class="page-controls">
                 
                 <button class="page-btn arrow-btn page-previous ">
-                    <img src="/assets/icons/chevron-left.png" alt="Previous">
+                    <i class="fa-solid fa-angle-left"></i>
                 </button>
         
                 <button class="page-btn active ">1</button>
@@ -337,7 +329,7 @@
                 <button class="page-btn">3</button>
         
                 <button class="page-btn arrow-btn page-next">
-                    <img src="/assets/icons/chevron-right.png" alt="Next">
+                    <i class="fa-solid fa-angle-right"></i>
                 </button>
         
             </div>
