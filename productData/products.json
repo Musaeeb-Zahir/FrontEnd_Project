@@ -7,6 +7,12 @@
     "sub_category": "Outerwear",
     "brand": "Zara",
     "price": { "current": 150.00, "old": 200.00, "currency": "USD", "discount_label": "25" },
+    "bulk_pricing": {
+      "first": 140,
+      "second": 130,
+      "third": 120
+    },
+    "tax": 12,
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -15,7 +21,16 @@
     },
     "rating": { "score": 9.0, "count": 45, "stars": 4.5 },
     "sales": { "sold_count": 320, "reviews_count": 45 },
-    "specifications": { "Material": "Genuine Leather", "Size": "S, M, L, XL" },
+    "specifications": {
+      "Type": "Biker Jacket",
+      "Material": "Genuine Leather",
+      "Design": "Slim Fit",
+      "Customization": "Custom Embossing Available",
+      "Protection": "Water Repellent Finish",
+      "Warranty": "1 Year Leather Warranty",
+      "Size": "S, M, L, XL",
+      "Color": "Black, Brown"
+    },
     "features": ["Windproof", "Zipper Pockets", "Premium Stitching"],
     "description": "High-quality genuine leather jacket perfect for winter riders.",
     "supplier": { "name": "Fashion Hub", "country": "Turkey", "verified": true, "shipping": "Worldwide" },
@@ -42,6 +57,12 @@
     "sub_category": "Men's wear",
     "brand": "H&M",
     "price": { "current": 25.00, "old": null, "currency": "USD", "discount_label": null },
+    "bulk_pricing": {
+      "first": 22,
+      "second": 20,
+      "third": 18
+    },
+    "tax": 5,
     "stock_status": "In stock",
     "min_order": "5 pcs",
     "images": {
@@ -50,7 +71,16 @@
     },
     "rating": { "score": 8.5, "count": 20, "stars": 4 },
     "sales": { "sold_count": 500, "reviews_count": 20 },
-    "specifications": { "Material": "Polyester", "Pattern": "Printed" },
+    "specifications": {
+      "Type": "Casual Shorts",
+      "Material": "Polyester Blend",
+      "Design": "Tropical Print",
+      "Customization": "None",
+      "Protection": "UV Protection Fabric",
+      "Warranty": "30 Days Return",
+      "Size": "M, L, XL, XXL",
+      "Color": "Blue, Orange, Green"
+    },
     "features": ["Quick Dry", "Elastic Waistband", "Breathable"],
     "description": "Comfortable shorts designed for beach and casual summer wear.",
     "supplier": { "name": "Beach Vibes", "country": "China", "verified": false, "shipping": "Standard" },
@@ -64,6 +94,12 @@
     "sub_category": "Tops",
     "brand": "Uniqlo",
     "price": { "current": 15.00, "old": 20.00, "currency": "USD", "discount_label": "25" },
+    "bulk_pricing": {
+      "first": 13,
+      "second": 11,
+      "third": 10
+    },
+    "tax": 5,
     "stock_status": "In stock",
     "min_order": "10 pcs",
     "images": {
@@ -72,7 +108,16 @@
     },
     "rating": { "score": 9.5, "count": 100, "stars": 5 },
     "sales": { "sold_count": 1200, "reviews_count": 100 },
-    "specifications": { "Material": "00 Cotton", "Fit": "Regular" },
+    "specifications": {
+      "Type": "T-Shirt",
+      "Material": "100% Cotton",
+      "Design": "Solid Color",
+      "Customization": "Screen Printing Available",
+      "Protection": "None",
+      "Warranty": "No Warranty",
+      "Size": "XS, S, M, L, XL",
+      "Color": "White, Black, Grey, Navy"
+    },
     "features": ["Soft Fabric", "Color Fastness", "Daily Wear"],
     "description": "Essential cotton t-shirt available in multiple colors.",
     "supplier": { "name": "Cotton World", "country": "Bangladesh", "verified": true, "shipping": "Fast Shipping" },
@@ -93,6 +138,12 @@
     "sub_category": "Accessories",
     "brand": "Fossil",
     "price": { "current": 45.00, "old": 60.00, "currency": "USD", "discount_label": "30" },
+    "bulk_pricing": {
+      "first": 40,
+      "second": 38,
+      "third": 35
+    },
+    "tax": 8,
     "stock_status": "Out of stock",
     "min_order": "1 pcs",
     "images": {
@@ -101,7 +152,16 @@
     },
     "rating": { "score": 8.8, "count": 60, "stars": 4.5 },
     "sales": { "sold_count": 400, "reviews_count": 60 },
-    "specifications": { "Material": "Leather", "Slots": "8 Card Slots" },
+    "specifications": {
+      "Type": "Wallet",
+      "Material": "Top Grain Leather",
+      "Design": "Bi-fold Minimalist",
+      "Customization": "Name Engraving",
+      "Protection": "RFID Blocking",
+      "Warranty": "2 Years",
+      "Size": "Standard Pocket Size",
+      "Color": "Tan, Dark Brown"
+    },
     "features": ["RFID Protection", "Slim Design", "Durable"],
     "description": "Classic leather wallet with plenty of storage for cards and cash.",
     "supplier": { "name": "Leather Crafts", "country": "Italy", "verified": true, "shipping": "Worldwide" },
@@ -128,6 +188,12 @@
     "sub_category": "Bags",
     "brand": "Samsonite",
     "price": { "current": 85.00, "old": null, "currency": "USD", "discount_label": null },
+    "bulk_pricing": {
+      "first": 80,
+      "second": 75,
+      "third": 70
+    },
+    "tax": 10,
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -136,7 +202,16 @@
     },
     "rating": { "score": 9.2, "count": 15, "stars": 4.5 },
     "sales": { "sold_count": 150, "reviews_count": 15 },
-    "specifications": { "Capacity": "30L", "Waterproof": "Yes" },
+    "specifications": {
+      "Type": "Backpack",
+      "Material": "Nylon & Polyester",
+      "Design": "Ergonomic Tech",
+      "Customization": "Corporate Logo Patch",
+      "Protection": "Waterproof Coating",
+      "Warranty": "5 Years Global",
+      "Size": "30L Capacity",
+      "Color": "Black, Grey"
+    },
     "features": ["Laptop Compartment", "Ergonomic Straps", "USB Port"],
     "description": "Stylish and functional backpack for daily commute or travel.",
     "supplier": { "name": "Bag Masters", "country": "Vietnam", "verified": true, "shipping": "Standard" },
@@ -150,6 +225,12 @@
     "sub_category": "Outerwear",
     "brand": "Burberry",
     "price": { "current": 120.00, "old": 150.00, "currency": "USD", "discount_label": "20" },
+    "bulk_pricing": {
+      "first": 110,
+      "second": 105,
+      "third": 95
+    },
+    "tax": 15,
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -158,7 +239,16 @@
     },
     "rating": { "score": 8.9, "count": 12, "stars": 4.5 },
     "sales": { "sold_count": 80, "reviews_count": 12 },
-    "specifications": { "Material": "Wool Blend", "Length": "Long" },
+    "specifications": {
+      "Type": "Coat",
+      "Material": "Wool Blend",
+      "Design": "Double Breasted",
+      "Customization": "Tailoring Available",
+      "Protection": "Wind Resistant",
+      "Warranty": "1 Year",
+      "Size": "48, 50, 52, 54, 56",
+      "Color": "Camel, Black"
+    },
     "features": ["Warm Lining", "Double Breasted", "Formal Look"],
     "description": "Elegant trench coat suitable for business and formal occasions.",
     "supplier": { "name": "Gentleman's Choice", "country": "UK", "verified": true, "shipping": "Express" },
@@ -179,6 +269,12 @@
     "sub_category": "Furniture",
     "brand": "IKEA",
     "price": { "current": 199.00, "old": 250.00, "currency": "USD", "discount_label": "20" },
+    "bulk_pricing": {
+      "first": 185,
+      "second": 175,
+      "third": 160
+    },
+    "tax": 18,
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -187,7 +283,16 @@
     },
     "rating": { "score": 9.4, "count": 55, "stars": 4.5 },
     "sales": { "sold_count": 210, "reviews_count": 55 },
-    "specifications": { "Material": "Velvet & Wood", "Color": "Teal" },
+    "specifications": {
+      "Type": "Armchair",
+      "Material": "Velvet & Solid Wood",
+      "Design": "Nordic Modern",
+      "Customization": "Fabric Color Selection",
+      "Protection": "Stain Resistant Coating",
+      "Warranty": "10 Years Frame Warranty",
+      "Size": "80cm x 90cm x 100cm",
+      "Color": "Teal, Mustard, Grey"
+    },
     "features": ["Ergonomic Support", "Soft Cushioning", "Modern Design"],
     "description": "Luxurious velvet chair that adds a touch of elegance to your living room.",
     "supplier": { "name": "Home Decor Ltd", "country": "Sweden", "verified": true, "shipping": "Freight" },
@@ -214,6 +319,12 @@
     "sub_category": "Kitchenware",
     "brand": "Corelle",
     "price": { "current": 89.99, "old": null, "currency": "USD", "discount_label": null },
+    "bulk_pricing": {
+      "first": 85,
+      "second": 80,
+      "third": 75
+    },
+    "tax": 8,
     "stock_status": "In stock",
     "min_order": "2 sets",
     "images": {
@@ -222,7 +333,16 @@
     },
     "rating": { "score": 8.7, "count": 30, "stars": 4.5 },
     "sales": { "sold_count": 150, "reviews_count": 30 },
-    "specifications": { "Pieces": "16", "Material": "Ceramic" },
+    "specifications": {
+      "Type": "Dinnerware Set",
+      "Material": "Bone China",
+      "Design": "Floral Pattern",
+      "Customization": "None",
+      "Protection": "Chip Resistant",
+      "Warranty": "3 Years Breakage Warranty",
+      "Size": "Service for 4 (16 Pieces)",
+      "Color": "White with Blue patterns"
+    },
     "features": ["Microwave Safe", "Dishwasher Safe", "Scratch Resistant"],
     "description": "Complete dinner set including plates, bowls, and mugs.",
     "supplier": { "name": "Kitchen Kings", "country": "China", "verified": true, "shipping": "Fragile Care" },
@@ -236,6 +356,12 @@
     "sub_category": "Lighting",
     "brand": "Philips",
     "price": { "current": 35.00, "old": 50.00, "currency": "USD", "discount_label": "30" },
+    "bulk_pricing": {
+      "first": 32,
+      "second": 30,
+      "third": 28
+    },
+    "tax": 5,
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -244,7 +370,16 @@
     },
     "rating": { "score": 9.1, "count": 80, "stars": 4.5 },
     "sales": { "sold_count": 600, "reviews_count": 80 },
-    "specifications": { "Bulb Type": "LED", "Power": "12W" },
+    "specifications": {
+      "Type": "Table Lamp",
+      "Material": "Aluminum & Glass",
+      "Design": "Minimalist Cylinder",
+      "Customization": "None",
+      "Protection": "Overheat Protection",
+      "Warranty": "2 Years",
+      "Size": "15cm x 30cm",
+      "Color": "White, Black"
+    },
     "features": ["Adjustable Brightness", "Warm Light", "Energy Saving"],
     "description": "Sleek bedside lamp perfect for reading and ambient lighting.",
     "supplier": { "name": "Bright Lights", "country": "Germany", "verified": true, "shipping": "Standard" },
@@ -265,6 +400,12 @@
     "sub_category": "Appliances",
     "brand": "Roomba",
     "price": { "current": 299.00, "old": 400.00, "currency": "USD", "discount_label": "25" },
+    "bulk_pricing": {
+      "first": 280,
+      "second": 270,
+      "third": 250
+    },
+    "tax": 20,
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -273,7 +414,16 @@
     },
     "rating": { "score": 9.6, "count": 120, "stars": 5 },
     "sales": { "sold_count": 800, "reviews_count": 120 },
-    "specifications": { "Battery Life": "120 mins", "Suction": "2000Pa" },
+    "specifications": {
+      "Type": "Robot Vacuum",
+      "Material": "Plastic & Rubber",
+      "Design": "Low Profile Circular",
+      "Customization": "Name in App",
+      "Protection": "Bumper Sensors",
+      "Warranty": "1 Year Limited",
+      "Size": "34cm Diameter",
+      "Color": "Black/Silver"
+    },
     "features": ["App Control", "Auto Charge", "Mapping Technology"],
     "description": "Keep your floors clean automatically with this smart robot vacuum.",
     "supplier": { "name": "Smart Home Inc", "country": "USA", "verified": true, "shipping": "Free Shipping" },
@@ -300,6 +450,12 @@
     "sub_category": "Appliances",
     "brand": "Nespresso",
     "price": { "current": 145.00, "old": null, "currency": "USD", "discount_label": null },
+    "bulk_pricing": {
+      "first": 140,
+      "second": 135,
+      "third": 125
+    },
+    "tax": 15,
     "stock_status": "Out of stock",
     "min_order": "1 pcs",
     "images": {
@@ -308,7 +464,16 @@
     },
     "rating": { "score": 9.3, "count": 200, "stars": 4.5 },
     "sales": { "sold_count": 1500, "reviews_count": 200 },
-    "specifications": { "Pressure": "19 Bar", "Tank": "1L" },
+    "specifications": {
+      "Type": "Coffee Machine",
+      "Material": "Stainless Steel & ABS",
+      "Design": "Compact Retro",
+      "Customization": "None",
+      "Protection": "Auto-Shutoff",
+      "Warranty": "2 Years",
+      "Size": "12cm x 32cm x 23cm",
+      "Color": "Red, Black, Cream"
+    },
     "features": ["Fast Heating", "Compact Size", "One-touch Brew"],
     "description": "Brew cafe-quality espresso at home in seconds.",
     "supplier": { "name": "Coffee Hub", "country": "Italy", "verified": true, "shipping": "Standard" },
@@ -322,6 +487,12 @@
     "sub_category": "Decor",
     "brand": "HomeStyle",
     "price": { "current": 40.00, "old": 55.00, "currency": "USD", "discount_label": "27" },
+    "bulk_pricing": {
+      "first": 35,
+      "second": 32,
+      "third": 28
+    },
+    "tax": 6,
     "stock_status": "In stock",
     "min_order": "2 pcs",
     "images": {
@@ -330,7 +501,16 @@
     },
     "rating": { "score": 8.2, "count": 25, "stars": 4 },
     "sales": { "sold_count": 100, "reviews_count": 25 },
-    "specifications": { "Material": "Polyester", "Size": "Custom" },
+    "specifications": {
+      "Type": "Roller Blind",
+      "Material": "Polyester Blackout",
+      "Design": "Solid Texture",
+      "Customization": "Custom Dimensions",
+      "Protection": "UV Coating",
+      "Warranty": "3 Years Mechanism",
+      "Size": "Custom (up to 2m width)",
+      "Color": "White, Beige, Grey"
+    },
     "features": ["Light Filtering", "Easy Install", "Privacy"],
     "description": "Contemporary blinds to control light and privacy in your home.",
     "supplier": { "name": "Decor Direct", "country": "China", "verified": false, "shipping": "Standard" },
@@ -351,6 +531,12 @@
     "sub_category": "Kitchenware",
     "brand": "KitchenAid",
     "price": { "current": 250.00, "old": 300.00, "currency": "USD", "discount_label": "16" },
+    "bulk_pricing": {
+      "first": 240,
+      "second": 230,
+      "third": 215
+    },
+    "tax": 25,
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -359,7 +545,16 @@
     },
     "rating": { "score": 9.8, "count": 300, "stars": 5 },
     "sales": { "sold_count": 900, "reviews_count": 300 },
-    "specifications": { "Power": "500W", "Bowl Capacity": "5L" },
+    "specifications": {
+      "Type": "Stand Mixer",
+      "Material": "Die-Cast Metal",
+      "Design": "Classic Tilt-Head",
+      "Customization": "Engraving Available",
+      "Protection": "Motor Overload Protection",
+      "Warranty": "5 Years",
+      "Size": "5L Bowl",
+      "Color": "Empire Red, Black, Silver"
+    },
     "features": ["Multiple Speeds", "Tilt-head", "Stainless Bowl"],
     "description": "The ultimate tool for baking and mixing heavy doughs.",
     "supplier": { "name": "Bake Pros", "country": "USA", "verified": true, "shipping": "Express" },
@@ -380,6 +575,12 @@
     "sub_category": "Decor",
     "brand": "Artisan",
     "price": { "current": 22.00, "old": null, "currency": "USD", "discount_label": null },
+    "bulk_pricing": {
+      "first": 20,
+      "second": 18,
+      "third": 15
+    },
+    "tax": 3,
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -388,7 +589,16 @@
     },
     "rating": { "score": 8.0, "count": 10, "stars": 4 },
     "sales": { "sold_count": 50, "reviews_count": 10 },
-    "specifications": { "Height": "30cm", "Material": "Ceramic" },
+    "specifications": {
+      "Type": "Vase",
+      "Material": "Glazed Ceramic",
+      "Design": "Handcrafted Curve",
+      "Customization": "None",
+      "Protection": "Waterproof Glaze",
+      "Warranty": "Arrival Guarantee",
+      "Size": "30cm Height",
+      "Color": "Matte White, Earthy Brown"
+    },
     "features": ["Hand Painted", "Modern Shape", "Waterproof"],
     "description": "Beautiful vase to accent your living space, perfect for fresh flowers.",
     "supplier": { "name": "Art House", "country": "Portugal", "verified": false, "shipping": "Standard" },
@@ -402,6 +612,12 @@
     "sub_category": "Cameras",
     "brand": "GoPro",
     "price": { "current": 350.00, "old": 400.00, "currency": "USD", "discount_label": "12" },
+    "bulk_pricing": {
+      "first": 340,
+      "second": 330,
+      "third": 315
+    },
+    "tax": 25,
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -410,7 +626,16 @@
     },
     "rating": { "score": 9.2, "count": 220, "stars": 4.5 },
     "sales": { "sold_count": 1000, "reviews_count": 220 },
-    "specifications": { "Resolution": "5K Video", "Waterproof": "10m" },
+    "specifications": {
+      "Type": "Action Camera",
+      "Material": "Rugged Plastic/Glass",
+      "Design": "Compact Cube",
+      "Customization": "None",
+      "Protection": "Waterproof 10m",
+      "Warranty": "1 Year Global",
+      "Size": "71mm x 55mm x 33mm",
+      "Color": "Black"
+    },
     "features": ["HyperSmooth 3.0", "Front Display", "Voice Control"],
     "description": "Capture stunning 5K video with the most advanced GoPro yet.",
     "supplier": { "name": "Tech World", "country": "USA", "verified": true, "shipping": "Free Shipping" },
@@ -437,6 +662,12 @@
     "sub_category": "Wearables",
     "brand": "Apple",
     "price": { "current": 329.00, "old": 399.00, "currency": "USD", "discount_label": "17" },
+    "bulk_pricing": {
+      "first": 320,
+      "second": 310,
+      "third": 300
+    },
+    "tax": 22,
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -445,7 +676,16 @@
     },
     "rating": { "score": 9.5, "count": 500, "stars": 5 },
     "sales": { "sold_count": 3000, "reviews_count": 500 },
-    "specifications": { "Battery": "18 Hours", "Connectivity": "GPS + Cellular" },
+    "specifications": {
+      "Type": "Smartwatch",
+      "Material": "Aluminum Case",
+      "Design": "Square Face",
+      "Customization": "Strap Selection",
+      "Protection": "Crack Resistant Crystal",
+      "Warranty": "1 Year Apple Care",
+      "Size": "41mm, 45mm",
+      "Color": "Midnight, Starlight, Green, Blue"
+    },
     "features": ["ECG App", "Blood Oxygen", "Fitness Tracking"],
     "description": "The future of health on your wrist. Larger display and faster charging.",
     "supplier": { "name": "iStore", "country": "USA", "verified": true, "shipping": "Express" },
@@ -466,6 +706,12 @@
     "sub_category": "Mobile",
     "brand": "Xiaomi",
     "price": { "current": 699.00, "old": null, "currency": "USD", "discount_label": null },
+    "bulk_pricing": {
+      "first": 680,
+      "second": 660,
+      "third": 640
+    },
+    "tax": 40,
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -474,7 +720,16 @@
     },
     "rating": { "score": 8.9, "count": 150, "stars": 4.5 },
     "sales": { "sold_count": 600, "reviews_count": 150 },
-    "specifications": { "RAM": "12GB", "Storage": "256GB" },
+    "specifications": {
+      "Type": "Smartphone",
+      "Material": "Glass Front/Back",
+      "Design": "Bezel-less",
+      "Customization": "None",
+      "Protection": "Gorilla Glass Victus",
+      "Warranty": "2 Years Manufacturer",
+      "Size": "6.7 inch Display",
+      "Color": "Cosmic Black, Lunar Silver"
+    },
     "features": ["108MP Camera", "120Hz Display", "5G Ready"],
     "description": "Flagship performance at an unbeatable price.",
     "supplier": { "name": "Mi Official", "country": "China", "verified": true, "shipping": "Standard" },
@@ -495,6 +750,12 @@
     "sub_category": "Audio",
     "brand": "Sony",
     "price": { "current": 199.00, "old": 250.00, "currency": "USD", "discount_label": "20" },
+    "bulk_pricing": {
+      "first": 190,
+      "second": 180,
+      "third": 165
+    },
+    "tax": 18,
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -503,7 +764,16 @@
     },
     "rating": { "score": 9.3, "count": 180, "stars": 4.5 },
     "sales": { "sold_count": 850, "reviews_count": 180 },
-    "specifications": { "Battery": "30 Hours", "Type": "Wireless" },
+    "specifications": {
+      "Type": "Over-Ear Headphones",
+      "Material": "Premium Plastic & Leather",
+      "Design": "Foldable",
+      "Customization": "None",
+      "Protection": "Splash Proof",
+      "Warranty": "1 Year",
+      "Size": "Adjustable Headband",
+      "Color": "Black, Silver"
+    },
     "features": ["Active NC", "Touch Controls", "Voice Assistant"],
     "description": "Immerse yourself in music with industry-leading noise cancellation.",
     "supplier": { "name": "Sound City", "country": "Japan", "verified": true, "shipping": "Standard" },
@@ -517,6 +787,12 @@
     "sub_category": "Mobile",
     "brand": "Samsung",
     "price": { "current": 999.00, "old": 1100.00, "currency": "USD", "discount_label": "-9" },
+    "bulk_pricing": {
+      "first": 980,
+      "second": 950,
+      "third": 920
+    },
+    "tax": 50,
     "stock_status": "Out of stock",
     "min_order": "1 pcs",
     "images": {
@@ -525,7 +801,16 @@
     },
     "rating": { "score": 9.7, "count": 400, "stars": 5 },
     "sales": { "sold_count": 2000, "reviews_count": 400 },
-    "specifications": { "Screen": "6.8 inch AMOLED", "Zoom": "100x" },
+    "specifications": {
+      "Type": "Smartphone",
+      "Material": "Armor Aluminum & Glass",
+      "Design": "Curve Edge",
+      "Customization": "Exclusive Online Colors",
+      "Protection": "IP68 Water Resistant",
+      "Warranty": "1 Year Standard",
+      "Size": "6.8 inch AMOLED",
+      "Color": "Phantom Black, Burgundy"
+    },
     "features": ["S-Pen Support", "Nightography", "Long Battery"],
     "description": "The ultimate smartphone experience with a powerful camera system.",
     "supplier": { "name": "Samsung Direct", "country": "Korea", "verified": true, "shipping": "Free Shipping" },
@@ -552,6 +837,12 @@
     "sub_category": "Mobile",
     "brand": "Oppo",
     "price": { "current": 199.00, "old": 220.00, "currency": "USD", "discount_label": "10" },
+    "bulk_pricing": {
+      "first": 190,
+      "second": 180,
+      "third": 170
+    },
+    "tax": 10,
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -560,7 +851,16 @@
     },
     "rating": { "score": 8.0, "count": 75, "stars": 4 },
     "sales": { "sold_count": 300, "reviews_count": 75 },
-    "specifications": { "RAM": "4GB", "Battery": "5000mAh" },
+    "specifications": {
+      "Type": "Smartphone",
+      "Material": "Plastic Body",
+      "Design": "Standard Bar",
+      "Customization": "None",
+      "Protection": "Basic Screen Guard",
+      "Warranty": "1 Year",
+      "Size": "6.5 inch HD",
+      "Color": "Blue, Black"
+    },
     "features": ["Dual Sim", "Expandable Storage", "HD Screen"],
     "description": "Reliable smartphone with essential features for everyday use.",
     "supplier": { "name": "Mobile Mart", "country": "China", "verified": false, "shipping": "Slow" },
@@ -574,6 +874,12 @@
     "sub_category": "Computers",
     "brand": "Dell",
     "price": { "current": 1200.00, "old": 1400.00, "currency": "USD", "discount_label": "14" },
+    "bulk_pricing": {
+      "first": 1150,
+      "second": 1100,
+      "third": 1050
+    },
+    "tax": 80,
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -582,7 +888,16 @@
     },
     "rating": { "score": 9.1, "count": 90, "stars": 4.5 },
     "sales": { "sold_count": 250, "reviews_count": 90 },
-    "specifications": { "Processor": "Intel i7", "RAM": "16GB" },
+    "specifications": {
+      "Type": "Laptop",
+      "Material": "CNC Aluminum",
+      "Design": "Ultrabook Thin",
+      "Customization": "OS Selection",
+      "Protection": "Fingerprint Reader",
+      "Warranty": "1 Year Onsite",
+      "Size": "15.6 inch Display",
+      "Color": "Platinum Silver"
+    },
     "features": ["InfinityEdge Display", "Backlit Keyboard", "SSD"],
     "description": "Powerhouse laptop for creators and professionals.",
     "supplier": { "name": "Comp World", "country": "USA", "verified": true, "shipping": "Fragile Care" },
@@ -603,11 +918,12 @@
     "sub_category": "Smart Home",
     "brand": "Xiaomi",
     "price": { "current": 45.00, "old": null, "currency": "USD", "discount_label": null },
-    "bulk_price": {
+    "bulk_pricing": {
       "first": 40,
       "second": 35,
       "third": 30
     },
+    "tax": 5,
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -616,7 +932,16 @@
     },
     "rating": { "score": 8.6, "count": 40, "stars": 4.5 },
     "sales": { "sold_count": 180, "reviews_count": 40 },
-    "specifications": { "Capacity": "1.7L", "Control": "App/Touch" },
+    "specifications": {
+      "Type": "Electric Kettle",
+      "Material": "Borosilicate Glass",
+      "Design": "Transparent Smart",
+      "Customization": "None",
+      "Protection": "Dry Boil Protection",
+      "Warranty": "1 Year",
+      "Size": "1.7L Capacity",
+      "Color": "Clear/White"
+    },
     "features": ["Temp Control", "Keep Warm", "Fast Boil"],
     "description": "Control your water temperature precisely with this smart kettle.",
     "supplier": { "name": "Mi Home", "country": "China", "verified": true, "shipping": "Standard" },
@@ -630,6 +955,12 @@
     "sub_category": "Audio",
     "brand": "Beats",
     "price": { "current": 180.00, "old": 200.00, "currency": "USD", "discount_label": "10" },
+    "bulk_pricing": {
+      "first": 170,
+      "second": 160,
+      "third": 150
+    },
+    "tax": 15,
     "stock_status": "In stock",
     "min_order": "1 pcs",
     "images": {
@@ -638,7 +969,16 @@
     },
     "rating": { "score": 8.8, "count": 110, "stars": 4.5 },
     "sales": { "sold_count": 450, "reviews_count": 110 },
-    "specifications": { "Color": "White", "Battery": "22 Hours" },
+    "specifications": {
+      "Type": "Wireless Headphones",
+      "Material": "Plastic",
+      "Design": "On-Ear",
+      "Customization": "None",
+      "Protection": "None",
+      "Warranty": "1 Year",
+      "Size": "One Size Fits All",
+      "Color": "White"
+    },
     "features": ["Pure ANC", "Fast Fuel", "Comfort Cushions"],
     "description": "Stylish white headphones delivering premium sound quality.",
     "supplier": { "name": "Audio Gear", "country": "USA", "verified": true, "shipping": "Standard" },

@@ -554,15 +554,17 @@
 }
 
 .related-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .related-card {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  height: 254px;
+  width: 172px;
 }
 
 .img-box {
