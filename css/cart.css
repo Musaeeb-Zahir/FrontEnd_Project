@@ -32,6 +32,10 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  height: 552px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  border-bottom: 1px solid var(--primary-line-clr);
 }
 
 .cart-item {
@@ -41,6 +45,12 @@
   padding: 20px;
   display: flex;
   gap: 15px;
+  transition: all 0.3s ease-in-out;
+}
+.cart-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-color: #bbbcbd;
 }
 
 .item-img {
@@ -97,7 +107,7 @@
 .btn-remove {
   background: none;
   border: 1px solid var(--primary-line-clr);
-  color: #fa3434; /* Red for remove */
+  color: #fa3434; 
   padding: 5px 10px;
   border-radius: 4px;
   font-size: 13px;
@@ -144,20 +154,11 @@
   outline: none;
   cursor: pointer;
 }
-/* .qty-select .qty-feild::after {
-  content: "⌄";
-  font-weight: 900;
-  position: absolute;
-  top: 4px;
-  right: 4px;
-} */
-
-/* --- Cart Actions Row --- */
 .cart-actions-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .btn-back-shop {
@@ -176,7 +177,7 @@
 
 .btn-back-shop img {
   width: 16px;
-  filter: brightness(0) invert(1); /* Icon ko white karne ke liye */
+  filter: brightness(0) invert(1); 
 }
 
 .btn-remove-all {
@@ -190,10 +191,10 @@
   background: white;
 }
 
-/* --- Service Features --- */
+ /* --- Service Features  */
 .service-features {
   display: flex;
-  justify-content: space-between; /* Icons spread karne ke liye */
+  justify-content: space-between; 
   margin-top: 20px;
   gap: 20px;
 }
@@ -207,7 +208,7 @@
 .icon-circle {
   width: 48px;
   height: 48px;
-  background-color: #e0e0e0; /* Grey circle bg */
+  background-color: #e0e0e0; 
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -235,7 +236,7 @@
   color: var(--secondary-text-clr);
 }
 
-/* --- Right Column: Sidebar --- */
+/* Right sidebar */
 .cart-sidebar {
   background: white;
   border: 1px solid var(--primary-line-clr);
@@ -315,7 +316,7 @@
 
 .btn-checkout {
   width: 100%;
-  background-color: #00b517; /* Green button */
+  background-color: #00b517; 
   color: white;
   border: none;
   padding: 12px;
@@ -324,8 +325,11 @@
   font-weight: 500;
   cursor: pointer;
   margin-bottom: 15px;
+  transition: all 0.3s ease-in-out;
 }
-
+.btn-checkout:hover {
+  transform: scale(1.03);
+}
 .payment-icons {
   display: flex;
   justify-content: center;
@@ -366,6 +370,8 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 20px 10px;
+  transition: all 0.3s ease-in-out;
 }
 
 .saved-img {
@@ -418,21 +424,14 @@
   font-weight: 500;
   cursor: pointer;
   width: fit-content;
+  transition: all 0.3s ease-in-out;
+}
+.btn-move-cart:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-color: #bbbcbd;
 }
 
 .btn-move-cart img {
   width: 14px;
-}
-
-/* --- Responsive Adjustments --- */
-@media (max-width: 992px) {
-  .cart-layout {
-    grid-template-columns: 1fr; /* Stack sidebar below items */
-  }
-  .saved-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .service-features {
-    flex-wrap: wrap;
-  }
 }

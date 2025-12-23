@@ -318,8 +318,11 @@
   font-weight: 500;
   cursor: pointer;
   font-size: 14px;
+  transition: all 0.3s ease-in-out;
 }
-
+.btn-inquiry:hover {
+  background-color: #0b5ed7;
+}
 .btn-profile {
   background-color: white;
   color: var(--primary-btn-bg);
@@ -399,7 +402,7 @@
 
 .tab-content {
   padding: 20px;
-  display: none; /* Default: Sab chupa do */
+  display: none; 
   animation: fadeIn 0.4s;
 }
 .tab-content.active-content {
@@ -440,7 +443,7 @@
 }
 
 .spec-label {
-  background-color: var(--gray-400); /* Light grey bg for labels */
+  background-color: var(--gray-400); 
   color: var(--primary-text-color);
   width: 150px;
   font-weight: 500;
@@ -535,13 +538,16 @@
   color: var(--secondary-text-clr);
 }
 /* related images section */
+.related-grid-section {
+  padding: 20px 0;
+  background-color: var(--bg-light);
+}
 .related-products-section {
-  background: white;
   border: 1px solid var(--primary-line-clr);
+  background-color: #ffffff;
   border-radius: 6px;
   padding: 20px;
-  margin-top: 20px;
-  max-width: 1200px;
+  max-width: 1161px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -556,7 +562,7 @@
 .related-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 7px;
 }
 
 .related-card {
@@ -568,7 +574,7 @@
 }
 
 .img-box {
-  background-color: #eeeeee; /* Image me background thoda dark grey hai */
+  background-color: #eeeeee;
   border-radius: 6px;
   height: 140px;
   display: flex;
@@ -581,7 +587,7 @@
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  mix-blend-mode: multiply; /* Agar image ka white bg ho to usay blend karne k liye */
+  mix-blend-mode: multiply; 
 }
 
 .info-box {
@@ -605,10 +611,13 @@
   font-size: 14px;
   color: var(--secondary-text-clr);
 }
-
+.discount-banner-placeholder {
+  background-color: var(--bg-light);
+  padding: 20px 0;
+}
 .discount-section {
   max-width: 1200px;
-  margin: 20px auto;
+  margin: 0 auto;
   padding: 0 20px;
 }
 
@@ -658,30 +667,30 @@
   padding: 15px 25px;
   font-size: 16px;
   font-weight: 500;
-  color: #8b96a5; /* Gray text for inactive */
+  color: #8b96a5;
   cursor: pointer;
   border-bottom: 2px solid transparent;
   transition: all 0.3s;
 }
 
 .tab-link:hover {
-  color: #0d6efd; /* Blue on hover */
+  color: #0d6efd; 
 }
 .tab-link:target {
   display: block;
 }
 
-/* Active Tab Style (Image jaisa) */
+
 .tab-link.active {
   color: #0d6efd;
   border-bottom: 2px solid #0d6efd;
   font-weight: 600;
 }
 
-/* --- CONTENT BOX --- */
+
 .tab-content-box {
-  border: 1px solid #e0e0e0; /* Box ka border */
-  border-top: none; /* Upar border nahi chahiye kyunki tabs hain */
+  border: 1px solid #e0e0e0; 
+  border-top: none;
   padding: 25px;
   background: #fff;
   min-height: 200px;
@@ -739,7 +748,7 @@
   color: #d4d4d4;
 }
 
-/* --- SHIPPING TABLE STYLE (Same as Specs) --- */
+/* --- SHIPPING TABLE STYLE  */
 .specs-table {
   width: 100%;
   border-collapse: collapse;
@@ -749,7 +758,7 @@
   border: 1px solid #e0e0e0;
 }
 .specs-table .label {
-  background-color: #f7f8f9; /* Gray background for labels */
+  background-color: #f7f8f9; 
   color: #505050;
   width: 30%;
   font-weight: 500;

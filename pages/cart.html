@@ -17,17 +17,19 @@
   <section class="cart-section">
     <div class="cart-container">
         
-        <h2>My cart (<span id="totalCartItems"></span>)</h2>
+        <h2 class="base-color">My cart (<span id="totalCartItems"></span>)</h2>
 
         <div class="cart-layout">
             
+            <div class="cart-items-container">
             <div class="cart-main">
 
+                </div>
                 <div class="cart-actions-row">
                     <a href="/index.html" class="btn-back-shop">
                         <i class="fa-solid fa-arrow-left"></i> Back to shop
                     </a>
-                    <button class="btn-remove-all ">Remove all</button>
+                    <button class="btn-remove-all " onclick="removeAllItems()">Remove all</button>
                 </div>
 
                 <div class="service-features">
@@ -116,6 +118,8 @@
         </section>
     </div>
 </section>
+<div class="addToCartPopup">
+</div>
 <div class="discount-banner-placeholder"></div>
 <div class="footer-placeholder"></div>
 <script>

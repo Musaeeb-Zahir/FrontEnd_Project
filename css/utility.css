@@ -1,5 +1,5 @@
 .normal-text {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 22px;
 }
@@ -27,4 +27,55 @@ a {
 }
 .availableCategory.active {
   background-color: #e5f1ff;
+}
+.font1 {
+  font-weight: 700;
+  font-size: 32px;
+  list-style: 100%;
+}
+.font2 {
+  font-weight: 400;
+  font-size: 28px;
+}
+.font3 {
+  font-size: 20px;
+}
+.font4 {
+  font-size: 16px;
+  list-style: 22px;
+  font-weight: 500;
+}
+.font5 {
+  font-size: 13px;
+}
+.cursor {
+  cursor: pointer;
+}
+.text-align {
+  text-align: center;
+}
+.base-color {
+  color: #1c1c1c;
+}
+.icons-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-color: #bbbcbd;
+}
+.addToCartPopup {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1000;
 }

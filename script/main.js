@@ -87,9 +87,10 @@ async function updateUIForDealElements() {
       dealItems.innerHTML += `
        <a href="/pages/productDetail.html?id=${element.id}">
       <article class="deal-item">
-        <img src="${element.images.main}" alt="">
-        <p>${element.title}</p>
-        <span>${element.price.discount_label}%</span>
+      <div class="img-box">
+        <img src="${element.images.main}" alt=""></div>
+        <p class="text-align">${element.specifications.Type}</p>
+        <span class="font5">-${element.price.discount_label}%</span>
       </article>
       </a>
     `;
@@ -112,10 +113,10 @@ async function updateUIHomeElements() {
     categoryGridContainer.innerHTML += `
      <a href="/pages/productDetail.html?id=${element.id}">
   <article class="cat-item">
-       <div><h3>${element.slug}</h3>
-        <span>From</span>
-        <span class="price"> ${element.price.currency} ${element.price.current}</span></div> 
-        <img src="${element.images.main}" alt="Soft chairs">
+       <div><h3 class="normal-text base-color">${element.slug}</h3>
+        <span class="opacity font5>From</span>
+        <span class="price opacity font5"> ${element.price.currency} ${element.price.current}</span></div> 
+        <img src="${element.images.main}" alt="Soft chairs" width="66px">
       </article>
       </a>
   `;
@@ -136,10 +137,10 @@ async function updateUIElectronicItems() {
     electronicsGridContainer.innerHTML += `
      <a href="/pages/productDetail.html?id=${element.id}">
   <article class="cat-item">
-       <div><h3>${element.slug}</h3>s
-        <span>From</span>
-        <span class="price"> ${element.price.currency} ${element.price.current}</span></div> 
-        <img src="${element.images.main}" alt="Soft chairs">
+       <div><h3 class="normal-text base-color">${element.slug}</h3>s
+        <span class="opacity font5>From</span>
+        <span class="price opacity font5"> ${element.price.currency} ${element.price.current}</span></div> 
+        <img src="${element.images.main}" alt="Soft chairs" width="69px">
       </article>
       </a>
   `;
@@ -198,19 +199,13 @@ async function loadProductDetailUI(product) {
     reviewsCount: document.querySelector("#reviews-count"),
     soldCount: document.querySelector("#sold-count"),
     featuresList: document.getElementById("features-list"),
-    bulkPrice: document.querySelectorAll(".price-val"),
+    bulk_pricing: document.querySelectorAll(".price-val"),
     attrValue: document.querySelectorAll(".attr-value"),
     saveForLater: document.querySelector(".btn-save-later"),
     btnInquiry: document.querySelector(".btn-inquiry"),
     ratingStars: document.querySelector(".rating-stars"),
     ratingNum: document.querySelector("#rating-num"),
-    // minOrder: document.querySelector(".min-order"),
-    // companyName: document.querySelector(".company-name"),
-    // supplierFlag: document.querySelector(".supplier-flag"),
-    // supplierLocation: document.querySelector(".supplier-location"),
-    // supplierShipping: document.querySelector(".supplier-shipping"),
-    // descriptionText: document.querySelector(".content-text p"),
-    // modelId: document.querySelector(".model-id"),
+    descriptionText: document.querySelector(".content-text p"),
   };
   el.ratingStars.innerHTML = getStarHTML(product.rating.stars);
   el.ratingNum.innerText = product.rating.stars;
@@ -221,24 +216,32 @@ async function loadProductDetailUI(product) {
   el.stockText.innerText = product.stock_status;
   el.reviewsCount.textContent = `${product.sales.reviews_count} Reviews`;
   el.soldCount.textContent = `${product.sales.sold_count} Sold`;
-  console.log(el.bulkPrice[0]);
-  el.bulkPrice[0].textContent = `$${
-    product.bulk_price.first || "not available"
+  console.log(el.bulk_pricing[0]);
+  el.bulk_pricing[0].textContent = `$${
+    product.bulk_pricing.first || "not available"
   }`;
-  el.bulkPrice[1].textContent = `$${product.bulk_price.second}`;
-  el.bulkPrice[2].textContent = `$${product.bulk_price.third}`;
-  console.log(el.attrValue);
-
+  el.bulk_pricing[1].textContent = `$${product.bulk_pricing.second}`;
+  el.bulk_pricing[2].textContent = `$${product.bulk_pricing.third}`;
   el.attrValue[0].textContent = `$${product.price.current}`;
   el.attrValue[2].textContent = `${
     product.specifications.Material || "Not Provided"
   }`;
 
-  el.attrValue[1].textContent = `${product.type || "Not Provided"}`;
-  el.attrValue[3].textContent = `${product.design || "Not Provided"}`;
-  el.attrValue[4].textContent = `${product.custamization || "Not Provided"}`;
-  el.attrValue[5].textContent = `${product.protection || "Not Provided"}`;
-  el.attrValue[6].textContent = `${product.warranty || "Not Provided"}`;
+  el.attrValue[1].textContent = `${
+    product.specifications.Type || "Not Provided"
+  }`;
+  el.attrValue[3].textContent = `${
+    product.specifications.Design || "Not Provided"
+  }`;
+  el.attrValue[4].textContent = `${
+    product.specifications.Customization || "Not Provided"
+  }`;
+  el.attrValue[5].textContent = `${
+    product.specifications.Protection || "Not Provided"
+  }`;
+  el.attrValue[6].textContent = `${
+    product.specifications.Warranty || "Not Provided"
+  }`;
 
   //view all thumnail list
   el.thumbnails.innerHTML = "";
@@ -353,9 +356,11 @@ async function loadProductDetailUI(product) {
   //load related items
   const relatedItemsContainer = document.querySelector(".related-grid");
   const allItems = await fetchProductsData();
-  const relatedItems = allItems.filter(
-    (item) => item.category === product.category && item.id !== product.id
-  );
+  const relatedItems = allItems
+    .filter(
+      (item) => item.category === product.category && item.id !== product.id
+    )
+    .slice(0, 6);
 
   relatedItemsContainer.innerHTML = "";
   relatedItems.forEach((element) => {
@@ -367,7 +372,7 @@ async function loadProductDetailUI(product) {
             </div>
             <div class="info-box">
                 <a href="#" class="rp-title">${element.title}</a>
-                <span class="rp-price">$40.00</span>
+                <span class="rp-price">$${element.bulk_pricing.first}-$${element.bulk_pricing.third}</span>
             </div>
         </div>
      </a>`;
@@ -375,12 +380,14 @@ async function loadProductDetailUI(product) {
 
   //load may like items
   const mayLikeItemsContainer = document.querySelector(".related-list");
-  const mayLikeItems = allItems.filter(
-    (item) =>
-      item.id !== product.id &&
-      item.category !== product.category &&
-      item.price.current < product.price.current
-  );
+  const mayLikeItems = allItems
+    .filter(
+      (item) =>
+        item.id !== product.id &&
+        item.category !== product.category &&
+        item.price.current < product.price.current
+    )
+    .slice(0, 7);
   mayLikeItemsContainer.innerHTML = "";
   mayLikeItems.forEach((element) => {
     mayLikeItemsContainer.innerHTML += `
@@ -415,7 +422,6 @@ async function loadCategoryListingItems() {
   } in ${categoryName}`;
   let savedIdsNumbers;
   const savedItemsForlater = JSON.parse(localStorage.getItem("wishlistIds"));
-  console.log("savedddddddd", savedItemsForlater);
   if (savedItemsForlater !== null) {
     savedIdsNumbers = savedItemsForlater.map(Number);
   } else {
@@ -508,20 +514,31 @@ const storedData = localStorage.getItem("wishlistIds");
 let savedItems = storedData ? JSON.parse(storedData) : [];
 async function saveForLater(elementid) {
   const index = savedItems.indexOf(elementid);
+  const popup = document.querySelector(".addToCartPopup");
   if (index !== -1) {
-    console.log(`already mojood ${elementid}`);
+    popup.innerHTML = ` <i class="fa-solid fa-bookmark" style="color: #dc0404;"></i>
+    <p>Already saved</p>`;
+    popup.style.opacity = "1";
+    setTimeout(() => {
+      popup.style.opacity = "0";
+    }, 2000);
   } else {
     savedItems.unshift(elementid);
+    popup.innerHTML = ` <i class="fa-solid fa-bookmark" style="color: #2f7500;"></i>
+    <p>saved Items</p>`;
+    popup.style.opacity = "1";
+    setTimeout(() => {
+      popup.style.opacity = "0";
+    }, 2000);
   }
   localStorage.setItem("wishlistIds", JSON.stringify(savedItems));
-  console.log("Updated List:", savedItems);
+  renderSavedForLater();
 }
 
 //hide and show filter list in listing page
 function toggleFilterList(id) {
   const filterList = document.querySelector(`#${id}`);
   filterList.classList.toggle("display-block");
-  // filterList.classList.toggle("display-none-list");
   event.target.src = event.target.src.includes("Vector.png")
     ? "/assets/Layout/Form/input-group/Icon/control/Vector2.png"
     : "/assets/Layout/Form/input-group/Icon/control/Vector.png";
@@ -561,11 +578,12 @@ shopping_cart
 async function renderCartUI() {
   const cartContainer = document.querySelector(".cart-main");
   const cartItemsStored = sessionStorage.getItem("cartItems");
+  const totalItemsInCart = document.querySelector("#totalCartItems");
   const cartItems = cartItemsStored ? JSON.parse(cartItemsStored) : [];
-
   // check empty cart
   if (cartItems.length === 0) {
-    cartContainer.innerHTML = "<p>Your cart is empty</p>";
+    totalItemsInCart.innerText = 0;
+    cartContainer.innerHTML = `<p class="base-color">Your cart is empty</p>`;
     return;
   }
 
@@ -577,7 +595,7 @@ async function renderCartUI() {
       cartItems.includes(product.id) || cartItems.includes(String(product.id))
     );
   });
-
+  totalItemsInCart.innerText = cartProducts.length;
   cartContainer.innerHTML = "";
   cartProducts.forEach((element) => {
     cartContainer.innerHTML += `
@@ -596,17 +614,17 @@ async function renderCartUI() {
                             <h4>${element.slug}</h4>
 
                             <p class="item-specs">Size: ${
-                              element.specifications.size
-                                ? element.specifications.size
+                              element.specifications.Size
+                                ? element.specifications.Size
                                 : ""
                             }, Color: ${
-      element.specifications.color ? element.specifications.color : ""
+      element.specifications.Color ? element.specifications.Color : ""
     }, Material: ${
       element.specifications.Material ? element.specifications.Material : ""
     }</p>
 
                             <p class="seller-name">Seller: ${
-                              element.seller ? element.seller : ""
+                              element.supplier.name ? element.supplier.name : ""
                             }</p>
 
 
@@ -636,6 +654,9 @@ async function renderCartUI() {
                     <div class="qty-select">
  <input list="qty" id="qty-choice" name="qty" value="1" class="qty-feild"
         data-price="${element.price.current}" 
+        data-first=${element.bulk_pricing.first}
+        data-second=${element.bulk_pricing.second}
+        data-third=${element.bulk_pricing.third}
         data-discount="${element.price.discount_label || 0}" 
         data-tax="${element.price.tax_percent || 0}" 
         
@@ -662,21 +683,50 @@ async function renderCartUI() {
 
 async function moveToCart(productid) {
   let cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
+  const popup = document.querySelector(".addToCartPopup");
   if (!cartItems.includes(productid)) {
     cartItems.unshift(productid);
     sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
-    console.log(`Added ${productid}`);
+    popup.innerHTML = ` <i class="fa-solid fa-circle-check" style="color: #028500;"></i>
+    <p>Item added to your cart</p>`;
+    popup.style.opacity = "1";
+    setTimeout(() => {
+      popup.style.opacity = "0";
+    }, 2000);
 
     await renderCartUI();
   } else {
-    console.log("Item already in cart");
+    popup.innerHTML = ` <i class="fa-solid fa-cart-arrow-down" style="color: #ffcb0f;"></i>
+    <p>Item is already added to your cart</p>`;
+    popup.style.opacity = "1";
+    setTimeout(() => {
+      popup.style.opacity = "0";
+    }, 2000);
   }
+}
+function removeAllItems() {
+  sessionStorage.clear("cartItems");
+  const popup = document.querySelector(".addToCartPopup");
+  popup.innerHTML = ` <i class="fa-solid fa-broom" style="color: #d05a1b;"></i>
+    <p>Remove all items from the cart</p>`;
+  popup.style.opacity = "1";
+  setTimeout(() => {
+    popup.style.opacity = "0";
+  }, 2000);
+  renderCartUI();
 }
 
 async function removeFromCart(id) {
   let cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
   const updatedItems = cartItems.filter((e) => e != id);
   sessionStorage.setItem("cartItems", JSON.stringify(updatedItems));
+  const popup = document.querySelector(".addToCartPopup");
+  popup.innerHTML = ` <i class="fa-solid fa-xmark" style="color: #ff0000;"></i>
+    <p>Item is remove from your cart</p>`;
+  popup.style.opacity = "1";
+  setTimeout(() => {
+    popup.style.opacity = "0";
+  }, 2000);
   await renderCartUI();
   priceCalculation();
 }
@@ -701,8 +751,21 @@ function priceCalculation() {
     const price = parseFloat(input.getAttribute("data-price"));
     const discountPercent = parseFloat(input.getAttribute("data-discount"));
     const taxPercent = parseFloat(input.getAttribute("data-tax"));
+    const firstPrice = parseFloat(input.getAttribute("data-first"));
+    const secondPrice = parseFloat(input.getAttribute("data-second"));
+    const thirdPrice = parseFloat(input.getAttribute("data-third"));
+    let bulkPrice;
+    if (qty >= 1 && qty < 50) {
+      bulkPrice = price;
+    } else if (qty >= 50 && qty <= 100) {
+      bulkPrice = firstPrice;
+    } else if (qty > 100 && qty <= 700) {
+      bulkPrice = secondPrice;
+    } else {
+      bulkPrice = thirdPrice;
+    }
 
-    const baseTotal = price * qty;
+    const baseTotal = bulkPrice * qty;
     const discountAmount = (baseTotal * discountPercent) / 100;
 
     const priceAfterDiscount = baseTotal - discountAmount;
@@ -714,20 +777,14 @@ function priceCalculation() {
     totalDiscountGiven += discountAmount;
     totalTaxCollected += taxAmount;
   });
-
-  console.log(
-    `Total: ${finalTotal}, Tax: ${totalTaxCollected}, Disc: ${totalDiscountGiven}`
-  );
-
   // Subtotal
   const subTotalEl = document.querySelector(".sub-total");
-  if (subTotalEl)
-    subTotalEl.innerText = "$" + (finalTotal - totalTaxCollected).toFixed(2);
+  if (subTotalEl) subTotalEl.innerText = "$" + finalTotal.toFixed(2);
   document.querySelector(".discount-percentage").innerText =
     "-" + totalDiscountGiven;
   document.querySelector(".tax-price").innerText = "+" + totalTaxCollected;
   // Final Total
-  const grandTotalEl = document.querySelector(".total-price"); // Total Price
+  const grandTotalEl = document.querySelector(".total-price");
   if (grandTotalEl) grandTotalEl.innerText = "$" + finalTotal.toFixed(2);
 }
 

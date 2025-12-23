@@ -258,8 +258,13 @@
   height: 230px;
   gap: 20px;
   align-items: center;
+  transition:all 0.3s ease-in-out;
 }
-
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-color: #bbbcbd;
+}
 .card-image {
   width: 200px;
   height: 200px;
@@ -267,6 +272,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  align-self: center;
 }
 
 .card-image img {

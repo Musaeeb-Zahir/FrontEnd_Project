@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 header {
   background-color: #ffffff;
@@ -12,7 +13,7 @@ header {
 }
 .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 86px;
   align-items: center;
 }
@@ -31,6 +32,13 @@ header {
   padding: 12px;
   border-collapse: collapse;
   border-right: none;
+}
+.search-bar input,
+.search-bar select {
+  outline: none;
+  font-family: inherit;
+  font-weight: 400;
+  font-style: normal;
 }
 .search-bar select {
   width: 145px;
@@ -93,6 +101,7 @@ header {
   display: flex;
   gap: 29px;
   align-items: center;
+  padding-left: 22px;
 }
 .sub-nav-links li {
   list-style: none;
@@ -108,8 +117,35 @@ header {
   gap: 8px;
 }
 .sub-nav-links li select {
+  border: none;
+  font-family: inherit;
+  color: var(--primary-text-color);
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.help-menu {
+  position: relative;
+}
+.help-menu .help-icon {
+  position: absolute;
+  right: 37px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.help-menu select {
+  outline: none;
 }
 
+.help-menu select:focus {
+  outline: none;
+}
+.help-menu select option {
+  font-family: inherit;
+  color: var(--primary-text-color);
+  padding: 8px;
+}
 /* Right */
 .right-nav {
   display: flex;
@@ -172,15 +208,16 @@ header {
   flex-direction: column;
   align-items: start;
   padding: 30px;
-  justify-content: center;
+  padding-top: 65px;
+  gap: 13px;
 }
 .main-banner button {
-  width: 100px;
-  height: 30px;
+  width: 119px;
+  height: 40px;
   background-color: #ffffff;
   border-radius: 6px;
   color: #1c1c1c;
-  margin-top: 30px;
+  margin-top: 10px;
   border: none;
 }
 
@@ -231,14 +268,22 @@ header {
 }
 
 .discount {
+  height: 95px;
   padding: 12px;
   border-radius: 6px;
   background-color: #f38332;
+  font: 16px;
+  font-weight: 300;
+  color: #ffffff;
 }
 .suplier {
   padding: 12px;
   border-radius: 6px;
   background-color: #55bdc3;
+  font: 16px;
+  height: 95px;
+  font-weight: 300;
+  color: #ffffff;
 }
 
 .deal-section {
@@ -260,22 +305,27 @@ header {
   padding-right: 30px;
   height: 100%;
   padding-top: 21px;
+  width: 285px;
 }
 .deal-timer .time-box {
   display: flex;
   width: 45px;
   height: 50px;
   color: #ffffff;
-  background-color: #333;
+  background-color: #606060;
   border-radius: 6px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-top: 12px;
 }
+.deal-timer .time-box .number {
+  font-weight: 700;
+}
 .deal-items {
   display: grid;
   grid-template-columns: repeat(5, 179px);
+  height: 100%;
 }
 
 .deal-item {
@@ -283,7 +333,25 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 5px;
   flex-wrap: wrap;
+  height: 100%;
+  justify-content: center;
+  border-left: 1px solid var(--primary-line-clr);
+  transition: all 0.3s ease-in-out;
+}
+.deal-item:hover {
+  transform: scale(1.02);
+  border-color: #bbbcbd;
+}
+.img-box {
+  height: 140px;
+  width: 140px;
+}
+.img-box img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 .deal-item span {
   padding: 2px 8px;
@@ -294,7 +362,7 @@ header {
 /* category-container */
 .category-section {
   background-color: #f7fafc;
-  margin-bottom: 20px;
+  padding-bottom: 30px;
 }
 .category-container {
   display: flex;
@@ -326,6 +394,7 @@ header {
 }
 .main-category > button {
   width: 123px;
+  margin-top: 13px;
   height: 40px;
   border: none;
   border-radius: 6px;
@@ -336,14 +405,22 @@ header {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  height: 100%;
+  width: calc(100% - 280px);
 }
 .cat-item {
   display: flex;
-  border: 1px solid var(--primary-line-clr);
+  border-left: 1px solid var(--primary-line-clr);
+  border-top: 1px solid var(--primary-line-clr);
   position: relative;
   width: 223px;
   height: 127px;
   padding: 12px;
+  transition: all 0.3s ease-in-out;
+}
+.cat-item:hover {
+  transform: scale(1.02);
+  cursor: pointer;
 }
 .cat-item > div {
   display: flex;
@@ -361,7 +438,7 @@ header {
 .hero-banner {
   background-size: cover;
   background-position: center;
-  background-color: var();
+  background-color: var(--bg-light);
   color: white;
 }
 .hero-banner .container {
@@ -429,6 +506,17 @@ textarea::placeholder {
   display: flex;
   gap: 10px;
 }
+#quantity {
+  border: 1px solid var(--primary-line-clr);
+  border-radius: 5px;
+  padding: 5px 10px;
+  outline: none;
+}
+#unit {
+  border: 1px solid var(--primary-line-clr);
+  border-radius: 5px;
+  padding: 5px 10px;
+}
 
 .btn-primary {
   background-color: var(--btn-primary-bg, #0d6efd);
@@ -439,14 +527,19 @@ textarea::placeholder {
   cursor: pointer;
   font-weight: 500;
   font-size: 15px;
+  transition: all 0.3s ease-in-out;
+}
+.btn-primary:hover {
+  background-color: #0b5ed7;
 }
 /* recommended items section */
 .recommended-items-section {
+  background-color: var(--bg-light);
 }
 .recommended-items-container {
   width: 1180px;
   margin: auto;
-  background-color: #ffffff;
+  background-color: var(--bg-light);
   border-radius: 6px;
   padding: 20px 0px;
   height: 696px;
@@ -472,6 +565,12 @@ textarea::placeholder {
   border-radius: 6px;
   background-color: #f7fafc;
   height: 310px;
+  transition: all 0.3s ease-in-out;
+}
+.recommended-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-color: #bbbcbd;
 }
 .recommended-item div {
   display: flex;
@@ -483,11 +582,13 @@ textarea::placeholder {
 }
 
 /* extra services section  */
-
+.extra-services-section {
+  background-color: var(--bg-light);
+}
 .extra-services-container {
   width: 1180px;
   margin: auto;
-  background-color: #ffffff;
+  background-color: var(--bg-light);
   border-radius: 6px;
   padding: 20px 0px;
   height: 150px;
@@ -557,8 +658,8 @@ textarea::placeholder {
 }
 /* supplier section */
 .suppliers-section {
-  padding: 30px 0;
-  background-color: #fff;
+  padding: 50px 0;
+  background-color: var(--bg-light);
 }
 .suppliers-section > .container {
   display: flex;
